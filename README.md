@@ -5,7 +5,7 @@
 </a>
 
 # Cloudflare Workers Blog
-![GitHub](https://img.shields.io/github/license/mashape/apistatus)
+![Crates.io](https://img.shields.io/crates/l/rustc-serialize)
 [![Build Status](https://travis-ci.org/agalwood/Motrix.svg?branch=master)](https://travis-ci.org/agalwood/Motrix)
 ![Spiget Download Size](https://img.shields.io/spiget/download-size/6)
 ![Relative date](https://img.shields.io/date/1571576559)
