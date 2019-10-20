@@ -11,7 +11,7 @@
 ![Relative date](https://img.shields.io/date/1571576559)
 
 ------
-[English](./README.md) | [简体中文](./README-CN.md)
+[English](./README.md) | [简体中文]
 
 # 用法
 将worker.js粘贴到Cloudflare worker面板中
