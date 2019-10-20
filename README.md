@@ -10,7 +10,7 @@
 ![Spiget Download Size](https://img.shields.io/spiget/download-size/6)
 ![Relative date](https://img.shields.io/date/1571576559)
 
-------
+
 [English](./README.md) | [简体中文](./README-CN.md)
 # Usage
 Paste workers.js into the Cloudflare worker panel
