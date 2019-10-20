@@ -4,7 +4,7 @@
   <img src="https://secure.gravatar.com/avatar/" width="256" alt="App Icon" />
 </a>
 
-# Cloudflare Workers Blog
+## Cloudflare Workers Blog
 ![Crates.io](https://img.shields.io/crates/l/rustc-serialize)
 [![Build Status](https://travis-ci.org/agalwood/Motrix.svg?branch=master)](https://travis-ci.org/agalwood/Motrix)
 ![Spiget Download Size](https://img.shields.io/spiget/download-size/6)
