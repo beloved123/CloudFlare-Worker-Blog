@@ -13,10 +13,10 @@
 ------
 [English](./README.md) | [简体中文](./README-CN.md)
 
-＃ 用法
+# 用法
 将worker.js粘贴到Cloudflare worker面板中
 
-＃ 如何撰写博客
+# 如何撰写博客
 
 首先使用随机名称创建一个Github项目，然后在本地克隆该项目。
 ```
