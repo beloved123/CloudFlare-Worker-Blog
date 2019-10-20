@@ -9,7 +9,7 @@ First create a Github project with a random name and then clone the project loca
 
 ```
 # Example
-Git clone https://github.com/kasuganosoras/cloudflare-worker-blog
+Git clone https://github.com/LittleRey/CloudFlare-Worker-Blog
 Cd cloudflare-worker-blog/
 ```
 
