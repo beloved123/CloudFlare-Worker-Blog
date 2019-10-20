@@ -1,6 +1,6 @@
 # Cloudflare Workers Blog
 [![LICENSE](https://img.shields.io/badge/license-Buildtest-blue.svg?style=flat-square)](https://github.com/LittleRey/CloudFlare-Worker-Blog/blob/master/LICENSE.md)
-
+[![Build Status](https://github.com/LittleRey/CloudFlare-Worker-Blog)](https://github.com/LittleRey/CloudFlare-Worker-Blog)
 # Usage
 Paste workers.js into the Cloudflare worker panel
 # How to write a blog
