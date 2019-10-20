@@ -3,7 +3,7 @@
 
 # Use
 Paste workers.js into the Cloudflare worker panel
-# How to write an article
+# How to write a blog
 
 First create a Github project with a random name and then clone the project locally.
 
