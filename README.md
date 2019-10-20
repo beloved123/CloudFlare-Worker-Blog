@@ -1,5 +1,5 @@
 # Cloudflare Workers Blog
-[![LICENSE](https://img.shields.io/badge/license-Buildtest-blue.svg?style=flat-square)](https://github.com/LittleRey/Worker-Blog/edit/master/LICENSE.md)
+[![LICENSE](https://img.shields.io/badge/license-Buildtest-blue.svg?style=flat-square)](https://github.com/LittleRey/CloudFlare-Worker-Blog/master/LICENSE.md)
 
 # Usage
 Paste workers.js into the Cloudflare worker panel
