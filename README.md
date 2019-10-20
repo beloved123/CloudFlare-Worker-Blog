@@ -1,7 +1,7 @@
 # CF Blog
 
 <a href="https://blog.buildtest.club/">
-  <img src="https://secure.gravatar.com/avatar/" width="256" alt="App Icon" />
+  <img src="https://secure.gravatar.com/avatar/" width="100" alt="App Icon" />
 </a>
 
 ## Cloudflare Workers Blog
