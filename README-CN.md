@@ -13,9 +13,10 @@
 ------
 [English](./README.md) | [简体中文](./README-CN.md)
 
-＃用法
+＃ 用法
 将worker.js粘贴到Cloudflare worker面板中
-＃如何撰写博客
+
+＃ 如何撰写博客
 
 首先使用随机名称创建一个Github项目，然后在本地克隆该项目。
 ```
@@ -47,19 +48,7 @@ mkdir posts/
 touch list.json
 ```
 
-编辑 list.json，在里面写入以下内容
-
-```json
-[
-  {
-    "title":"文章名称",
-    "time":"发布时间",
-    "file":"posts/helloworld.md（或者其他名字）"
-  }
-]
-```
-
-如果你有多篇文章就这样写：
+# List.json 格式
 
 ```json
 [
