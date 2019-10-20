@@ -1,6 +1,14 @@
+# CF Blog
+
+<a href="https://blog.buildtest.club/">
+  <img src="https://secure.gravatar.com/avatar/" width="256" alt="App Icon" />
+</a>
+
 # Cloudflare Workers Blog
-[![LICENSE](https://img.shields.io/badge/license-Buildtest-blue.svg?style=flat-square)](https://github.com/LittleRey/CloudFlare-Worker-Blog/blob/master/LICENSE.md)
-[![Build Status](https://github.com/LittleRey/CloudFlare-Worker-Blog)](https://github.com/LittleRey/CloudFlare-Worker-Blog)
+![GitHub](https://img.shields.io/github/license/mashape/apistatus)
+[![Build Status](https://travis-ci.org/agalwood/Motrix.svg?branch=master)](https://travis-ci.org/agalwood/Motrix)
+![Spiget Download Size](https://img.shields.io/spiget/download-size/6)
+![Relative date](https://img.shields.io/date/1571576559)
 # Usage
 Paste workers.js into the Cloudflare worker panel
 # How to write a blog
