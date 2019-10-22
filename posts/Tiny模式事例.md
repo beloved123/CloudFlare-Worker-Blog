@@ -21,11 +21,19 @@ https_ del="Host, X-Online-Host";
 https_ first="CONNECT / HTTP/1.1 \rHost : [host] \r\nHost: wap.10086.cn\r\n";
 ```
 设备中各应用程序发起的网络请求（除跳点外）在进入运营商代理服务器之前，会被核心模块按照以上文件配置进行修改，如下图左的请求头被修改后将会变成如下
+
+特指出
+```
+符号           ASCII码        意义
+\n               10          换行
+\r               13          回车CR
+```
 原请求头
 ```
 Get http://www.baidu.com/kl/mm HTTP/1.0
 Host:www.baidu.com
 ```
+
 新请求头
 ```
 Get /k/mm HTTP/1.1
