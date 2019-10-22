@@ -8,7 +8,7 @@
 ![Crates.io](https://img.shields.io/crates/l/rustc-serialize)
 [![Build Status](https://travis-ci.org/agalwood/Motrix.svg?branch=master)](https://travis-ci.org/agalwood/Motrix)
 ![Spiget Download Size](https://img.shields.io/spiget/download-size/6)
-![Relative date](https://img.shields.io/date/1571760039)
+![Relative date](https://img.shields.io/date/1571760316)
 
 
 [English](./README.md) | [简体中文](./README-CN.md)
