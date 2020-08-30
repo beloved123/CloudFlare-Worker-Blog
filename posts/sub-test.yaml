@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - name: "ss3"
+  - name: "v2plugin"
     type: ss
     server: v2plugin.buildtest.site
     port: 443
@@ -14,11 +14,11 @@ proxies:
     plugin: v2ray-plugin
     plugin-opts:
       mode: websocket # no QUIC now
-       tls: true  wss
+       tls: true
       # skip-cert-verify: true
        host: v2plugin.buildtest.site
        path: "/static"
-      # mux: true
+       mux: true
       # headers:
       #   custom: value
   - {name: 🇨🇳 gyddnas.myqnapcloud.cn, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
