@@ -5,16 +5,22 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - name: "v2plugin"
+  - name: "ss3"
     type: ss
     server: server
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "e4445806-8968-4d3f-898a-229eb759b45a"
+    password: "password"
     plugin: v2ray-plugin
     plugin-opts:
-      mode: websocket
-
+      mode: websocket # no QUIC now
+      # tls: true # wss
+      # skip-cert-verify: true
+      # host: bing.com
+      # path: "/"
+      # mux: true
+      # headers:
+      #   custom: value
   - {name: 🇨🇳 gyddnas.myqnapcloud.cn, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
   - {name: Heroku-V2ray, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
 proxy-groups:
