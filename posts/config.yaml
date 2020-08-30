@@ -10185,10 +10185,10 @@ Rule:
  - IP-CIDR,223.252.199.66/32,🎸 网易云音乐,no-resolve
  - IP-CIDR,223.252.199.67/32,🎸 网易云音乐,no-resolve
 
-  - DOMAIN,admusicpic.music.126.net,REJECT
-  - DOMAIN,iadmat.nosdn.127.net,REJECT
-  - DOMAIN,iadmusicmat.music.126.net,REJECT
-  - DOMAIN,iadmusicmatvideo.music.126.net,REJECT
+ - DOMAIN,admusicpic.music.126.net,🛑 全球拦截
+ - DOMAIN,iadmat.nosdn.127.net,🛑 全球拦截
+ - DOMAIN,iadmusicmat.music.126.net,🛑 全球拦截
+ - DOMAIN,iadmusicmatvideo.music.126.net,🛑 全球拦截
 
  - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 漏网之鱼
