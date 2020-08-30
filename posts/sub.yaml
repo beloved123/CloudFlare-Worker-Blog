@@ -5,11 +5,11 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: [SS] 🇨🇳 NeteaseUnblock-CN-HHHT, server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ, udp: true}
-  - {name: [SS] 🇨🇳 NeteaseUnblock-CN-SQ, server: netease-sq.wcc.best, port: 32028, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQ, udp: true}
-  - {name: [SS] 🇨🇳 NeteaseUnblock-CN-SR, server: netease-sr.wcc.best, port: 48933, type: ss, cipher: aes-256-gcm, password: QawxvsgMzUnm5VNe, udp: true}
-  - {name: [SS] 🇰🇷 NeteaseUnblock-KR-CN2GIA, server: netease-kr.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQkr, udp: true}
-  - {name: [SS] 🇸🇬 NeteaseUnblock-SG-CN2GIA, server: netease-sg.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: sgT5ckndbLSXHQ, udp: true}
+  - {name: [SS] 🇨🇳 NeteaseUnblock-CN-HHHT, server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ}
+  - {name: [SS] 🇨🇳 NeteaseUnblock-CN-SQ, server: netease-sq.wcc.best, port: 32028, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQ}
+  - {name: [SS] 🇨🇳 NeteaseUnblock-CN-SR, server: netease-sr.wcc.best, port: 48933, type: ss, cipher: aes-256-gcm, password: QawxvsgMzUnm5VNe}
+  - {name: [SS] 🇰🇷 NeteaseUnblock-KR-CN2GIA, server: netease-kr.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQkr}
+  - {name: [SS] 🇸🇬 NeteaseUnblock-SG-CN2GIA, server: netease-sg.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: sgT5ckndbLSXHQ}
   - {name: 🇨🇳 gyddnas.myqnapcloud.cn, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
   - {name: Heroku-V2ray, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
 proxy-groups:
