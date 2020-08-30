@@ -14,7 +14,7 @@ proxies:
     plugin: v2ray-plugin
     plugin-opts:
       mode: websocket # no QUIC now
-       tls: true
+       tls: true # wss
       # skip-cert-verify: true
        host: v2plugin.buildtest.site
        path: "/static"
