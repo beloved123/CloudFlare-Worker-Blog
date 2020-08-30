@@ -7,17 +7,17 @@ external-controller: :9090
 proxies:
   - name: "ss3"
     type: ss
-    server: server
+    server: v2plugin.buildtest.site
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "password"
+    password: "e4445806-8968-4d3f-898a-229eb759b45a"
     plugin: v2ray-plugin
     plugin-opts:
       mode: websocket # no QUIC now
-      # tls: true # wss
+       tls: true # wss
       # skip-cert-verify: true
-      # host: bing.com
-      # path: "/"
+       host: v2plugin.buildtest.site
+       path: "/static"
       # mux: true
       # headers:
       #   custom: value
