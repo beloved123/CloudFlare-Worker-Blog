@@ -29,8 +29,7 @@ dns:
        - https://ea-dns.rubyfish.cn
        - https://uw-dns.rubyfish.cn
        - https://doh.360.cn/dns-query
-
-      fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
+     fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
         - tls://1.0.0.1:853
         - tls://dns.google:853
 Proxy:
