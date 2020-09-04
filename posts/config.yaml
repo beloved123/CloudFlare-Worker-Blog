@@ -6,32 +6,51 @@ log-level: info
 external-controller: :9090
 ipv6: true
 dns:
-     enable: true
-     ipv6: true
-     listen: 0.0.0.0:53
-     # enhanced-mode: redir-host # 或 fake-ip
-     # # fake-ip-range: 198.18.0.1/16 # 如果你不知道这个参数的作用，请勿修改
-     # fake-ip-filter: # fake-ip 白名单列表
-     #   - '*.lan'
-     #   - localhost.ptlogin2.qq.com
+  enable: true
+  listen: 0.0.0.0:53
+  # ipv6: false # when the false, response to AAAA questions will be empty
 
-     nameserver:
-       - tls://dns.google:853
-       - tls://dns.pub:853
-       - tls://dns.alidns.com:853
-       - tls://dns.sb:853
-       - tls://ea-dns.rubyfish.cn:853
-       - tls://uw-dns.rubyfish.cn:853
-       - tls://dot.360.cn:853
-       - https://doh.pub/dns-query
-       - https://dns.sb/dns-query
-       - https://dns.alidns.com/dns-query
-       - https://ea-dns.rubyfish.cn/dns-query
-       - https://uw-dns.rubyfish.cn/dns-query
-       - https://doh.360.cn/dns-query
-     fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
-        - tls://1.0.0.1:853
-        - tls://dns.google:853
+  # These nameservers are used to resolve the DNS nameserver hostnames below.
+  # Specify IP addresses only
+  # default-nameserver:
+  #  - 114.114.114.114
+  #  - 8.8.8.8
+  # enhanced-mode: redir-host # or fake-ip
+  # fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+  # use-hosts: true # lookup hosts and return IP record
+  
+  # Hostnames in this list will not be resolved with fake IPs
+  # i.e. questions to these domain names will always be answered with their
+  # real IP addresses
+  # fake-ip-filter:
+  #   - '*.lan'
+  #   - localhost.ptlogin2.qq.com
+  
+  # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
+  # All DNS questions are sent directly to the nameserver, without proxies
+  # involved. Clash answers the DNS question with the first result gathered.
+  nameserver:
+    - tls://dns.google:853
+    - tls://dns.pub:853
+    - tls://dns.alidns.com:853
+    - tls://dns.sb:853
+    - tls://ea-dns.rubyfish.cn:853
+    - tls://uw-dns.rubyfish.cn:853
+    - tls://dot.360.cn:853
+    - https://doh.pub/dns-query
+    - https://dns.sb/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://ea-dns.rubyfish.cn/dns-query
+    - https://uw-dns.rubyfish.cn/dns-query
+    - https://doh.360.cn/dns-query
+  # When `fallback` is present, the DNS server will send concurrent requests
+  # to the servers in this section along with servers in `nameservers`.
+  # The answers from fallback servers are used when the GEOIP country
+  # is not `CN`.
+   fallback:
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
 Proxy:
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-HHHT", server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ, udp: true}
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-SQ", server: netease-sq.wcc.best, port: 32028, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQ, udp: true}
