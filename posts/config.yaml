@@ -7,7 +7,7 @@ external-controller: :9090
 ipv6: false
 dns:
   enable: true
-  listen: 0.0.0.0:53
+  # listen: 0.0.0.0:53
   nameserver:
     - tls://dns.google:853
     - tls://dns.pub:853
@@ -22,9 +22,9 @@ dns:
     - https://ea-dns.rubyfish.cn/dns-query
     - https://uw-dns.rubyfish.cn/dns-query
     - https://doh.360.cn/dns-query
-  # fallback:
-  #  - tls://1.0.0.1:853
-  #  - tls://dns.google:853
+  fallback:
+   - tls://1.0.0.1:853
+   - tls://dns.google:853
 
 Proxy:
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-HHHT", server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ, udp: true}
