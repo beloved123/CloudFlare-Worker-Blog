@@ -4,16 +4,35 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-ipv6: false
-
-Proxy:
+ipv6: true
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  nameserver:
+    - tls://dns.google:853
+    - tls://dns.pub:853
+    - tls://dns.alidns.com:853
+    - tls://dns.sb:853
+    - tls://ea-dns.rubyfish.cn:853
+    - tls://uw-dns.rubyfish.cn:853
+    - tls://dot.360.cn:853
+    - https://doh.pub/dns-query
+    - https://dns.sb/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://ea-dns.rubyfish.cn/dns-query
+    - https://uw-dns.rubyfish.cn/dns-query
+    - https://doh.360.cn/dns-query
+  fallback:
+   - tls://1.0.0.1:853
+   - tls://dns.google:853
+proxies:
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-HHHT", server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ, udp: true}
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-SQ", server: netease-sq.wcc.best, port: 32028, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQ, udp: true}
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-SR", server: netease-sr.wcc.best, port: 48933, type: ss, cipher: aes-256-gcm, password: QawxvsgMzUnm5VNe, udp: true}
   - {name: "[SS] 🇰🇷 NeteaseUnblock-KR-CN2GIA", server: netease-kr.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQkr, udp: true}
   - {name: "[SS] 🇸🇬 NeteaseUnblock-SG-CN2GIA", server: netease-sg.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: sgT5ckndbLSXHQ, udp: true}
   - {name: "Heroku-V2ray", server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}, udp: true}
-Proxy Group:
+proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
