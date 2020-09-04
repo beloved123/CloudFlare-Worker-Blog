@@ -4,9 +4,10 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-ipv6: true
+ipv6: false
 dns:
   enable: true
+  ipv6: false
   listen: 0.0.0.0:53
   # ipv6: false # when the false, response to AAAA questions will be empty
 
