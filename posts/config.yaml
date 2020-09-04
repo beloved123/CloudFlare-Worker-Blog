@@ -25,9 +25,9 @@ dns:
        - tls://dot.360.cn:853
        - https://doh.pub/dns-query
        - https://dns.sb/dns-query
-       - https://dns.alidns.com
-       - https://ea-dns.rubyfish.cn
-       - https://uw-dns.rubyfish.cn
+       - https://dns.alidns.com/dns-query
+       - https://ea-dns.rubyfish.cn/dns-query
+       - https://uw-dns.rubyfish.cn/dns-query
        - https://doh.360.cn/dns-query
      fallback: # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
         - tls://1.0.0.1:853
