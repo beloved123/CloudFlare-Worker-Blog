@@ -9,7 +9,7 @@ dns:
   enable: true
   ipv6: true
   enhanced-mode: redir-host
-  listen: 0.0.0.0:53
+  listen: 0.0.0.0:5354
   nameserver:
     - tls://1dot1dot1dot1.cloudflare-dns.com:853
     - tls://dns.sb:853
