@@ -26,10 +26,10 @@ dns:
     - tls://ea-dns.rubyfish.cn:853
     - tls://uw-dns.rubyfish.cn:853
     - tls://dot.360.cn:853
- #   - tls://dns.google:853
+    - tls://dns.google:853
   fallback:
     - https://dns.cloudflare.com/dns-query
-    - tls://dns.google:853
+ #   - tls://dns.google:853
   fallback-filter:
     geoip: true
     ipcidr:
