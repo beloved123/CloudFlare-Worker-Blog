@@ -4,7 +4,7 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-
+ipv6: true
 dns:
   enable: true
   ipv6: true
@@ -10240,7 +10240,6 @@ rules:
   - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
   - DOMAIN,download.jetbrains.com,🎯 全球直连
   - DOMAIN,images-cn.ssl-images-amazon.com,🎯 全球直连
-  - IP-CIDR,119.28.28.28/32,🎯 全球直连,no-resolve
   - DOMAIN-SUFFIX,smtp,🎯 全球直连
   - DOMAIN-KEYWORD,aria2,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
