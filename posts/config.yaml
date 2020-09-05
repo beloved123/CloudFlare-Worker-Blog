@@ -28,7 +28,8 @@ dns:
     - tls://dot.360.cn:853
  #   - tls://dns.google:853
   fallback:
-    - tls://dns.google:853
+    - https://dns.google.com/dns-query
+ #   - tls://dns.google:853
   fallback-filter:
     geoip: true
     ipcidr:
