@@ -11,21 +11,22 @@ dns:
   enhanced-mode: redir-host
   listen: 0.0.0.0:53
   nameserver:
+    - tls://1dot1dot1dot1.cloudflare-dns.com:853
+    - tls://dns.sb:853
+    - tls://dns.pub:853
+    - tls://dns.alidns.com:853
+    - tls://ea-dns.rubyfish.cn:853
+    - tls://uw-dns.rubyfish.cn:853
+    - tls://dot.360.cn:853
+    - https://doh.pub/dns-query
+    - https://dns.sb/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://ea-dns.rubyfish.cn/dns-query
+    - https://uw-dns.rubyfish.cn/dns-query
+    - https://doh.360.cn/dns-query
     - https://dns.cloudflare.com/dns-query
     - https://doh.opendns.com/dns-query
-    - tls://dns.sb:853
  #   - tls://dns.google:853
- #   - tls://dns.pub:853
- #   - tls://dns.alidns.com:853
- #   - tls://ea-dns.rubyfish.cn:853
- #   - tls://uw-dns.rubyfish.cn:853
- #   - tls://dot.360.cn:853
- #   - https://doh.pub/dns-query
- #   - https://dns.sb/dns-query
- #   - https://dns.alidns.com/dns-query
- #   - https://ea-dns.rubyfish.cn/dns-query
- #   - https://uw-dns.rubyfish.cn/dns-query
- #   - https://doh.360.cn/dns-query
   fallback:
     - tls://dns.google:853
   fallback-filter:
