@@ -8,7 +8,7 @@ ipv6: true
 dns:
   enable: true
   enhanced-mode: redir-host
-  listen: 0.0.0.0:5354
+  listen: 0.0.0.0:53
   nameserver:
     - https://doh.opendns.com/dns-query
     - tls://1.1.1.1:853
