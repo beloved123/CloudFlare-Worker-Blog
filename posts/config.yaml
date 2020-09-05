@@ -29,7 +29,7 @@ dns:
  #   - tls://dns.google:853
   fallback:
     - https://dns.google.com/dns-query
- #   - tls://dns.google:853
+    - tls://dns.google:853
   fallback-filter:
     geoip: true
     ipcidr:
