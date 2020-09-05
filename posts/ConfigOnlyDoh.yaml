@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 ipv6: true
- dns:
+dns:
   enable: true
 #  listen: 0.0.0.0:5354
   default-nameserver:
