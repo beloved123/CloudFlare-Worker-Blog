@@ -17,6 +17,7 @@ dns:
     - https://ea-dns.rubyfish.cn/dns-query
     - https://uw-dns.rubyfish.cn/dns-query
     - https://doh.360.cn/dns-query
+    - https://doh.opendns.com/dns-query
    # - https://dns.cloudflare.com/dns-query
    # - https://doh.opendns.com/dns-query
    # - tls://1dot1dot1dot1.cloudflare-dns.com:853
@@ -28,8 +29,7 @@ dns:
    # - tls://dot.360.cn:853
    # - tls://dns.google:853
   fallback:
-    - https://dns.cloudflare.com/dns-query
-    - https://doh.opendns.com/dns-query
+    - https://cloudflare-dns.com/dns-query
    # - tls://dns.google:853
   fallback-filter:
     geoip: true
