@@ -10,8 +10,8 @@ dns:
   enhanced-mode: redir-host
   listen: 0.0.0.0:53
   nameserver:
-    - https://doh.opendns.com/dns-query
     - tls://1.1.1.1:853
+    - https://doh.opendns.com/dns-query
  #   - tls://dns.google:853
  #   - tls://dns.pub:853
  #   - tls://dns.alidns.com:853
