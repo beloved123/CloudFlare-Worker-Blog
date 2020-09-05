@@ -139,6 +139,7 @@ proxy-groups:
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
 rules:
+ - DOMAIN,gyddnas.myqnapcloud.cn,🎯 全球直连  
  - DOMAIN-SUFFIX,163yun.com,🎸 网易云音乐
  - DOMAIN-SUFFIX,api.iplay.163.com,🎸 网易云音乐
  - DOMAIN-SUFFIX,hz.netease.com,🎸 网易云音乐
@@ -166,7 +167,7 @@ rules:
  - IP-CIDR,193.112.159.225/32,🎸 网易云音乐,no-resolve
  - IP-CIDR,223.252.199.66/31,🎸 网易云音乐,no-resolve
  - IP-CIDR,223.252.199.67/32,🎸 网易云音乐,no-resolve
-  
+ 
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
