@@ -6,10 +6,10 @@ log-level: info
 external-controller: :9090
 ipv6: true
 dns:
-  enable: true
+  enable: false
   ipv6: true
-#  enhanced-mode: redir-host
-#  listen: 0.0.0.0:5354
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:5354
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
