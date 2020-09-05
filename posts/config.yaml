@@ -11,7 +11,7 @@ dns:
   enhanced-mode: redir-host
   listen: 0.0.0.0:53
   nameserver:
-    - tls://cloudflare-dns.com:853
+    - https://dns.cloudflare.com/dns-query
     - https://doh.opendns.com/dns-query
     - tls://dns.sb:853
  #   - tls://dns.google:853
