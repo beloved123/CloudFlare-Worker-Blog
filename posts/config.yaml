@@ -11,12 +11,12 @@ dns:
   enhanced-mode: redir-host
   listen: 0.0.0.0:53
   nameserver:
-    - tls://1.1.1.1:853
- #   - https://doh.opendns.com/dns-query
+    - tls://cloudflare-dns.com:853
+    - https://doh.opendns.com/dns-query
+    - tls://dns.sb:853
  #   - tls://dns.google:853
  #   - tls://dns.pub:853
  #   - tls://dns.alidns.com:853
- #   - tls://dns.sb:853
  #   - tls://ea-dns.rubyfish.cn:853
  #   - tls://uw-dns.rubyfish.cn:853
  #   - tls://dot.360.cn:853
