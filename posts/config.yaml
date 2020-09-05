@@ -4,9 +4,10 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-ipv6: true
+
 dns:
   enable: true
+  ipv6: true
   enhanced-mode: redir-host
   listen: 0.0.0.0:53
   nameserver:
