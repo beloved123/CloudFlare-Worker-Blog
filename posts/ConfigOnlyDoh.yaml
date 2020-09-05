@@ -6,7 +6,7 @@ log-level: info
 external-controller: :9090
 ipv6: true
 dns:
-  enable: false
+  enable: true
   nameserver:
     - 114.114.114.114
 #    - https://dns.alidns.com/dns-query
