@@ -5,19 +5,19 @@ mode: Rule
 log-level: info
 external-controller: :9090
 ipv6: true
-dns:
-  enable: false
-  ipv6: true
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:5354
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://dns.sb/dns-query
-    - https://ea-dns.rubyfish.cn/dns-query
-    - https://uw-dns.rubyfish.cn/dns-query
-    - https://doh.360.cn/dns-query
-    - https://doh.opendns.com/dns-query
+# dns:
+#  enable: false
+#  ipv6: true
+#  enhanced-mode: redir-host
+#  listen: 0.0.0.0:5354
+#  nameserver:
+#    - https://dns.alidns.com/dns-query
+#    - https://doh.pub/dns-query
+#    - https://dns.sb/dns-query
+#    - https://ea-dns.rubyfish.cn/dns-query
+#    - https://uw-dns.rubyfish.cn/dns-query
+#    - https://doh.360.cn/dns-query
+#    - https://doh.opendns.com/dns-query
    # - https://dns.cloudflare.com/dns-query
    # - https://doh.opendns.com/dns-query
    # - tls://1dot1dot1dot1.cloudflare-dns.com:853
@@ -28,12 +28,12 @@ dns:
    # - tls://uw-dns.rubyfish.cn:853
    # - tls://dot.360.cn:853
    # - tls://dns.google:853
-  fallback:
-    - https://cloudflare-dns.com/dns-query
+#  fallback:
+#    - https://cloudflare-dns.com/dns-query
    # - tls://dns.google:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
+#  fallback-filter:
+#    geoip: true
+#    ipcidr:
    # - 240.0.0.0/4
 proxies:
   - name: 🎵 解锁节点1
