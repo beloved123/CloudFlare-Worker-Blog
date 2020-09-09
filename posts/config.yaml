@@ -9,8 +9,7 @@ dns:
   enable: true
   ipv6: true
   enhanced-mode: redir-host
-#  listen: 0.0.0.0:5354
-  listen: {127.0.0.1:5354, [::1]:5354}
+  listen: 0.0.0.0:5354
   nameserver:
    #   - https://dns.alidns.com/dns-query
    #   - https://doh.pub/dns-query
