@@ -12,7 +12,7 @@ dns:
 #  listen: 0.0.0.0:5354
   listen:
     - 0.0.0.0:5354
-    - [::1]:5364
+#    - [::1]:5354
   nameserver:
    #   - https://dns.alidns.com/dns-query
    #   - https://doh.pub/dns-query
