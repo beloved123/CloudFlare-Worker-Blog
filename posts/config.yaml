@@ -20,8 +20,8 @@ dns:
     - https://dns.cloudflare.com/dns-query
     - https://doh.opendns.com/dns-query
     - https://dns-unfiltered.adguard.com
-    - tls://1dot1dot1dot1.cloudflare-dns.com:853
-    - tls://dns-unfiltered.adguard.com
+   #   - tls://1dot1dot1dot1.cloudflare-dns.com:853
+   #   - tls://dns-unfiltered.adguard.com
    #   - tls://dns.sb:853
    #   - tls://dns.pub:853
    #   - tls://dns.alidns.com:853
@@ -31,7 +31,7 @@ dns:
    #   - tls://dns.google:853
   fallback:
     - https://dns.cloudflare.com/dns-query
-    - tls://dns.google:853
+   #   - tls://dns.google:853
   fallback-filter:
     geoip: true
     ipcidr:
