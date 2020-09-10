@@ -34,7 +34,8 @@ dns:
     geoip: true
     ipcidr:
    # - 240.0.0.0/4
-  interface-name: net
+  experimental:
+    ignore-resolve-fail: true
 proxies:
   - name: 🎵 解锁节点1
     type: ss
