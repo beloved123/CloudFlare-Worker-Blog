@@ -10,6 +10,8 @@ dns:
   ipv6: true
   enhanced-mode: redir-host
   listen: 0.0.0.0:53
+  default-nameserver:
+    - 127.0.0.1
   nameserver:
    #   - https://dns.alidns.com/dns-query
    #   - https://doh.pub/dns-query
