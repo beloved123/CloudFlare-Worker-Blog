@@ -11,7 +11,7 @@ dns:
   enhanced-mode: redir-host
   listen: 0.0.0.0:5354
   default-nameserver:
-    - 0.0.0.0:5354
+    - 1.1.1.1
   nameserver:
    #   - https://dns.alidns.com/dns-query
    #   - https://doh.pub/dns-query
