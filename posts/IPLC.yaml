@@ -1,5 +1,5 @@
 #---------------------------------------------------#
-## 更新：2020-09-19 10:09:17
+## 更新：2020-09-19 09:21:42
 ## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
 ## 链接：https://stc-spadesdns.com/link/rUhT8jazLqDsKYxz?clash=1
 #---------------------------------------------------#
@@ -49,20 +49,6 @@ proxies:
  
   - {"name":"香港 03 [D3/VR/IPLC]","type":"vmess","server":"14.17.97.145","port":5004,"uuid":"3bc521f7-439e-332c-acc4-594398dfa5a2","alterId":2,"cipher":"auto","udp":true} 
  
-  - {"name":"台湾 01 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5011,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
-  - {"name":"日本 01 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5009,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
-  - {"name":"狮城 01 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5007,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
-  - {"name":"美国 01 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5013,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
-  - {"name":"香港 01 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5001,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
-  - {"name":"香港 02 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5003,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
-  - {"name":"香港 03 [D3/SR/IPLC]","type":"ssr","server":"14.17.97.144","port":5005,"cipher":"aes-256-cfb","password":"STC.SS","protocol":"auth_aes128_md5","protocolparam":"371760:seJtzf","obfs":"tls1.2_ticket_auth","obfsparam":"d4ee9371760.update.microsoft.com"} 
- 
  
 proxy-groups: 
 -
@@ -82,33 +68,26 @@ proxy-groups:
     - '香港 01 [D3/VR/IPLC]'
     - '香港 02 [D3/VR/IPLC]'
     - '香港 03 [D3/VR/IPLC]'
-    - '香港 01 [D3/SR/IPLC]'
-    - '香港 02 [D3/SR/IPLC]'
-    - '香港 03 [D3/SR/IPLC]'
 -
   name: 台湾
   type: select
   proxies:
     - '台湾 01 [D3/VR/IPLC]'
-    - '台湾 01 [D3/SR/IPLC]'
 -
   name: 新加坡
   type: select
   proxies:
     - '狮城 01 [D3/VR/IPLC]'
-    - '狮城 01 [D3/SR/IPLC]'
 -
   name: 日本
   type: select
   proxies:
     - '日本 01 [D3/VR/IPLC]'
-    - '日本 01 [D3/SR/IPLC]'
 -
   name: 美国
   type: select
   proxies:
     - '美国 01 [D3/VR/IPLC]'
-    - '美国 01 [D3/SR/IPLC]'
 -
   name: Proxy
   type: select
@@ -120,13 +99,6 @@ proxy-groups:
     - '香港 01 [D3/VR/IPLC]'
     - '香港 02 [D3/VR/IPLC]'
     - '香港 03 [D3/VR/IPLC]'
-    - '台湾 01 [D3/SR/IPLC]'
-    - '日本 01 [D3/SR/IPLC]'
-    - '狮城 01 [D3/SR/IPLC]'
-    - '美国 01 [D3/SR/IPLC]'
-    - '香港 01 [D3/SR/IPLC]'
-    - '香港 02 [D3/SR/IPLC]'
-    - '香港 03 [D3/SR/IPLC]'
 
 
 # 规则 
