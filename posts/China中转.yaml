@@ -64,8 +64,7 @@ proxies:
   - {"name":"V4-香港94|解锁流|1倍率|SSR","type":"ssr","server":"hkt01-yy-ttgbc.youyun666.org","port":34567,"cipher":"chacha20","password":"JXpZpq","protocol":"auth_aes128_md5","protocolparam":"34835:KpZuX6","obfs":"tls1.2_ticket_auth","obfsparam":"3108c34835.microsoft.com"}
 
 proxy-groups:
--
-  name: Proxy
+- name: Proxy
   type: select
   proxies:
     - V4-中转104|上海-俄罗斯|1倍率|V2ray
@@ -96,25 +95,21 @@ proxy-groups:
     - V4-香港152|解锁流|1倍率|V2ray
     - V4-香港78|解锁流|1倍率|SSR
     - V4-香港94|解锁流|1倍率|SSR
--
-  name: Domestic
+- name: Domestic
   type: select
   proxies:
     - DIRECT
     - Proxy
--
-  name: AsianTV
+- name: AsianTV
   type: select
   proxies:
     - Domestic
     - Proxy
--
-  name: GlobalTV
+- name: GlobalTV
   type: select
   proxies:
     - Proxy
--
-  name: Others
+- name: Others
   type: select
   proxies:
     - Proxy
