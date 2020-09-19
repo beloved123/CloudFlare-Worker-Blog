@@ -33,7 +33,7 @@ secret: ''
 # external-ui: folder
 
 
-Proxy:
+proxies:
   - {"name":"V4-中转104|上海-俄罗斯|1倍率|V2ray","type":"vmess","server":"bwg.freevpnet.monster","port":443,"uuid":"76f57f0c-b457-4913-94a5-c219a7bcc493","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/52597205/","ws-headers":{"Host":"bwg.freevpnet.monster"}}
   - {"name":"V4-中转106|上海-俄罗斯|1倍率|V2ray","type":"vmess","server":"shanghai-01.suying666.org","port":38812,"uuid":"56a3c888-5500-3b42-92e2-35330f2c2b5a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"shanghai-01.suying666.org"}}
   - {"name":"V4-中转107|上海-俄罗斯|1倍率|V2ray","type":"vmess","server":"shanghai-01.suying666.org","port":38813,"uuid":"56a3c888-5500-3b42-92e2-35330f2c2b5a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/v2ray","ws-headers":{"Host":"shanghai-01.suying666.org"}}
@@ -63,7 +63,7 @@ Proxy:
   - {"name":"V4-香港78|解锁流|1倍率|SSR","type":"ssr","server":"hkt05-yy-ttgbc.youyun666.org","port":34567,"cipher":"chacha20","password":"JXpZpq","protocol":"auth_aes128_md5","protocolparam":"34835:KpZuX6","obfs":"tls1.2_ticket_auth","obfsparam":"3108c34835.microsoft.com"}
   - {"name":"V4-香港94|解锁流|1倍率|SSR","type":"ssr","server":"hkt01-yy-ttgbc.youyun666.org","port":34567,"cipher":"chacha20","password":"JXpZpq","protocol":"auth_aes128_md5","protocolparam":"34835:KpZuX6","obfs":"tls1.2_ticket_auth","obfsparam":"3108c34835.microsoft.com"}
 
-Proxy Group:
+proxy-groups:
 -
   name: Proxy
   type: select
