@@ -83,6 +83,13 @@ proxy-groups:
       - 🎯 全球直连
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -90,6 +97,13 @@ proxy-groups:
     proxies:
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -98,11 +112,27 @@ proxy-groups:
       - 🎯 全球直连
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - gyddnas.myqnapcloud.cn
+      - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: 🎸 网易云音乐
     type: select
     proxies:
@@ -121,6 +151,13 @@ proxy-groups:
       - 🔰 节点选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: 📲 电报信息
     type: select
     proxies:
@@ -128,6 +165,13 @@ proxy-groups:
       - 🎯 全球直连
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -136,6 +180,13 @@ proxy-groups:
       - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -153,6 +204,13 @@ proxy-groups:
       - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
+      - 台湾 01 [D3/VR/IPLC]
+      - 日本 01 [D3/VR/IPLC]
+      - 狮城 01 [D3/VR/IPLC]
+      - 美国 01 [D3/VR/IPLC]
+      - 香港 01 [D3/VR/IPLC]
+      - 香港 02 [D3/VR/IPLC]
+      - 香港 03 [D3/VR/IPLC]
 rules:
  - DOMAIN-SUFFIX,163yun.com,🎸 网易云音乐
  - DOMAIN-SUFFIX,api.iplay.163.com,🎸 网易云音乐
