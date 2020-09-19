@@ -65,7 +65,6 @@ dns:
    # - 240.0.0.0/4
   experimental:
     ignore-resolve-fail: true
-    interface-name: WLAN
 
 proxies:
   - {name: V4-中转104|上海-俄罗斯|1倍率|V2ray, type: vmess, server: bwg.freevpnet.monster, port: 443, uuid: 76f57f0c-b457-4913-94a5-c219a7bcc493, alterId: 0, cipher: auto, udp: true, network: ws, ws-path: /52597205/, ws-headers: {Host: bwg.freevpnet.monster}}
