@@ -73,7 +73,6 @@ proxies:
   - {name: 香港 01 [D3/VR/IPLC], server: 14.17.97.145, port: 5000, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: 香港 02 [D3/VR/IPLC], server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: 香港 03 [D3/VR/IPLC], server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
- 
 proxy-groups:
   - name: 🔰 节点选择
     type: select
