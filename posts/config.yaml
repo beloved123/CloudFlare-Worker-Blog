@@ -17,20 +17,20 @@ dns:
    # - https://ea-dns.rubyfish.cn/dns-query
    # - https://uw-dns.rubyfish.cn/dns-query
    # - https://doh.360.cn/dns-query
-    - https://dns.cloudflare.com/dns-query
-    - https://doh.opendns.com/dns-query
-    - https://dns-unfiltered.adguard.com
-    - tls://1dot1dot1dot1.cloudflare-dns.com:853
-    - tls://dns-unfiltered.adguard.com:853
-    - tls://dns.sb:853
+   # - https://dns.cloudflare.com/dns-query
+   # - https://doh.opendns.com/dns-query
+   # - https://dns-unfiltered.adguard.com
+   # - tls://1dot1dot1dot1.cloudflare-dns.com:853
+   # - tls://dns-unfiltered.adguard.com:853
+   # - tls://dns.sb:853
    # - tls://dns.pub:853
    # - tls://dns.alidns.com:853
    # - tls://ea-dns.rubyfish.cn:853
    # - tls://uw-dns.rubyfish.cn:853
    # - tls://dot.360.cn:853
-   # - tls://dns.google:853
+    - tls://dns.google:853
   fallback:
-    - https://dns.cloudflare.com/dns-query
+   # - https://dns.cloudflare.com/dns-query
     - tls://dns.google:853
   fallback-filter:
     geoip: true
