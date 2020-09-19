@@ -31,7 +31,41 @@ secret: ''
 # 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
 # 参数应填写配置目录的相对路径或绝对路径。
 # external-ui: folder
-
+ipv6: true
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.sb/dns-query
+    - https://ea-dns.rubyfish.cn/dns-query
+    - https://uw-dns.rubyfish.cn/dns-query
+    - https://doh.360.cn/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://dns-unfiltered.adguard.com/dns-query
+    - tls://1dot1dot1dot1.cloudflare-dns.com:853
+    - tls://dns-unfiltered.adguard.com:853
+    - tls://dns.sb:853
+    - tls://dns.pub:853
+    - tls://dns.alidns.com:853
+    - tls://ea-dns.rubyfish.cn:853
+    - tls://uw-dns.rubyfish.cn:853
+    - tls://dot.360.cn:853
+    - tls://dns.google:853
+  fallback:
+    - https://dns.cloudflare.com/dns-query
+    - tls://dns.google:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+   # - 240.0.0.0/4
+  experimental:
+    ignore-resolve-fail: true
+    interface-name: WLAN
 
 proxies:
   - {"name":"V4-中转104|上海-俄罗斯|1倍率|V2ray","type":"vmess","server":"bwg.freevpnet.monster","port":443,"uuid":"76f57f0c-b457-4913-94a5-c219a7bcc493","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-path":"/52597205/","ws-headers":{"Host":"bwg.freevpnet.monster"}}
@@ -117,7 +151,7 @@ proxy-groups:
 
 
 # 规则
-Rule:
+rules:
 # (GlobalTV)
 # > ABC
 - DOMAIN-SUFFIX,edgedatg.com,GlobalTV
