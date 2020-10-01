@@ -68,7 +68,7 @@ proxies:
   - {name: 🎵 解锁节点6, server: music.lolico.me, port: 39000, type: http, tls: false, skip-cert-verify: false, udp: true}
   - {name: 🎵 超时或并不影响使用, server: ub163.herokuapp.com, port: 8080, type: http, tls: false, skip-cert-verify: false, udp: true}
   - {name: gyddnas.myqnapcloud.cn, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
-  - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-HHHT", server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ, udp: true}
+  - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-HHHT", server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: aes-256-gcm, password: T5ckndbLSXHQ, udp: true}
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-SQ", server: netease-sq.wcc.best, port: 32028, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQ, udp: true}
   - {name: "[SS] 🇨🇳 NeteaseUnblock-CN-SR", server: netease-sr.wcc.best, port: 48933, type: ss, cipher: aes-256-gcm, password: QawxvsgMzUnm5VNe, udp: true}
   - {name: "[SS] 🇰🇷 NeteaseUnblock-KR-CN2GIA", server: netease-kr.wcc.best, port: 58080, type: ss, cipher: chacha20-ietf-poly1305, password: T5ckndbLSXHQ, udp: true}
@@ -81,6 +81,7 @@ proxies:
   - {name: 香港 01 D3/VR/IPLC, server: 14.17.97.145, port: 5000, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: 香港 02 D3/VR/IPLC, server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: 香港 03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: Trojan-Microsoft HK, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -96,6 +97,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -110,6 +112,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -125,6 +128,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -139,6 +143,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: 🎸 网易云音乐
     type: select
     proxies:
@@ -169,6 +174,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: 📲 电报信息
     type: select
     proxies:
@@ -183,6 +189,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -198,6 +205,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -222,6 +230,7 @@ proxy-groups:
       - 香港 01 D3/VR/IPLC
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
+      - Trojan-Microsoft HK
 rules:
  - DOMAIN-SUFFIX,163yun.com,🎸 网易云音乐
  - DOMAIN-SUFFIX,api.iplay.163.com,🎸 网易云音乐
