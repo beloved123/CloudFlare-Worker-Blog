@@ -58,6 +58,8 @@ proxies:
     username: ""
     password: ""
     tls: false
+    false, skip-cert-verify: false
+    udp: false
   - name: 🎵 解锁节点3
     server: taron.top
     port: 100
