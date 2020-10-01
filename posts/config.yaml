@@ -53,7 +53,7 @@ proxies:
     password: desperadoj.com_free_proxy_vrfn
   - name: 🎵 解锁节点2
     server: unblockmusic.yjs2635.xyz
-    port: 2635
+    port: 80
     type: http
     username: ""
     password: ""
