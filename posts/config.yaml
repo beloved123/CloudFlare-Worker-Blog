@@ -52,19 +52,17 @@ proxies:
     cipher: aes-128-gcm
     password: desperadoj.com_free_proxy_emx2
   - name: 🎵 解锁节点2
-    server: unblockmusic.yjs2635.xyz
-    port: 80
-    type: http
-    username: ""
-    password: ""
-    tls: false
+    type: ss
+    server: music.desperadoj.com
+    port: 30001
+    cipher: aes-128-gcm
+    password: desperadoj.com_free_proxy_emx2
   - name: 🎵 解锁节点3
-    server: taron.top
-    port: 100
-    type: http
-    username: ""
-    password: ""
-    tls: false
+    type: ss
+    server: 127.0.0.1
+    port: 8080
+    cipher: aes-128-gcm
+    password: This_proxy_is_for_free
   - {name: 🎵 解锁节点4, server: fs2.ilogic.net.cn, port: 5200, type: http, tls: false, skip-cert-verify: false, udp: true}
   - {name: 🎵 解锁节点5, server: music.desperadoj.com, port: 30001, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_vrfn, udp: true}
   - {name: 🎵 解锁节点6, server: music.lolico.me, port: 39000, type: http, tls: false, skip-cert-verify: false, udp: true}
