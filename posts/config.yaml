@@ -52,8 +52,8 @@ proxies:
     cipher: aes-128-gcm
     password: desperadoj.com_free_proxy_vrfn
   - name: 🎵 解锁节点2
-    server: music.lolico.me
-    port: 39000
+    server: 106.52.127.72
+    port: 19951
     type: http
     username: ""
     password: ""
