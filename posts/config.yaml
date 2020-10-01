@@ -52,14 +52,12 @@ proxies:
     cipher: aes-128-gcm
     password: desperadoj.com_free_proxy_vrfn
   - name: 🎵 解锁节点2
-    server: 106.52.127.72
-    port: 19951
+    server: unblockmusic.yjs2635.xyz
+    port: 2635
     type: http
     username: ""
     password: ""
     tls: false
-    false, skip-cert-verify: false
-    udp: false
   - name: 🎵 解锁节点3
     server: taron.top
     port: 100
