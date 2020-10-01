@@ -217,6 +217,7 @@ proxy-groups:
       - 香港 02 D3/VR/IPLC
       - 香港 03 D3/VR/IPLC
 rules:
+ - DOMAIN-SUFFIX,music.126.net,🎯 全球直连
  - DOMAIN-SUFFIX,163yun.com,🎸 网易云音乐
  - DOMAIN-SUFFIX,api.iplay.163.com,🎸 网易云音乐
  - DOMAIN-SUFFIX,hz.netease.com,🎸 网易云音乐
