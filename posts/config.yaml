@@ -50,7 +50,7 @@ proxies:
     server: music.desperadoj.com
     port: 30001
     cipher: aes-128-gcm
-    password: desperadoj.com_free_proxy_vrfn
+    password: desperadoj.com_free_proxy_emx2
   - name: 🎵 解锁节点2
     server: unblockmusic.yjs2635.xyz
     port: 80
