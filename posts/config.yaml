@@ -227,7 +227,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🔰 节点选择
       - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
