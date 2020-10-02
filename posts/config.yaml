@@ -8,7 +8,7 @@ ipv6: true
 dns:
   enable: true
   ipv6: true
-  listen: 0.0.0.0:5354
+  listen: :53
   enhanced-mode: redir-host
   nameserver:
 #    - https://dns.alidns.com/dns-query
