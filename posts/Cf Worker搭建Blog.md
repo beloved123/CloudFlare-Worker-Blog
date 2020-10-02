@@ -3,7 +3,6 @@
 <a href="https://blog.buildtest.club/">
   <img src="https://secure.gravatar.com/avatar/" width="100" alt="App Icon" />
 </a>
-[项目地址](https://github.com/LittleRey/CloudFlare-Worker-Blog)
 
 
 # 用法
@@ -23,7 +22,7 @@ Cd cloudflare-worker-blog/
 
 ```
 # 示例
-git clone https://github.com/LittleRey/CloudFlare-Worker-Blog
+git clone https://github.com/xxx/CloudFlare-Worker-Blog
 cd cloudflare-worker-blog/
 ```
 
