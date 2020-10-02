@@ -310,6 +310,14 @@ rules:
  
  - SRC-PORT,53,🛑 DNS拦截
  - DST-PORT,53,🛑 DNS拦截
+ - IP-CIDR,224.0.0.251,🛑 DNS拦截
+ - IP-CIDR,224.0.0.252,🛑 DNS拦截
+ - IP-CIDR,10.0.0.255,🛑 DNS拦截
+ - IP-CIDR,239.255.255.250,🛑 DNS拦截
+ - SRC-IP-CIDR,224.0.0.251,🛑 DNS拦截
+ - SRC-IP-CIDR,224.0.0.252,🛑 DNS拦截
+ - SRC-IP-CIDR,239.255.255.250,🛑 DNS拦截
+ - SRC-IP-CIDR,10.0.0.255,🛑 DNS拦截
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
  - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
