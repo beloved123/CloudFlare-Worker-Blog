@@ -144,6 +144,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
       - 台湾 01 D3/VR/IPLC
@@ -176,6 +177,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
       - 台湾 01 D3/VR/IPLC
@@ -191,6 +193,7 @@ proxy-groups:
     type: select
     proxies:
       - 🔰 节点选择
+      - ♻️ 自动选择
       - 🎯 全球直连
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
@@ -207,8 +210,8 @@ proxy-groups:
     type: select
     proxies:
       - 🔰 节点选择
-      - 🎯 全球直连
       - ♻️ 自动选择
+      - 🎯 全球直连
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
       - 台湾 01 D3/VR/IPLC
@@ -224,6 +227,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 🔰 节点选择
       - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
@@ -241,6 +245,7 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
+      - 🔰 节点选择
       - ♻️ 自动选择
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
@@ -257,8 +262,8 @@ proxy-groups:
     type: select
     proxies:
       - 🔰 节点选择
-      - 🎯 全球直连
       - ♻️ 自动选择
+      - 🎯 全球直连
       - gyddnas.myqnapcloud.cn
       - Heroku-V2ray
       - 台湾 01 D3/VR/IPLC
