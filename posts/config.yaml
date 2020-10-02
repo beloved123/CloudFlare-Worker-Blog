@@ -9,7 +9,11 @@ dns:
   enable: true
   ipv6: true
   listen: :53
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+#    - '*.lan'
+#    - localhost.ptlogin2.qq.com
   nameserver:
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
@@ -35,8 +39,9 @@ dns:
 #    - tls://dns.google:853
   fallback:
     - https://dns.cloudflare.com/dns-query
+    - https://dns-unfiltered.adguard.com/dns-query
 #    - https://dns.alidns.com/dns-query
-    - https://dns.google.com/dns-query
+#    - https://dns.google.com/dns-query
 #    - tls://dns.google:853
   fallback-filter:
     geoip: true
@@ -83,6 +88,7 @@ proxies:
   - {name: 香港 02 D3/VR/IPLC, server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: 香港 03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: Trojan-Microsoft HK, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
+  - {name: 拒绝访问, server: blog.buildtest.site, port: 8888, type: ss, cipher: aes-256-gcm, password: 111111, udp: true}
   - name: 🇯🇵 Japan · Tokyo 12
     server: 45.87.213.3
     port: 34651
@@ -122,11 +128,10 @@ proxy-groups:
       - 香港 03 D3/VR/IPLC
       - Trojan-Microsoft HK
       -  🇯🇵 Japan · Tokyo 12
-  - name: 🛑 DNS拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
+#  - name: 🛑 DNS拦截
+#    type: select
+#    proxies:
+#      - 拒绝访问
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -308,16 +313,31 @@ rules:
  - IP-CIDR,223.252.199.66/31,🎸 网易云音乐,no-resolve
  - IP-CIDR,223.252.199.67/32,🎸 网易云音乐,no-resolve
  
+ - SRC-PORT,2,🛑 DNS拦截
+ - DST-PORT,2,🛑 DNS拦截
  - SRC-PORT,53,🛑 DNS拦截
  - DST-PORT,53,🛑 DNS拦截
- - IP-CIDR,224.0.0.251,🛑 DNS拦截
- - IP-CIDR,224.0.0.252,🛑 DNS拦截
- - IP-CIDR,10.0.0.255,🛑 DNS拦截
- - IP-CIDR,239.255.255.250,🛑 DNS拦截
- - SRC-IP-CIDR,224.0.0.251,🛑 DNS拦截
- - SRC-IP-CIDR,224.0.0.252,🛑 DNS拦截
- - SRC-IP-CIDR,239.255.255.250,🛑 DNS拦截
- - SRC-IP-CIDR,10.0.0.255,🛑 DNS拦截
+ - SRC-PORT,953,🛑 DNS拦截
+ - DST-PORT,953,🛑 DNS拦截
+ - SRC-PORT,5353,🛑 DNS拦截
+ - DST-PORT,5353,🛑 DNS拦截
+ - SRC-PORT,5355,🛑 DNS拦截
+ - DST-PORT,5355,🛑 DNS拦截
+ - SRC-PORT,1900,🛑 DNS拦截
+ - DST-PORT,1900,🛑 DNS拦截
+ - SRC-PORT,52219,🛑 DNS拦截
+ - DST-PORT,52219,🛑 DNS拦截
+ - IP-CIDR,224.0.0.251/30,🛑 DNS拦截
+ - IP-CIDR,224.0.0.252/30,🛑 DNS拦截
+ - IP-CIDR,239.255.255.250/30,🛑 DNS拦截
+ - IP-CIDR,10.0.0.255/30,🛑 DNS拦截
+ - IP-CIDR,192.168.0.1/16,🛑 DNS拦截
+ - SRC-IP-CIDR,224.0.0.251/30,🛑 DNS拦截
+ - SRC-IP-CIDR,224.0.0.252/30,🛑 DNS拦截
+ - SRC-IP-CIDR,239.255.255.250/30,🛑 DNS拦截
+ - SRC-IP-CIDR,10.0.0.255/30,🛑 DNS拦截
+ - SRC-IP-CIDR,192.168.0.1/16,🛑 DNS拦截
+ 
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
  - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
