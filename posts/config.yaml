@@ -74,7 +74,7 @@ proxies:
   - {name: NeteaseUnblock-JP-IOS, server: netease-jp.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: ngIF8Qs52OSElP6x}
   - {name: NeteaseUnblock-CN-HHHT-PC, server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ}
   - {name: NeteaseUnblock-CN-HHHT-IOS, server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ}
-  - {name: HK-Myqnapcloud, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
+  - {name: HK-MyQnapCloud, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
   - {name: Heroku-V2ray, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
   - {name: TW-01 D3/VR/IPLC, server: 14.17.97.145, port: 5010, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: JP-01 D3/VR/IPLC, server: 14.17.97.145, port: 5008, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
@@ -95,7 +95,7 @@ proxy-groups:
     proxies:
       - PingTest
       - DirectConnect
-      - HK-Myqnapcloud
+      - HK-MyQnapCloud
       - Heroku-V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
@@ -111,7 +111,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - HK-Myqnapcloud
+      - HK-MyQnapCloud
       - Heroku-V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
@@ -149,7 +149,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - HK-Myqnapcloud
+      - HK-MyQnapCloud
       - Heroku-V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
@@ -166,7 +166,7 @@ proxy-groups:
     proxies:
       - Proxy
       - DirectConnect
-      - HK-Myqnapcloud
+      - HK-MyQnapCloud
       - Heroku-V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
