@@ -82,11 +82,6 @@ proxies:
 #Dns污染回环本地
   - {name: REJECT DNS, server: 127.0.0.1, port: 53, type: http, cipher: aes-256-gcm, udp: true}
 proxy-groups:
-  
-  - name: DnsBlock
-    type: select
-    proxies:
-      - REJECT DNS
 
   - name: Proxy
     type: select
@@ -120,6 +115,11 @@ proxy-groups:
       - HK-03 D3/VR/IPLC
       - HK-Microsoft
       - JP-Tokyo 12
+  
+  - name: DnsBlock
+    type: select
+    proxies:
+      - REJECT
 
   - name: Netease
     type: select
@@ -172,6 +172,8 @@ proxy-groups:
       - JP-Tokyo 12
 rules:
 
+
+# 禁用所有DNS相关
  - SRC-PORT,0,DnsBlock
  - DST-PORT,0,DnsBlock
  - SRC-PORT,2,DnsBlock
@@ -199,10 +201,11 @@ rules:
  - SRC-IP-CIDR,10.0.0.255/32,DnsBlock
  - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
  
-
+# Google
  - DOMAIN-KEYWORD,google,Proxy
  
  
+# Dns Over Https直连
  - DOMAIN,dns.cloudflare.com,DirectConnect
  - DOMAIN,doh.opendns.com,DirectConnect
  - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
@@ -222,7 +225,7 @@ rules:
  - DOMAIN,doh.rixcloud.dev,DirectConnect
 
  
-
+# Github走代理
  - DOMAIN-KEYWORD,github,Proxy
  - DOMAIN-SUFFIX,github.com,Proxy
  - DOMAIN-SUFFIX,github.io,Proxy
@@ -235,6 +238,7 @@ rules:
  - DOMAIN-SUFFIX,googleapis.cn,Proxy
 
 
+# 网易云规则
  - DOMAIN-SUFFIX,163yun.com,Netease
  - DOMAIN-SUFFIX,music.163.com,Netease
  - DOMAIN-SUFFIX,music.126.net,Netease
