@@ -18,7 +18,7 @@ dns:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
   nameserver:
-#    - https://dns.alidns.com/dns-query
+    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
