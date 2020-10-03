@@ -11,15 +11,15 @@ dns:
   enable: true
   ipv6: true
   listen: :53
-  enhanced-mode: fake-ip
+  enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
+#  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
   nameserver:
-    - https://dns.alidns.com/dns-query
+#    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
-#    - https://ea-dns.rubyfish.cn/dns-query
+    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
 #    - https://doh.360.cn/dns-query
     - https://doh.dns.sb/dns-query
@@ -45,7 +45,7 @@ dns:
     - https://dns.cloudflare.com/dns-query
     - https://dns-unfiltered.adguard.com/dns-query
 #    - https://dns.alidns.com/dns-query
-#    - https://dns.google.com/dns-query
+    - https://dns.google.com/dns-query
 #    - tls://dns.google:853
   fallback-filter:
     geoip: true
