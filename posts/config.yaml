@@ -82,7 +82,13 @@ proxies:
 #Dns污染回环本地
   - {name: REJECT DNS, server: 127.0.0.1, port: 53, type: http, cipher: aes-256-gcm, udp: true}
 proxy-groups:
-  - name: Proxies
+  
+  - name: DnsBlock
+    type: select
+    proxies:
+      - REJECT DNS
+
+  - name: Proxy
     type: select
     proxies:
       - PingTest
@@ -131,10 +137,6 @@ proxy-groups:
       - NeteaseUnblock-CN-HHHT-PC
       - NeteaseUnblock-CN-HHHT-IOS
 
-  - name: DnsBlock
-    type: select
-    proxies:
-      - REJECT DNS
 
   - name: DirectConnect
     type: select
@@ -155,7 +157,7 @@ proxy-groups:
   - name: Final
     type: select
     proxies:
-      - Proxies
+      - Proxy
       - DirectConnect
       - HK-Myqnapcloud
       - Heroku-V2ray
@@ -198,7 +200,7 @@ rules:
  - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
  
 
- - DOMAIN-KEYWORD,google,Proxies
+ - DOMAIN-KEYWORD,google,Proxy
  
  
  - DOMAIN,dns.cloudflare.com,DirectConnect
@@ -221,16 +223,16 @@ rules:
 
  
 
- - DOMAIN-KEYWORD,github,Proxies
- - DOMAIN-SUFFIX,github.com,Proxies
- - DOMAIN-SUFFIX,github.io,Proxies
- - DOMAIN-SUFFIX,githubapp.com,Proxies
- - DOMAIN-SUFFIX,githubassets.com,Proxies
- - DOMAIN-SUFFIX,githubusercontent.com,Proxies
- - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxies
- - DOMAIN,ip.skk.moe,Proxies
- - DOMAIN,ip.sb,Proxies
- - DOMAIN-SUFFIX,googleapis.cn,Proxies
+ - DOMAIN-KEYWORD,github,Proxy
+ - DOMAIN-SUFFIX,github.com,Proxy
+ - DOMAIN-SUFFIX,github.io,Proxy
+ - DOMAIN-SUFFIX,githubapp.com,Proxy
+ - DOMAIN-SUFFIX,githubassets.com,Proxy
+ - DOMAIN-SUFFIX,githubusercontent.com,Proxy
+ - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxy
+ - DOMAIN,ip.skk.moe,Proxy
+ - DOMAIN,ip.sb,Proxy
+ - DOMAIN-SUFFIX,googleapis.cn,Proxy
 
 
  - DOMAIN-SUFFIX,163yun.com,Netease
@@ -270,4 +272,4 @@ rules:
 
 
  - GEOIP,CN,DirectConnect
- - MATCH,Proxies
+ - MATCH,Proxy
