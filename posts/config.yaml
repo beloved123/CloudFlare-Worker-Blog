@@ -246,6 +246,17 @@ rules:
 
 
 # 网易云规则
+ - DOMAIN,p1.music.126.net,DirectConnect
+ - DOMAIN,p2.music.126.net,DirectConnect
+ - DOMAIN,p3.music.126.net,DirectConnect
+ - DOMAIN,p4.music.126.net,DirectConnect
+ - DOMAIN,p5.music.126.net,DirectConnect
+ - DOMAIN,p6.music.126.net,DirectConnect
+ - DOMAIN,p7.music.126.net,DirectConnect
+ - DOMAIN,p8.music.126.net,DirectConnect
+ - DOMAIN,p9.music.126.net,DirectConnect
+ - DOMAIN,p10.music.126.net,DirectConnect
+
  - DOMAIN-SUFFIX,163yun.com,Netease
  - DOMAIN-SUFFIX,music.163.com,Netease
  - DOMAIN-SUFFIX,music.126.net,Netease
