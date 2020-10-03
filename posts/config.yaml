@@ -169,7 +169,7 @@ proxy-groups:
       - HK-Microsoft
       - JP-Tokyo 12
 rules:
-#Google
+
  - DOMAIN,mtalk.google.com,DirectConnect
  - DOMAIN,alt1-mtalk.google.com,DirectConnect
  - DOMAIN,alt2-mtalk.google.com,DirectConnect
@@ -180,7 +180,7 @@ rules:
  - DOMAIN,alt7-mtalk.google.com,DirectConnect
  - DOMAIN,alt8-mtalk.google.com,DirectConnect
  - DOMAIN,alt9-mtalk.google.com,DirectConnect
-#Dns over https
+
  - DOMAIN,dns.cloudflare.com,DirectConnect
  - DOMAIN,doh.opendns.com,DirectConnect
  - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
@@ -200,7 +200,7 @@ rules:
  - DOMAIN,doh.rixcloud.dev,DirectConnect
 
  
-#Github
+
  - DOMAIN-KEYWORD,github,Proxies
  - DOMAIN-SUFFIX,github.com,Proxies
  - DOMAIN-SUFFIX,github.io,Proxies
@@ -212,7 +212,7 @@ rules:
  - DOMAIN,ip.sb,Proxies
  - DOMAIN-SUFFIX,googleapis.cn,Proxies
 
-#Netease Music
+
  - DOMAIN-SUFFIX,163yun.com,Netease
  - DOMAIN-SUFFIX,music.163.com,Netease
  - DOMAIN-SUFFIX,music.126.net,Netease
@@ -246,7 +246,7 @@ rules:
  - IP-CIDR,223.252.199.66/32,Netease
  - IP-CIDR,223.252.199.67/32,Netease
 
-#Dns Pollution
+
  - SRC-PORT,0,DnsBlock
  - DST-PORT,0,DnsBlock
  - SRC-PORT,2,DnsBlock
