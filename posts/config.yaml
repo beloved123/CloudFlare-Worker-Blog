@@ -20,10 +20,10 @@ dns:
   nameserver:
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
-#    - https://dns.sb/dns-query
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
 #    - https://doh.360.cn/dns-query
+    - https://doh.dns.sb/dns-query
     - https://dns.cloudflare.com/dns-query
     - https://doh.opendns.com/dns-query
     - https://dns-unfiltered.adguard.com/dns-query
@@ -31,6 +31,8 @@ dns:
     - https://dns10.quad9.net/dns-query
     - https://doh.crypto.sx/dns-query
     - https://dns.containerpi.com/dns-query
+    - https://dns.pumplex.com/dns-query
+    - https://doh.rixcloud.dev/dns-query
 #    - tls://1dot1dot1dot1.cloudflare-dns.com:853
 #    - tls://dns-unfiltered.adguard.com:853
 #    - tls://dns.sb:853
@@ -43,7 +45,7 @@ dns:
   fallback:
     - https://dns.cloudflare.com/dns-query
     - https://dns-unfiltered.adguard.com/dns-query
-    - https://dns.alidns.com/dns-query
+#    - https://dns.alidns.com/dns-query
 #    - https://dns.google.com/dns-query
 #    - tls://dns.google:853
   fallback-filter:
@@ -166,6 +168,7 @@ proxy-groups:
       - HK-Microsoft
       - JP-Tokyo 12
 rules:
+#Google
  - DOMAIN,mtalk.google.com,DirectConnect
  - DOMAIN,alt1-mtalk.google.com,DirectConnect
  - DOMAIN,alt2-mtalk.google.com,DirectConnect
@@ -176,6 +179,27 @@ rules:
  - DOMAIN,alt7-mtalk.google.com,DirectConnect
  - DOMAIN,alt8-mtalk.google.com,DirectConnect
  - DOMAIN,alt9-mtalk.google.com,DirectConnect
+#Dns over https
+ - DOMAIN,dns.cloudflare.com,DirectConnect
+ - DOMAIN,doh.opendns.com,DirectConnect
+ - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
+ - DOMAIN,ddns.nextdns.io,DirectConnect
+ - DOMAIN,dns10.quad9.net,DirectConnect
+ - DOMAIN,doh.crypto.sx,DirectConnect
+ - DOMAIN,dns.containerpi.com,DirectConnect
+ - DOMAIN,dns.alidns.com,DirectConnect
+ - DOMAIN,doh.pub,DirectConnect
+ - DOMAIN,doh.dns.sb,DirectConnect
+ - DOMAIN,dns.sb,DirectConnect
+ - DOMAIN,ea-dns.rubyfish.cn,DirectConnect
+ - DOMAIN,uw-dns.rubyfish.cn,DirectConnect
+ - DOMAIN,doh.360.cn,DirectConnect
+ - DOMAIN,dns.google,DirectConnect
+ - DOMAIN,dns.pumplex.com,DirectConnect
+ - DOMAIN,doh.rixcloud.dev,DirectConnect
+
+ 
+#Github
  - DOMAIN-KEYWORD,github,Proxies
  - DOMAIN-SUFFIX,github.com,Proxies
  - DOMAIN-SUFFIX,github.io,Proxies
@@ -187,6 +211,7 @@ rules:
  - DOMAIN,ip.sb,Proxies
  - DOMAIN-SUFFIX,googleapis.cn,Proxies
 
+#Netease Music
  - DOMAIN-SUFFIX,163yun.com,Netease
  - DOMAIN-SUFFIX,music.163.com,Netease
  - DOMAIN-SUFFIX,music.126.net,Netease
