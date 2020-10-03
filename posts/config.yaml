@@ -170,17 +170,37 @@ proxy-groups:
       - JP-Tokyo 12
 rules:
 
- - DOMAIN,mtalk.google.com,DirectConnect
- - DOMAIN,alt1-mtalk.google.com,DirectConnect
- - DOMAIN,alt2-mtalk.google.com,DirectConnect
- - DOMAIN,alt3-mtalk.google.com,DirectConnect
- - DOMAIN,alt4-mtalk.google.com,DirectConnect
- - DOMAIN,alt5-mtalk.google.com,DirectConnect
- - DOMAIN,alt6-mtalk.google.com,DirectConnect
- - DOMAIN,alt7-mtalk.google.com,DirectConnect
- - DOMAIN,alt8-mtalk.google.com,DirectConnect
- - DOMAIN,alt9-mtalk.google.com,DirectConnect
+ - SRC-PORT,0,DnsBlock
+ - DST-PORT,0,DnsBlock
+ - SRC-PORT,2,DnsBlock
+ - DST-PORT,2,DnsBlock
+ - SRC-PORT,53,DnsBlock
+ - DST-PORT,53,DnsBlock
+ - SRC-PORT,953,DnsBlock
+ - DST-PORT,953,DnsBlock
+ - SRC-PORT,5353,DnsBlock
+ - DST-PORT,5353,DnsBlock
+ - SRC-PORT,5355,DnsBlock
+ - DST-PORT,5355,DnsBlock
+ - SRC-PORT,1900,DnsBlock
+ - DST-PORT,1900,DnsBlock
+ - SRC-PORT,52219,DnsBlock
+ - DST-PORT,52219,DnsBlock
+ - IP-CIDR,224.0.0.251/32,DnsBlock
+ - IP-CIDR,224.0.0.252/32,DnsBlock
+ - IP-CIDR,239.255.255.250/32,DnsBlock
+ - IP-CIDR,10.0.0.255/32,DnsBlock
+ - IP-CIDR,192.168.0.1/16,DnsBlock
+ - SRC-IP-CIDR,224.0.0.251/32,DnsBlock
+ - SRC-IP-CIDR,224.0.0.252/32,DnsBlock
+ - SRC-IP-CIDR,239.255.255.250/32,DnsBlock
+ - SRC-IP-CIDR,10.0.0.255/32,DnsBlock
+ - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
+ 
 
+ - DOMAIN-KEYWORD,google,Proxies
+ 
+ 
  - DOMAIN,dns.cloudflare.com,DirectConnect
  - DOMAIN,doh.opendns.com,DirectConnect
  - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
@@ -247,33 +267,7 @@ rules:
  - IP-CIDR,223.252.199.67/32,Netease
 
 
- - SRC-PORT,0,DnsBlock
- - DST-PORT,0,DnsBlock
- - SRC-PORT,2,DnsBlock
- - DST-PORT,2,DnsBlock
- - SRC-PORT,53,DnsBlock
- - DST-PORT,53,DnsBlock
- - SRC-PORT,953,DnsBlock
- - DST-PORT,953,DnsBlock
- - SRC-PORT,5353,DnsBlock
- - DST-PORT,5353,DnsBlock
- - SRC-PORT,5355,DnsBlock
- - DST-PORT,5355,DnsBlock
- - SRC-PORT,1900,DnsBlock
- - DST-PORT,1900,DnsBlock
- - SRC-PORT,52219,DnsBlock
- - DST-PORT,52219,DnsBlock
- - IP-CIDR,224.0.0.251/32,DnsBlock
- - IP-CIDR,224.0.0.252/32,DnsBlock
- - IP-CIDR,239.255.255.250/32,DnsBlock
- - IP-CIDR,10.0.0.255/32,DnsBlock
- - IP-CIDR,192.168.0.1/16,DnsBlock
- - SRC-IP-CIDR,224.0.0.251/32,DnsBlock
- - SRC-IP-CIDR,224.0.0.252/32,DnsBlock
- - SRC-IP-CIDR,239.255.255.250/32,DnsBlock
- - SRC-IP-CIDR,10.0.0.255/32,DnsBlock
- - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
- 
+
 
  - GEOIP,CN,DirectConnect
  - MATCH,Proxies
