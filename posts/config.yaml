@@ -10,18 +10,16 @@ ipv6: true
 dns:
   enable: true
   ipv6: true
-  listen: :5354
+  listen: 0.0.0.0:53
   enhanced-mode: redir-host
-  fake-ip-range: 198.18.0.1/16
+#  fake-ip-range: 198.18.0.1/16
 #  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
+  default-nameserver:
+    - 223.5.5.5
   nameserver:
-    - https://dns.alidns.com/dns-query
-#    - https://doh.pub/dns-query
-#    - https://ea-dns.rubyfish.cn/dns-query
-#    - https://uw-dns.rubyfish.cn/dns-query
-#    - https://doh.360.cn/dns-query
+
     - https://doh.dns.sb/dns-query
     - https://dns.cloudflare.com/dns-query
     - https://doh.opendns.com/dns-query
@@ -32,8 +30,16 @@ dns:
     - https://dns.containerpi.com/dns-query
     - https://dns.pumplex.com/dns-query
     - https://doh.rixcloud.dev/dns-query
+
+    - https://dns.alidns.com/dns-query
+#    - https://doh.pub/dns-query
+#    - https://ea-dns.rubyfish.cn/dns-query
+#    - https://uw-dns.rubyfish.cn/dns-query
+#    - https://doh.360.cn/dns-query
+
     - tls://1dot1dot1dot1.cloudflare-dns.com:853
     - tls://dns-unfiltered.adguard.com:853
+
 #    - tls://dns.sb:853
 #    - tls://dns.pub:853
 #    - tls://dns.alidns.com:853
@@ -117,10 +123,10 @@ proxy-groups:
       - HK-Microsoft
       - JP-Tokyo 12
   
-  - name: DnsBlock
-    type: select
-    proxies:
-      - REJECT
+#  - name: DnsBlock
+#    type: select
+#    proxies:
+#      - REJECT
 
   - name: Netease
     type: select
@@ -175,32 +181,32 @@ rules:
 
 
 # 禁用所有DNS相关
- - SRC-PORT,0,DnsBlock
- - DST-PORT,0,DnsBlock
- - SRC-PORT,2,DnsBlock
- - DST-PORT,2,DnsBlock
- - SRC-PORT,53,DnsBlock
- - DST-PORT,53,DnsBlock
- - SRC-PORT,953,DnsBlock
- - DST-PORT,953,DnsBlock
- - SRC-PORT,5353,DnsBlock
- - DST-PORT,5353,DnsBlock
- - SRC-PORT,5355,DnsBlock
- - DST-PORT,5355,DnsBlock
- - SRC-PORT,1900,DnsBlock
- - DST-PORT,1900,DnsBlock
- - SRC-PORT,52219,DnsBlock
- - DST-PORT,52219,DnsBlock
- - IP-CIDR,224.0.0.251/32,DnsBlock
- - IP-CIDR,224.0.0.252/32,DnsBlock
- - IP-CIDR,239.255.255.250/32,DnsBlock
- - IP-CIDR,10.0.0.255/32,DnsBlock
- - IP-CIDR,192.168.0.1/16,DnsBlock
- - SRC-IP-CIDR,224.0.0.251/32,DnsBlock
- - SRC-IP-CIDR,224.0.0.252/32,DnsBlock
- - SRC-IP-CIDR,239.255.255.250/32,DnsBlock
- - SRC-IP-CIDR,10.0.0.255/32,DnsBlock
- - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
+# - SRC-PORT,0,DnsBlock
+# - DST-PORT,0,DnsBlock
+# - SRC-PORT,2,DnsBlock
+# - DST-PORT,2,DnsBlock
+# - SRC-PORT,53,DnsBlock
+# - DST-PORT,53,DnsBlock
+# - SRC-PORT,953,DnsBlock
+# - DST-PORT,953,DnsBlock
+# - SRC-PORT,5353,DnsBlock
+# - DST-PORT,5353,DnsBlock
+# - SRC-PORT,5355,DnsBlock
+# - DST-PORT,5355,DnsBlock
+# - SRC-PORT,1900,DnsBlock
+# - DST-PORT,1900,DnsBlock
+# - SRC-PORT,52219,DnsBlock
+# - DST-PORT,52219,DnsBlock
+# - IP-CIDR,224.0.0.251/32,DnsBlock
+# - IP-CIDR,224.0.0.252/32,DnsBlock
+# - IP-CIDR,239.255.255.250/32,DnsBlock
+# - IP-CIDR,10.0.0.255/32,DnsBlock
+# - IP-CIDR,192.168.0.1/16,DnsBlock
+# - SRC-IP-CIDR,224.0.0.251/32,DnsBlock
+# - SRC-IP-CIDR,224.0.0.252/32,DnsBlock
+# - SRC-IP-CIDR,239.255.255.250/32,DnsBlock
+# - SRC-IP-CIDR,10.0.0.255/32,DnsBlock
+# - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
  
 # Google
  - DOMAIN-KEYWORD,google,Proxy
