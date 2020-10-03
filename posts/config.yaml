@@ -5,6 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 ipv6: true
+
+interface-name:
+
 dns:
   enable: true
   ipv6: true
@@ -51,22 +54,12 @@ dns:
     ignore-resolve-fail: true
 
 proxies:
-  - name: 🎵 解锁节点1
-    type: ss
-    server: music.desperadoj.com
-    port: 30001
-    cipher: aes-128-gcm
-    password: desperadoj.com_free_proxy_emx2
-  - name: 🎵 解锁节点2
-    type: ss
-    server: music.desperadoj.com
-    port: 30001
-    cipher: aes-128-gcm
-    password: desperadoj.com_free_proxy_emx2
-  - {name: 🎵 解锁节点3, server: fs2.ilogic.net.cn, port: 5200, type: http, tls: false, skip-cert-verify: false, udp: true}
-  - {name: 🎵 解锁节点4, server: music.desperadoj.com, port: 30001, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_vrfn, udp: true}
-  - {name: 🎵 解锁节点5, server: music.lolico.me, port: 39000, type: http, tls: false, skip-cert-verify: false, udp: true}
-  - {name: gyddnas.myqnapcloud.cn, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
+  - {name: NeteaseUnblock 1, type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
+  - {name: NeteaseUnblock 2, type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
+  - {name: NeteaseUnblock 3, server: fs2.ilogic.net.cn, port: 5200, type: http, tls: false, skip-cert-verify: false, udp: true}
+  - {name: NeteaseUnblock 4, server: music.desperadoj.com, port: 30001, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_vrfn, udp: true}
+  - {name: NeteaseUnblock 5, server: music.lolico.me, port: 39000, type: http, tls: false, skip-cert-verify: false, udp: true}
+  - {name: HK-Myqnapcloud, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
   - {name: NeteaseUnblock-HK-PC, server: 99.83.196.141, port: 58080, type: ss, cipher: rc4-md5, password: ieG9l1nte5eo7IBZas84jLi, udp: true}
   - {name: NeteaseUnblock-HK-IOS, server: 99.83.196.141, port: 58081, type: ss, cipher: rc4-md5, password: ieG9l1nte5eo7IBZas84jLi, udp: true}
   - {name: NeteaseUnblock-JP-PC, server: netease-jp.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: ngIF8Qs52OSElP6x, udp: true}
@@ -74,221 +67,115 @@ proxies:
   - {name: NeteaseUnblock-CN-HHHT-PC, server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: NeteaseUnblock-CN-HHHT-IOS, server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: Heroku-V2ray, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
-  - {name: 台湾 01 D3/VR/IPLC, server: 14.17.97.145, port: 5010, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: 日本 01 D3/VR/IPLC, server: 14.17.97.145, port: 5008, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: 狮城 01 D3/VR/IPLC, server: 14.17.97.145, port: 5006, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: 美国 01 D3/VR/IPLC, server: 14.17.97.145, port: 5012, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: 香港 01 D3/VR/IPLC, server: 14.17.97.145, port: 5000, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: 香港 02 D3/VR/IPLC, server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: 香港 03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: Trojan-Microsoft HK, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
+  - {name: TW-01 D3/VR/IPLC, server: 14.17.97.145, port: 5010, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: JP-01 D3/VR/IPLC, server: 14.17.97.145, port: 5008, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: SG-01 D3/VR/IPLC, server: 14.17.97.145, port: 5006, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: US-01 D3/VR/IPLC, server: 14.17.97.145, port: 5012, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: HK-01 D3/VR/IPLC, server: 14.17.97.145, port: 5000, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: HK-02 D3/VR/IPLC, server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: HK-03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: HK-Microsoft, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
+  - {name: JP-Tokyo 12, server: 45.87.213.3, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+
   - {name: 拒绝访问, server: blog.buildtest.site, port: 8888, type: ss, cipher: aes-256-gcm, password: 111111, udp: true}
-  - name: 🇯🇵 Japan · Tokyo 12
-    server: 45.87.213.3
-    port: 34651
-    type: ss
-    cipher: aes-256-gcm
-    password: fQrrhJUGWCGRfgvJgPDDX5sN
 proxy-groups:
-  - name: 🔰 节点选择
+  - name: Proxies
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - gyddnas.myqnapcloud.cn
+      - PingTest
+      - DirectConnect
+      - HK-Myqnapcloud
       - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: ♻️ 自动选择
+      - TW-01 D3/VR/IPLC
+      - JP-01 D3/VR/IPLC
+      - SG-01 D3/VR/IPLC
+      - US-01 D3/VR/IPLC
+      - HK-01 D3/VR/IPLC
+      - HK-02 D3/VR/IPLC
+      - HK-03 D3/VR/IPLC
+      - HK-Microsoft
+      - JP-Tokyo 12
+  - name: PingTest
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - gyddnas.myqnapcloud.cn
+      - HK-Myqnapcloud
       - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
+      - TW-01 D3/VR/IPLC
+      - JP-01 D3/VR/IPLC
+      - SG-01 D3/VR/IPLC
+      - US-01 D3/VR/IPLC
+      - HK-01 D3/VR/IPLC
+      - HK-02 D3/VR/IPLC
+      - HK-03 D3/VR/IPLC
+      - HK-Microsoft
+      - JP-Tokyo 12
+
+  - name: Netease
+    type: select
+    proxies:
+      - DirectConnect
+      - NeteaseUnblock 1
+      - NeteaseUnblock 2
+      - NeteaseUnblock 3
+      - NeteaseUnblock 4
+      - NeteaseUnblock 5
+      - NeteaseUnblock-HK-PC
+      - NeteaseUnblock-HK-IOS
+      - NeteaseUnblock-JP-PC
+      - NeteaseUnblock-JP-IOS
+      - NeteaseUnblock-CN-HHHT-PC
+      - NeteaseUnblock-CN-HHHT-IOS
+
 #  - name: 🛑 DNS拦截
 #    type: select
 #    proxies:
 #      - 拒绝访问
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - gyddnas.myqnapcloud.cn
-      - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: 🌏 国内媒体
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - gyddnas.myqnapcloud.cn
-      - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: 🎸 网易云音乐
-    type: select
-    proxies:
-      - 🎵 解锁节点1
-      - 🎵 解锁节点2
-      - 🎵 解锁节点3
-      - 🎵 解锁节点4
-      - 🎵 解锁节点5
-      - 🎵 解锁节点6
-      - 🎵 超时或并不影响使用
-      - "[SS] 🇨🇳 NeteaseUnblock-CN-HHHT"
-      - "[SS] 🇨🇳 NeteaseUnblock-CN-SQ"
-      - "[SS] 🇨🇳 NeteaseUnblock-CN-SR"
-      - "[SS] 🇰🇷 NeteaseUnblock-KR-CN2GIA"
-      - "[SS] 🇸🇬 NeteaseUnblock-SG-CN2GIA"
-      - 🎯 全球直连
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - gyddnas.myqnapcloud.cn
-      - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - gyddnas.myqnapcloud.cn
-      - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - gyddnas.myqnapcloud.cn
-      - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: 🎯 全球直连
+
+  - name: DirectConnect
     type: select
     proxies:
       - DIRECT
-      - ♻️ 自动选择
-      - gyddnas.myqnapcloud.cn
+      - HK-Myqnapcloud
       - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - gyddnas.myqnapcloud.cn
-      - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
+      - TW-01 D3/VR/IPLC
+      - JP-01 D3/VR/IPLC
+      - SG-01 D3/VR/IPLC
+      - US-01 D3/VR/IPLC
+      - HK-01 D3/VR/IPLC
+      - HK-02 D3/VR/IPLC
+      - HK-03 D3/VR/IPLC
+      - HK-Microsoft
+      - JP-Tokyo 12
+
   - name: Final
     type: select
     proxies:
       - Proxies
-      - Domestic
-      - DIRECT
-      - gyddnas.myqnapcloud.cn
+      - DirectConnect
+      - HK-Myqnapcloud
       - Heroku-V2ray
-      - 台湾 01 D3/VR/IPLC
-      - 日本 01 D3/VR/IPLC
-      - 狮城 01 D3/VR/IPLC
-      - 美国 01 D3/VR/IPLC
-      - 香港 01 D3/VR/IPLC
-      - 香港 02 D3/VR/IPLC
-      - 香港 03 D3/VR/IPLC
-      - Trojan-Microsoft HK
-      -  🇯🇵 Japan · Tokyo 12
+      - TW-01 D3/VR/IPLC
+      - JP-01 D3/VR/IPLC
+      - SG-01 D3/VR/IPLC
+      - US-01 D3/VR/IPLC
+      - HK-01 D3/VR/IPLC
+      - HK-02 D3/VR/IPLC
+      - HK-03 D3/VR/IPLC
+      - HK-Microsoft
+      - JP-Tokyo 12
 rules:
- - DOMAIN,mtalk.google.com,DIRECT
- - DOMAIN,alt1-mtalk.google.com,DIRECT
- - DOMAIN,alt2-mtalk.google.com,DIRECT
- - DOMAIN,alt3-mtalk.google.com,DIRECT
- - DOMAIN,alt4-mtalk.google.com,DIRECT
- - DOMAIN,alt5-mtalk.google.com,DIRECT
- - DOMAIN,alt6-mtalk.google.com,DIRECT
- - DOMAIN,alt7-mtalk.google.com,DIRECT
- - DOMAIN,alt8-mtalk.google.com,DIRECT
- - DOMAIN,alt9-mtalk.google.com,DIRECT
+ - DOMAIN,mtalk.google.com,DirectConnect
+ - DOMAIN,alt1-mtalk.google.com,DirectConnect
+ - DOMAIN,alt2-mtalk.google.com,DirectConnect
+ - DOMAIN,alt3-mtalk.google.com,DirectConnect
+ - DOMAIN,alt4-mtalk.google.com,DirectConnect
+ - DOMAIN,alt5-mtalk.google.com,DirectConnect
+ - DOMAIN,alt6-mtalk.google.com,DirectConnect
+ - DOMAIN,alt7-mtalk.google.com,DirectConnect
+ - DOMAIN,alt8-mtalk.google.com,DirectConnect
+ - DOMAIN,alt9-mtalk.google.com,DirectConnect
  - DOMAIN-KEYWORD,github,Proxies
  - DOMAIN-SUFFIX,github.com,Proxies
  - DOMAIN-SUFFIX,github.io,Proxies
@@ -359,5 +246,5 @@ rules:
 # - SRC-IP-CIDR,192.168.0.1/16,DNS拦截
  
 
- - GEOIP,CN,DIRECT
+ - GEOIP,CN,DirectConnect
  - MATCH,Proxies
