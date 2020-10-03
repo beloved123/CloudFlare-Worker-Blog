@@ -6,7 +6,6 @@ log-level: info
 external-controller: :9090
 ipv6: true
 
-interface-name:
 
 dns:
   enable: true
@@ -54,7 +53,9 @@ dns:
     - 240.0.0.0/4
   experimental:
     ignore-resolve-fail: true
-
+    
+  interface-name:
+  
 proxies:
   - {name: NeteaseUnblock 1, type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
   - {name: NeteaseUnblock 2, type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
