@@ -117,10 +117,10 @@ proxy-groups:
       - HK-Microsoft
       - JP-Tokyo 12
   
-  - name: DnsBlock
-    type: select
-    proxies:
-      - REJECT
+#  - name: DnsBlock
+#    type: select
+#    proxies:
+#      - REJECT
 
   - name: Netease
     type: select
@@ -169,12 +169,59 @@ proxy-groups:
 rules:
 
 
+
+
+ - DOMAIN-SUFFIX,local,DirectConnect
+ - DOMAIN-SUFFIX,localhost,DirectConnect
+ - IP-CIDR,0.0.0.0/8,DirectConnect
+ - IP-CIDR,10.0.0.0/8,DirectConnect
+ - IP-CIDR,100.64.0.0/10,DirectConnect
+ - IP-CIDR,127.0.0.0/8,DirectConnect
+ - IP-CIDR,169.254.0.0/16,DirectConnect
+ - IP-CIDR,172.16.0.0/12,DirectConnect
+ - IP-CIDR,192.0.0.0/24,DirectConnect
+ - IP-CIDR,192.0.2.0/24,DirectConnect
+ - IP-CIDR,192.88.99.0/24,DirectConnect
+ - IP-CIDR,192.168.0.0/16,DirectConnect
+ - IP-CIDR,198.18.0.0/15,DirectConnect
+ - IP-CIDR,198.51.100.0/24,DirectConnect
+ - IP-CIDR,203.0.113.0/24,DirectConnect
+ - IP-CIDR,224.0.0.0/4,DirectConnect
+ - IP-CIDR,240.0.0.0/4,DirectConnect
+ - IP-CIDR,255.255.255.255/32,DirectConnect
+ - IP-CIDR6,::1/128,DirectConnect
+ - IP-CIDR6,fc00::/7,DirectConnect
+ - IP-CIDR6,fe80::/10,DirectConnect
+
+
+
+ - SRC-IP-CIDR,0.0.0.0/8,DirectConnect
+ - SRC-IP-CIDR,10.0.0.0/8,DirectConnect
+ - SRC-IP-CIDR,100.64.0.0/10,DirectConnect
+ - SRC-IP-CIDR,127.0.0.0/8,DirectConnect
+ - SRC-IP-CIDR,169.254.0.0/16,DirectConnect
+ - SRC-IP-CIDR,172.16.0.0/12,DirectConnect
+ - SRC-IP-CIDR,192.0.0.0/24,DirectConnect
+ - SRC-IP-CIDR,192.0.2.0/24,DirectConnect
+ - SRC-IP-CIDR,192.88.99.0/24,DirectConnect
+ - SRC-IP-CIDR,192.168.0.0/16,DirectConnect
+ - SRC-IP-CIDR,198.18.0.0/15,DirectConnect
+ - SRC-IP-CIDR,198.51.100.0/24,DirectConnect
+ - SRC-IP-CIDR,203.0.113.0/24,DirectConnect
+ - SRC-IP-CIDR,224.0.0.0/4,DirectConnect
+ - SRC-IP-CIDR,240.0.0.0/4,DirectConnect
+ - SRC-IP-CIDR,255.255.255.255/32,DirectConnect
+ - SRC-IP-CIDR,::1/128,DirectConnect
+ - SRC-IP-CIDR,fc00::/7,DirectConnect
+ - SRC-IP-CIDR,fe80::/10,DirectConnect
+
+
 # 禁用所有DNS相关
 # - SRC-PORT,0,DnsBlock
 # - DST-PORT,0,DnsBlock
 # - SRC-PORT,2,DnsBlock
 # - DST-PORT,2,DnsBlock
- - SRC-PORT,53,DnsBlock
+# - SRC-PORT,53,DnsBlock
 # - DST-PORT,53,DnsBlock
 # - SRC-PORT,953,DnsBlock
 # - DST-PORT,953,DnsBlock
