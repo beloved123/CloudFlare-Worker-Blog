@@ -2,7 +2,7 @@ port: 7890
 socks-port: 7891
 allow-lan: true
 mode: Rule
-log-level: info
+log-level: silent
 external-controller: :9090
 ipv6: true
 
@@ -11,8 +11,8 @@ dns:
   enable: true
   ipv6: true
   listen: 0.0.0.0:53
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  enhanced-mode: redir-host
+#  fake-ip-range: 198.18.0.1/16
 #  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
@@ -52,9 +52,9 @@ dns:
     - https://dns.alidns.com/dns-query
 #    - https://dns.google.com/dns-query
     - tls://dns.google:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
+#  fallback-filter:
+#    geoip: true
+#    ipcidr:
 #    - 240.0.0.0/4
   experimental:
     ignore-resolve-fail: false
@@ -281,5 +281,271 @@ rules:
 
 
 
- - GEOIP,CN,DirectConnect
- - MATCH,Proxy
+#GeoIP
+ - GEOIP,AF,Proxy
+ - GEOIP,AL,Proxy
+ - GEOIP,DZ,Proxy
+ - GEOIP,AS,Proxy
+ - GEOIP,AD,Proxy
+ - GEOIP,AO,Proxy
+ - GEOIP,AI,Proxy
+ - GEOIP,AQ,Proxy
+ - GEOIP,AG,Proxy
+ - GEOIP,AR,Proxy
+ - GEOIP,AM,Proxy
+ - GEOIP,AW,Proxy
+ - GEOIP,AU,Proxy
+ - GEOIP,AT,Proxy
+ - GEOIP,AZ,Proxy
+ - GEOIP,BS,Proxy
+ - GEOIP,BH,Proxy
+ - GEOIP,BD,Proxy
+ - GEOIP,BB,Proxy
+ - GEOIP,BY,Proxy
+ - GEOIP,BE,Proxy
+ - GEOIP,BZ,Proxy
+ - GEOIP,BJ,Proxy
+ - GEOIP,BM,Proxy
+ - GEOIP,BT,Proxy
+ - GEOIP,BO,Proxy
+ - GEOIP,BA,Proxy
+ - GEOIP,BW,Proxy
+ - GEOIP,BV,Proxy
+ - GEOIP,BR,Proxy
+ - GEOIP,IO,Proxy
+ - GEOIP,VG,Proxy
+ - GEOIP,BN,Proxy
+ - GEOIP,BG,Proxy
+ - GEOIP,BF,Proxy
+ - GEOIP,MM,Proxy
+ - GEOIP,BI,Proxy
+ - GEOIP,CV,Proxy
+ - GEOIP,KH,Proxy
+ - GEOIP,CM,Proxy
+ - GEOIP,CA,Proxy
+ - GEOIP,KY,Proxy
+ - GEOIP,CF,Proxy
+ - GEOIP,TD,Proxy
+ - GEOIP,CL,Proxy
+ - GEOIP,CX,Proxy
+ - GEOIP,CC,Proxy
+ - GEOIP,CO,Proxy
+ - GEOIP,KM,Proxy
+ - GEOIP,CD,Proxy
+ - GEOIP,CG,Proxy
+ - GEOIP,CK,Proxy
+ - GEOIP,CR,Proxy
+ - GEOIP,CI,Proxy
+ - GEOIP,HR,Proxy
+ - GEOIP,CU,Proxy
+ - GEOIP,CW,Proxy
+ - GEOIP,CY,Proxy
+ - GEOIP,CZ,Proxy
+ - GEOIP,DK,Proxy
+ - GEOIP,DJ,Proxy
+ - GEOIP,DM,Proxy
+ - GEOIP,DO,Proxy
+ - GEOIP,EC,Proxy
+ - GEOIP,EG,Proxy
+ - GEOIP,SV,Proxy
+ - GEOIP,GQ,Proxy
+ - GEOIP,ER,Proxy
+ - GEOIP,EE,Proxy
+ - GEOIP,ET,Proxy
+ - GEOIP,FK,Proxy
+ - GEOIP,FO,Proxy
+ - GEOIP,FJ,Proxy
+ - GEOIP,FI,Proxy
+ - GEOIP,FR,Proxy
+ - GEOIP,FX,Proxy
+ - GEOIP,GF,Proxy
+ - GEOIP,PF,Proxy
+ - GEOIP,TF,Proxy
+ - GEOIP,GA,Proxy
+ - GEOIP,GM,Proxy
+ - GEOIP,PS,Proxy
+ - GEOIP,GE,Proxy
+ - GEOIP,DE,Proxy
+ - GEOIP,GH,Proxy
+ - GEOIP,GI,Proxy
+ - GEOIP,GR,Proxy
+ - GEOIP,GL,Proxy
+ - GEOIP,GD,Proxy
+ - GEOIP,GP,Proxy
+ - GEOIP,GU,Proxy
+ - GEOIP,GT,Proxy
+ - GEOIP,GG,Proxy
+ - GEOIP,GN,Proxy
+ - GEOIP,GW,Proxy
+ - GEOIP,GY,Proxy
+ - GEOIP,HT,Proxy
+ - GEOIP,HM,Proxy
+ - GEOIP,VA,Proxy
+ - GEOIP,HN,Proxy
+ - GEOIP,HK,Proxy
+ - GEOIP,HU,Proxy
+ - GEOIP,IS,Proxy
+ - GEOIP,IN,Proxy
+ - GEOIP,ID,Proxy
+ - GEOIP,IR,Proxy
+ - GEOIP,IQ,Proxy
+ - GEOIP,IE,Proxy
+ - GEOIP,IM,Proxy
+ - GEOIP,IL,Proxy
+ - GEOIP,IT,Proxy
+ - GEOIP,JM,Proxy
+ - GEOIP,JP,Proxy
+ - GEOIP,JE,Proxy
+ - GEOIP,JO,Proxy
+ - GEOIP,KZ,Proxy
+ - GEOIP,KE,Proxy
+ - GEOIP,KI,Proxy
+ - GEOIP,KP,Proxy
+ - GEOIP,KR,Proxy
+ - GEOIP,XK,Proxy
+ - GEOIP,KW,Proxy
+ - GEOIP,KG,Proxy
+ - GEOIP,LA,Proxy
+ - GEOIP,LV,Proxy
+ - GEOIP,LB,Proxy
+ - GEOIP,LS,Proxy
+ - GEOIP,LR,Proxy
+ - GEOIP,LY,Proxy
+ - GEOIP,LI,Proxy
+ - GEOIP,LT,Proxy
+ - GEOIP,LU,Proxy
+ - GEOIP,MO,Proxy
+ - GEOIP,MK,Proxy
+ - GEOIP,MG,Proxy
+ - GEOIP,MW,Proxy
+ - GEOIP,MY,Proxy
+ - GEOIP,MV,Proxy
+ - GEOIP,ML,Proxy
+ - GEOIP,MT,Proxy
+ - GEOIP,MH,Proxy
+ - GEOIP,MQ,Proxy
+ - GEOIP,MR,Proxy
+ - GEOIP,MU,Proxy
+ - GEOIP,YT,Proxy
+ - GEOIP,MX,Proxy
+ - GEOIP,FM,Proxy
+ - GEOIP,MD,Proxy
+ - GEOIP,MC,Proxy
+ - GEOIP,MN,Proxy
+ - GEOIP,ME,Proxy
+ - GEOIP,MS,Proxy
+ - GEOIP,MA,Proxy
+ - GEOIP,MZ,Proxy
+ - GEOIP,NA,Proxy
+ - GEOIP,NR,Proxy
+ - GEOIP,NP,Proxy
+ - GEOIP,NL,Proxy
+ - GEOIP,AN,Proxy
+ - GEOIP,NC,Proxy
+ - GEOIP,NZ,Proxy
+ - GEOIP,NI,Proxy
+ - GEOIP,NE,Proxy
+ - GEOIP,NG,Proxy
+ - GEOIP,NU,Proxy
+ - GEOIP,NF,Proxy
+ - GEOIP,MP,Proxy
+ - GEOIP,NO,Proxy
+ - GEOIP,OM,Proxy
+ - GEOIP,PK,Proxy
+ - GEOIP,PW,Proxy
+ - GEOIP,PA,Proxy
+ - GEOIP,PG,Proxy
+ - GEOIP,PY,Proxy
+ - GEOIP,PE,Proxy
+ - GEOIP,PH,Proxy
+ - GEOIP,PN,Proxy
+ - GEOIP,PL,Proxy
+ - GEOIP,PT,Proxy
+ - GEOIP,PR,Proxy
+ - GEOIP,QA,Proxy
+ - GEOIP,RE,Proxy
+ - GEOIP,RO,Proxy
+ - GEOIP,TW,Proxy
+ - GEOIP,RU,Proxy
+ - GEOIP,RW,Proxy
+ - GEOIP,BL,Proxy
+ - GEOIP,SH,Proxy
+ - GEOIP,KN,Proxy
+ - GEOIP,LC,Proxy
+ - GEOIP,MF,Proxy
+ - GEOIP,VC,Proxy
+ - GEOIP,WS,Proxy
+ - GEOIP,SM,Proxy
+ - GEOIP,ST,Proxy
+ - GEOIP,SA,Proxy
+ - GEOIP,SN,Proxy
+ - GEOIP,RS,Proxy
+ - GEOIP,SC,Proxy
+ - GEOIP,SL,Proxy
+ - GEOIP,SG,Proxy
+ - GEOIP,SX,Proxy
+ - GEOIP,SK,Proxy
+ - GEOIP,SI,Proxy
+ - GEOIP,SB,Proxy
+ - GEOIP,SO,Proxy
+ - GEOIP,ZA,Proxy
+ - GEOIP,GS,Proxy
+ - GEOIP,SS,Proxy
+ - GEOIP,ES,Proxy
+ - GEOIP,LK,Proxy
+ - GEOIP,SD,Proxy
+ - GEOIP,SR,Proxy
+ - GEOIP,PM,Proxy
+ - GEOIP,SZ,Proxy
+ - GEOIP,SE,Proxy
+ - GEOIP,CH,Proxy
+ - GEOIP,SY,Proxy
+ - GEOIP,TJ,Proxy
+ - GEOIP,TZ,Proxy
+ - GEOIP,TH,Proxy
+ - GEOIP,TL,Proxy
+ - GEOIP,TG,Proxy
+ - GEOIP,TK,Proxy
+ - GEOIP,TO,Proxy
+ - GEOIP,TT,Proxy
+ - GEOIP,TN,Proxy
+ - GEOIP,TR,Proxy
+ - GEOIP,TM,Proxy
+ - GEOIP,TC,Proxy
+ - GEOIP,TV,Proxy
+ - GEOIP,UG,Proxy
+ - GEOIP,UA,Proxy
+ - GEOIP,AE,Proxy
+ - GEOIP,GB,Proxy
+ - GEOIP,US,Proxy
+ - GEOIP,UM,Proxy
+ - GEOIP,UY,Proxy
+ - GEOIP,UZ,Proxy
+ - GEOIP,VU,Proxy
+ - GEOIP,VE,Proxy
+ - GEOIP,VN,Proxy
+ - GEOIP,VI,Proxy
+ - GEOIP,WF,Proxy
+ - GEOIP,PS,Proxy
+ - GEOIP,EH,Proxy
+ - GEOIP,UN,Proxy
+ - GEOIP,EU,Proxy
+ - GEOIP,YE,Proxy
+ - GEOIP,ZA,Proxy
+ - GEOIP,ZM,Proxy
+ - GEOIP,ZW,Proxy
+ - GEOIP,RO,Proxy
+ - GEOIP,WI,Proxy
+ - GEOIP,EN,Proxy
+ - GEOIP,AZ,Proxy
+ - GEOIP,YG,Proxy
+ - GEOIP,UR,Proxy
+ - GEOIP,DH,Proxy
+ - GEOIP,VL,Proxy
+ - GEOIP,BO,Proxy
+ - GEOIP,TC,Proxy
+ - GEOIP,UA,Proxy
+ - GEOIP,SG,Proxy
+
+#剩余直连
+ - MATCH,DirectConnect
