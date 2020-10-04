@@ -69,7 +69,7 @@ proxies:
   - {name: NeteaseUnblock-CN-HHHT-PC, server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: NeteaseUnblock-CN-HHHT-IOS, server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: HK-MyQnapCloud, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
-  - {name: US-Heroku, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
+  - {name: US-Heroku V2ray, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
   - {name: TW-01 D3/VR/IPLC, server: 14.17.97.145, port: 5010, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: JP-01 D3/VR/IPLC, server: 14.17.97.145, port: 5008, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: SG-01 D3/VR/IPLC, server: 14.17.97.145, port: 5006, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
@@ -90,7 +90,7 @@ proxy-groups:
       - PingTest
       - DirectConnect
       - HK-MyQnapCloud
-      - US-Heroku
+      - US-Heroku V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
       - SG-01 D3/VR/IPLC
@@ -106,7 +106,7 @@ proxy-groups:
     interval: 300
     proxies:
       - HK-MyQnapCloud
-      - US-Heroku
+      - US-Heroku V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
       - SG-01 D3/VR/IPLC
@@ -139,7 +139,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - HK-MyQnapCloud
-      - US-Heroku
+      - US-Heroku V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
       - SG-01 D3/VR/IPLC
@@ -153,10 +153,10 @@ proxy-groups:
   - name: Final
     type: select
     proxies:
-      - Proxy
       - DirectConnect
+      - Proxy
       - HK-MyQnapCloud
-      - US-Heroku
+      - US-Heroku V2ray
       - TW-01 D3/VR/IPLC
       - JP-01 D3/VR/IPLC
       - SG-01 D3/VR/IPLC
@@ -195,25 +195,25 @@ rules:
 
 
 
- - SRC-IP-CIDR,0.0.0.0/8,DirectConnect
- - SRC-IP-CIDR,10.0.0.0/8,DirectConnect
- - SRC-IP-CIDR,100.64.0.0/10,DirectConnect
- - SRC-IP-CIDR,127.0.0.0/8,DirectConnect
- - SRC-IP-CIDR,169.254.0.0/16,DirectConnect
- - SRC-IP-CIDR,172.16.0.0/12,DirectConnect
- - SRC-IP-CIDR,192.0.0.0/24,DirectConnect
- - SRC-IP-CIDR,192.0.2.0/24,DirectConnect
- - SRC-IP-CIDR,192.88.99.0/24,DirectConnect
- - SRC-IP-CIDR,192.168.0.0/16,DirectConnect
- - SRC-IP-CIDR,198.18.0.0/15,DirectConnect
- - SRC-IP-CIDR,198.51.100.0/24,DirectConnect
- - SRC-IP-CIDR,203.0.113.0/24,DirectConnect
- - SRC-IP-CIDR,224.0.0.0/4,DirectConnect
- - SRC-IP-CIDR,240.0.0.0/4,DirectConnect
- - SRC-IP-CIDR,255.255.255.255/32,DirectConnect
- - SRC-IP-CIDR,::1/128,DirectConnect
- - SRC-IP-CIDR,fc00::/7,DirectConnect
- - SRC-IP-CIDR,fe80::/10,DirectConnect
+# - SRC-IP-CIDR,0.0.0.0/8,DirectConnect
+# - SRC-IP-CIDR,10.0.0.0/8,DirectConnect
+# - SRC-IP-CIDR,100.64.0.0/10,DirectConnect
+# - SRC-IP-CIDR,127.0.0.0/8,DirectConnect
+# - SRC-IP-CIDR,169.254.0.0/16,DirectConnect
+# - SRC-IP-CIDR,172.16.0.0/12,DirectConnect
+# - SRC-IP-CIDR,192.0.0.0/24,DirectConnect
+# - SRC-IP-CIDR,192.0.2.0/24,DirectConnect
+# - SRC-IP-CIDR,192.88.99.0/24,DirectConnect
+# - SRC-IP-CIDR,192.168.0.0/16,DirectConnect
+# - SRC-IP-CIDR,198.18.0.0/15,DirectConnect
+# - SRC-IP-CIDR,198.51.100.0/24,DirectConnect
+# - SRC-IP-CIDR,203.0.113.0/24,DirectConnect
+# - SRC-IP-CIDR,224.0.0.0/4,DirectConnect
+# - SRC-IP-CIDR,240.0.0.0/4,DirectConnect
+# - SRC-IP-CIDR,255.255.255.255/32,DirectConnect
+# - SRC-IP-CIDR,::1/128,DirectConnect
+# - SRC-IP-CIDR,fc00::/7,DirectConnect
+# - SRC-IP-CIDR,fe80::/10,DirectConnect
 
 
 # 禁用所有DNS相关
@@ -595,4 +595,4 @@ rules:
  - GEOIP,SG,Proxy
 
 #剩余直连
- - MATCH,DirectConnect
+ - MATCH,Final
