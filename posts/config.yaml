@@ -16,8 +16,8 @@ dns:
 #  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
-  default-nameserver:
-    - 114.114.114.114
+#  default-nameserver:
+#    - 114.114.114.114
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
