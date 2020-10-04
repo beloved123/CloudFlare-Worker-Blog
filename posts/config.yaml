@@ -16,8 +16,7 @@ dns:
 #  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
-  default-nameserver:
-    - 223.5.5.5
+
   nameserver:
     - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
@@ -56,9 +55,9 @@ dns:
   fallback-filter:
     geoip: true
     ipcidr:
-    - 240.0.0.0/4
+#    - 240.0.0.0/4
   experimental:
-    ignore-resolve-fail: true
+    ignore-resolve-fail: false
     
   interface-name:
   
@@ -118,10 +117,10 @@ proxy-groups:
       - HK-Microsoft
       - JP-Tokyo 12
   
-#  - name: DnsBlock
-#    type: select
-#    proxies:
-#      - REJECT
+  - name: DnsBlock
+    type: select
+    proxies:
+      - REJECT
 
   - name: Netease
     type: select
@@ -175,7 +174,7 @@ rules:
 # - DST-PORT,0,DnsBlock
 # - SRC-PORT,2,DnsBlock
 # - DST-PORT,2,DnsBlock
-# - SRC-PORT,53,DnsBlock
+ - SRC-PORT,53,DnsBlock
 # - DST-PORT,53,DnsBlock
 # - SRC-PORT,953,DnsBlock
 # - DST-PORT,953,DnsBlock
