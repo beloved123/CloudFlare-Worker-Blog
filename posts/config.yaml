@@ -54,8 +54,8 @@ dns:
 #    - https://dns.alidns.com/dns-query
 #    - https://dns.google.com/dns-query
 #    - tls://dns.google:853
-#  fallback-filter:
-#    geoip: true
+  fallback-filter:
+    geoip: true
 #    ipcidr:
 #    - 240.0.0.0/4
   experimental:
