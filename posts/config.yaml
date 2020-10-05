@@ -20,7 +20,7 @@ dns:
 #  default-nameserver:
 #    - 114.114.114.114
   nameserver:
-#    - https://dns.alidns.com/dns-query
+    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
@@ -65,9 +65,9 @@ dns:
   
 proxies:
   - {name: NeteaseUnblock-1, type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
-  - {name: NeteaseUnblock-2, server: music.lolico.me, port: 39000, type: http, tls: false, skip-cert-verify: false}
-  - {name: NeteaseUnblock-3, server: taron.top, port: 100, type: http}
-  - {name: NeteaseUnblock-4, server: taron.top, port: 200, type: http}
+  - {name: NeteaseUnblock-2, server: music.lolico.me, port: 39000, type: http, tls: false}
+  - {name: NeteaseUnblock-3, server: taron.top, port: 100, type: http, tls: false}
+  - {name: NeteaseUnblock-4, server: taron.top, port: 200, type: http, tls: false}
   - {name: NeteaseUnblock-CN-HHHT-PC, server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: NeteaseUnblock-CN-HHHT-IOS, server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: HK-MyQnapCloud, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
