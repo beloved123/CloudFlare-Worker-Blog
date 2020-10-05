@@ -12,8 +12,8 @@ dns:
   enable: true
   ipv6: true
   listen: 0.0.0.0:53
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  enhanced-mode: redir-host
+#  fake-ip-range: 198.18.0.1/16
 #  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
@@ -59,7 +59,7 @@ dns:
 #    ipcidr:
 #    - 240.0.0.0/4
   experimental:
-    ignore-resolve-fail: false
+    ignore-resolve-fail: true
     
   interface-name:
   
@@ -171,7 +171,7 @@ rules:
 
 
 
-
+#local
  - DOMAIN-SUFFIX,local,DirectConnect
  - DOMAIN-SUFFIX,localhost,DirectConnect
  - IP-CIDR,0.0.0.0/8,DirectConnect
