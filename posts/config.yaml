@@ -154,8 +154,8 @@ proxy-groups:
   - name: Final
     type: select
     proxies:
-      - DirectConnect
       - Proxy
+      - DirectConnect
       - HK-MyQnapCloud
       - US-Heroku V2ray
       - TW-01 D3/VR/IPLC
