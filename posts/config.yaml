@@ -595,6 +595,6 @@ rules:
  - GEOIP,UA,Proxy
  - GEOIP,SG,Proxy
 
- - GEOIP,CN,DirectConnect
+# - GEOIP,CN,DirectConnect
 #剩余直连
  - MATCH,Final
