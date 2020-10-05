@@ -250,23 +250,23 @@ rules:
  
  
 # Dns Over Https直连
- - DOMAIN,dns.cloudflare.com,DirectConnect
- - DOMAIN,doh.opendns.com,DirectConnect
- - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
- - DOMAIN,ddns.nextdns.io,DirectConnect
- - DOMAIN,dns10.quad9.net,DirectConnect
- - DOMAIN,doh.crypto.sx,DirectConnect
- - DOMAIN,dns.containerpi.com,DirectConnect
- - DOMAIN,dns.alidns.com,DirectConnect
- - DOMAIN,doh.pub,DirectConnect
- - DOMAIN,doh.dns.sb,DirectConnect
- - DOMAIN,dns.sb,DirectConnect
- - DOMAIN,ea-dns.rubyfish.cn,DirectConnect
- - DOMAIN,uw-dns.rubyfish.cn,DirectConnect
- - DOMAIN,doh.360.cn,DirectConnect
- - DOMAIN,dns.google,DirectConnect
- - DOMAIN,dns.pumplex.com,DirectConnect
- - DOMAIN,doh.rixcloud.dev,DirectConnect
+# - DOMAIN,dns.cloudflare.com,DirectConnect
+# - DOMAIN,doh.opendns.com,DirectConnect
+# - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
+# - DOMAIN,ddns.nextdns.io,DirectConnect
+# - DOMAIN,dns10.quad9.net,DirectConnect
+# - DOMAIN,doh.crypto.sx,DirectConnect
+# - DOMAIN,dns.containerpi.com,DirectConnect
+# - DOMAIN,dns.alidns.com,DirectConnect
+# - DOMAIN,doh.pub,DirectConnect
+# - DOMAIN,doh.dns.sb,DirectConnect
+# - DOMAIN,dns.sb,DirectConnect
+# - DOMAIN,ea-dns.rubyfish.cn,DirectConnect
+# - DOMAIN,uw-dns.rubyfish.cn,DirectConnect
+# - DOMAIN,doh.360.cn,DirectConnect
+# - DOMAIN,dns.google,DirectConnect
+# - DOMAIN,dns.pumplex.com,DirectConnect
+# - DOMAIN,doh.rixcloud.dev,DirectConnect
 
  
 # Github走代理
