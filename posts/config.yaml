@@ -18,11 +18,11 @@ dns:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
   default-nameserver:
-    - 1.1.1.1
     - 8.8.8.8
   nameserver:
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
+    - https://dns.rubyfish.cn/dns-query
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
 #    - https://doh.360.cn/dns-query
@@ -53,7 +53,7 @@ dns:
     - https://dns.cloudflare.com/dns-query
     - https://dns-unfiltered.adguard.com/dns-query
 #    - https://dns.alidns.com/dns-query
-    - https://dns.google.com/dns-query
+#    - https://dns.google.com/dns-query
 #    - tls://dns.google:853
   fallback-filter:
     geoip: true
@@ -102,6 +102,7 @@ proxy-groups:
       - HK-03 D3/VR/IPLC
       - HK-Microsoft
       - JP-Tokyo 12
+      
   - name: PingTest
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -119,10 +120,10 @@ proxy-groups:
       - HK-Microsoft
       - JP-Tokyo 12
   
-  - name: DnsBlock
-    type: select
-    proxies:
-      - REJECT
+#  - name: DnsBlock
+#    type: select
+#    proxies:
+#      - REJECT
 
   - name: Netease
     type: select
@@ -223,8 +224,8 @@ rules:
 # - DST-PORT,0,DnsBlock
 # - SRC-PORT,2,DnsBlock
 # - DST-PORT,2,DnsBlock
- - SRC-PORT,53,DnsBlock
- - DST-PORT,53,DnsBlock
+# - SRC-PORT,53,DnsBlock
+# - DST-PORT,53,DnsBlock
 # - SRC-PORT,953,DnsBlock
 # - DST-PORT,953,DnsBlock
 # - SRC-PORT,5353,DnsBlock
@@ -262,6 +263,7 @@ rules:
 # - DOMAIN,doh.pub,DirectConnect
 # - DOMAIN,doh.dns.sb,DirectConnect
 # - DOMAIN,dns.sb,DirectConnect
+# - DOMAIN,dns.rubyfish.cn,DirectConnect
 # - DOMAIN,ea-dns.rubyfish.cn,DirectConnect
 # - DOMAIN,uw-dns.rubyfish.cn,DirectConnect
 # - DOMAIN,doh.360.cn,DirectConnect
