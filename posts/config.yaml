@@ -21,7 +21,7 @@ dns:
     - 114.114.114.114
     - 8.8.8.8
   nameserver:
-    - https://dns.alidns.com/dns-query
+#    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
     - https://dns.rubyfish.cn/dns-query
     - https://ea-dns.rubyfish.cn/dns-query
