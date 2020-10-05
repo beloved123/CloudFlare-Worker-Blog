@@ -21,11 +21,11 @@ dns:
     - 8.8.8.8
   nameserver:
 #    - https://dns.alidns.com/dns-query
-#    - https://doh.pub/dns-query
+    - https://doh.pub/dns-query
     - https://dns.rubyfish.cn/dns-query
-#    - https://ea-dns.rubyfish.cn/dns-query
-#    - https://uw-dns.rubyfish.cn/dns-query
-#    - https://doh.360.cn/dns-query
+    - https://ea-dns.rubyfish.cn/dns-query
+    - https://uw-dns.rubyfish.cn/dns-query
+    - https://doh.360.cn/dns-query
 
     - https://doh.dns.sb/dns-query
     - https://dns.cloudflare.com/dns-query
