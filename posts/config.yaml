@@ -19,6 +19,8 @@ dns:
 #    - localhost.ptlogin2.qq.com
   default-nameserver:
     - 114.114.114.114
+    - 223.5.5.5
+    - 1.1.1.1
     - 8.8.8.8
   nameserver:
   #国内Doh
@@ -28,7 +30,7 @@ dns:
     - https://ea-dns.rubyfish.cn/dns-query
     - https://uw-dns.rubyfish.cn/dns-query
     - https://doh.360.cn/dns-query
-    - https://101.6.6.6:8443/dns-query
+#    - https://101.6.6.6:8443/dns-query
 #国外Doh
     - https://doh.dns.sb/dns-query
     - https://dns.cloudflare.com/dns-query
