@@ -28,6 +28,8 @@ dns:
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
     - https://doh.360.cn/dns-query
+#    - https://i.233py.com/dns-query
+#    - https://dns.233py.com/dns-query
 #    - https://101.6.6.6:8443/dns-query
 #国外Doh
     - https://doh.dns.sb/dns-query
@@ -230,6 +232,8 @@ rules:
  - DOMAIN,dns.google,DirectConnect
  - DOMAIN,dns.pumplex.com,DirectConnect
  - DOMAIN,doh.rixcloud.dev,DirectConnect
+ - DOMAIN,dns.233py.com,DirectConnect
+ - DOMAIN,i.233py.com,DirectConnect
 
  
 # Github走代理
