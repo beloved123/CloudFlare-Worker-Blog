@@ -17,11 +17,15 @@ dns:
 #  fake-ip-filter:
 #    - '*.lan'
 #    - localhost.ptlogin2.qq.com
+#DNS BootStar,引导Doh、Dot服务
   default-nameserver:
     - 114.114.114.114
+    - 223.5.5.5
+    - 1.1.1.1
     - 8.8.8.8
+#首选DNS，最终解析结果会与Fallback验证，建议使用国内Doh
   nameserver:
-  #国内Doh
+#国内Doh
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
 #    - https://dns.rubyfish.cn/dns-query
@@ -56,6 +60,7 @@ dns:
 #    - tls://dns-unfiltered.adguard.com:853
 #    - tls://dot.360.cn:853
 #    - tls://dns.google:853
+#回环DNS，所有Nameserver解析结果会与Fallback验证
   fallback:
     - https://dns.cloudflare.com/dns-query
     - https://dns-unfiltered.adguard.com/dns-query
