@@ -27,8 +27,8 @@ dns:
 #    - https://dns.rubyfish.cn/dns-query
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
-#    - https://doh.360.cn/dns-query
-    - https://101.6.6.6/dns-query
+    - https://doh.360.cn/dns-query
+
 #国外Doh
     - https://doh.dns.sb/dns-query
     - https://dns.cloudflare.com/dns-query
