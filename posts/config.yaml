@@ -24,9 +24,9 @@ dns:
     - 8.8.8.8
   nameserver:
   #国内Doh
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://dns.rubyfish.cn/dns-query
+#    - https://dns.alidns.com/dns-query
+#    - https://doh.pub/dns-query
+#    - https://dns.rubyfish.cn/dns-query
 #    - https://ea-dns.rubyfish.cn/dns-query
 #    - https://uw-dns.rubyfish.cn/dns-query
     - https://doh.360.cn/dns-query
