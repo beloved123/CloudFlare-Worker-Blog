@@ -116,7 +116,7 @@ proxy-groups:
       
   - name: PingTest
     type: url-test
-    url: https://www.google.com
+    url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
     interval: 300
     proxies:
       - HK-MyQnapCloud
