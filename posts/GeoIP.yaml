@@ -257,7 +257,7 @@ rules:
  - DOMAIN-SUFFIX,music.126.net,DirectConnect
  - DOMAIN-SUFFIX,vod.126.net,DirectConnect
  
- - DOMAIN-SUFFIX,126.net,NeteaseMusic
+# - DOMAIN-SUFFIX,126.net,NeteaseMusic
  - DOMAIN-SUFFIX,163yun.com,NeteaseMusic
  - DOMAIN-SUFFIX,music.163.com,NeteaseMusic
  - DOMAIN-SUFFIX,api.iplay.163.com,NeteaseMusic
