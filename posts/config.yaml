@@ -310,6 +310,11 @@ rules:
  - DOMAIN-SUFFIX,hz.netease.com,NeteaseMusic
  - DOMAIN-SUFFIX,crash.163.com,NeteaseMusic
  - DOMAIN-SUFFIX,mr.da.netease.com,NeteaseMusic
+ 
+ - DOMAIN,admusicpic.music.126.net,REJECT
+ - DOMAIN,iadmat.nosdn.127.net,REJECT
+ - DOMAIN,iadmusicmat.music.126.net,REJECT
+ - DOMAIN,iadmusicmatvideo.music.126.net,REJECT
 
 
 
