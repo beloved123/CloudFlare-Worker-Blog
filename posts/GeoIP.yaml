@@ -133,7 +133,7 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - DirectConnect
+      - 直连
 
   - name: 漏网之鱼
     type: select
