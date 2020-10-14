@@ -254,20 +254,18 @@ rules:
  - DOMAIN-SUFFIX,googleapis.cn,国外
 
 # 网易云规则
- - DOMAIN-SUFFIX,music.126.net,直连
- - DOMAIN-SUFFIX,vod.126.net,直连
- - DOMAIN-SUFFIX,mp.music.163.com,直连
-
+ - DOMAIN-SUFFIX,music.126.net,DirectConnect
+ - DOMAIN-SUFFIX,vod.126.net,DirectConnect
  
-# - DOMAIN-SUFFIX,126.net,网易云音乐
- - DOMAIN-SUFFIX,163yun.com,网易云音乐
- - DOMAIN-SUFFIX,music.163.com,网易云音乐
- - DOMAIN-SUFFIX,api.iplay.163.com,网易云音乐
- - DOMAIN-SUFFIX,music.126.com,网易云音乐
- - DOMAIN-SUFFIX,mam.netease.com,网易云音乐
- - DOMAIN-SUFFIX,hz.netease.com,网易云音乐
- - DOMAIN-SUFFIX,crash.163.com,网易云音乐
- - DOMAIN-SUFFIX,mr.da.netease.com,网易云音乐
+ - DOMAIN-SUFFIX,126.net,NeteaseMusic
+ - DOMAIN-SUFFIX,163yun.com,NeteaseMusic
+ - DOMAIN-SUFFIX,music.163.com,NeteaseMusic
+ - DOMAIN-SUFFIX,api.iplay.163.com,NeteaseMusic
+ - DOMAIN-SUFFIX,music.126.com,NeteaseMusic
+ - DOMAIN-SUFFIX,mam.netease.com,NeteaseMusic
+ - DOMAIN-SUFFIX,hz.netease.com,NeteaseMusic
+ - DOMAIN-SUFFIX,crash.163.com,NeteaseMusic
+ - DOMAIN-SUFFIX,mr.da.netease.com,NeteaseMusic
 
 
 
