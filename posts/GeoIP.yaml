@@ -267,6 +267,11 @@ rules:
  - DOMAIN-SUFFIX,hz.netease.com,网易云音乐
  - DOMAIN-SUFFIX,crash.163.com,网易云音乐
  - DOMAIN-SUFFIX,mr.da.netease.com,网易云音乐
+ 
+ - DOMAIN,admusicpic.music.126.net,REJECT
+ - DOMAIN,iadmat.nosdn.127.net,REJECT
+ - DOMAIN,iadmusicmat.music.126.net,REJECT
+ - DOMAIN,iadmusicmatvideo.music.126.net,REJECT
 
 
 
