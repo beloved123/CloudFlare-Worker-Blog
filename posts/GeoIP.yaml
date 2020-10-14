@@ -254,7 +254,7 @@ rules:
  - DOMAIN-SUFFIX,googleapis.cn,国外
 
 # 网易云规则
-# - DOMAIN-SUFFIX,music.126.net,DirectConnect
+ - DOMAIN-SUFFIX,music.126.net,DirectConnect
  - DOMAIN-SUFFIX,vod.126.net,DirectConnect
  
  - DOMAIN-SUFFIX,126.net,NeteaseMusic
