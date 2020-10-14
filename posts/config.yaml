@@ -136,6 +136,17 @@ proxy-groups:
 #    proxies:
 #      - REJECT
 
+#  - name: DnsBlock
+#    type: select
+#    proxies:
+#      - REJECT
+
+  - name: Block
+    type: select
+    proxies:
+      - REJECT
+      - DirectConnect
+
   - name: NeteaseMusic
     type: select
     proxies:
@@ -311,10 +322,10 @@ rules:
  - DOMAIN-SUFFIX,crash.163.com,NeteaseMusic
  - DOMAIN-SUFFIX,mr.da.netease.com,NeteaseMusic
  
- - DOMAIN,admusicpic.music.126.net,REJECT
- - DOMAIN,iadmat.nosdn.127.net,REJECT
- - DOMAIN,iadmusicmat.music.126.net,REJECT
- - DOMAIN,iadmusicmatvideo.music.126.net,REJECT
+ - DOMAIN,admusicpic.music.126.net,Block
+ - DOMAIN,iadmat.nosdn.127.net,Block
+ - DOMAIN,iadmusicmat.music.126.net,Block
+ - DOMAIN,iadmusicmatvideo.music.126.net,Block
 
 
 
