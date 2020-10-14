@@ -93,6 +93,12 @@ proxies:
   - {name: HK-03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: HK-Microsoft-Trojan, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
   - {name: JP-Tokyo 12, server: 45.87.213.3, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: JP-Tokyo 17, server: 45.87.213.211, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: CN-Taiwan, server: 103.98.74.227, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: CN-Taiwan 15, server: 103.98.74.229, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: USA-Denver 4, server: 212.102.44.98, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: USA-Houston 9, server: 199.10.64.67, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: USA-Phoenix 5, server: 107.181.184.117, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
 
 
 proxy-groups:
@@ -112,7 +118,13 @@ proxy-groups:
       - HK-02 D3/VR/IPLC
       - HK-03 D3/VR/IPLC
       - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
       
   - name: PingTest
     type: url-test
@@ -129,7 +141,13 @@ proxy-groups:
       - HK-02 D3/VR/IPLC
       - HK-03 D3/VR/IPLC
       - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
   
 #  - name: DnsBlock
 #    type: select
@@ -168,7 +186,13 @@ proxy-groups:
       - HK-02 D3/VR/IPLC
       - HK-03 D3/VR/IPLC
       - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
 
   - name: Block
     type: select
@@ -191,7 +215,13 @@ proxy-groups:
       - HK-02 D3/VR/IPLC
       - HK-03 D3/VR/IPLC
       - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
 rules:
 
 
