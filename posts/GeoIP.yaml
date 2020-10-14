@@ -23,9 +23,9 @@ dns:
     - 223.5.5.5
     - 1.1.1.1
     - 8.8.8.8
-#首选DNS，最终解析结果会与Fallback验证，建议使用国内Doh
+#首选DNS，最终解析结果会与Fallback验证，建议使用直连Doh
   nameserver:
-#国内Doh
+#直连Doh
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
 #    - https://dns.rubyfish.cn/dns-query
@@ -47,8 +47,8 @@ dns:
     - https://dns.pumplex.com/dns-query
     - https://doh.rixcloud.dev/dns-query
 
-#Dot是固定端口，所有国内Dot服务都可能被拦截，建议使用Doh
-#国内Dot
+#Dot是固定端口，所有直连Dot服务都可能被拦截，建议使用Doh
+#直连Dot
 #    - tls://dns.sb:853
 #    - tls://dns.pub:853
 #    - tls://dns.alidns.com:853
@@ -89,15 +89,15 @@ proxies:
 
 proxy-groups:
 
-  - name: Proxy
+  - name: 国外
     type: select
     proxies:
-      - PingTest
-      - DirectConnect
+      - 延迟测试
+      - 直连
       - US-Heroku-Vmess
       - JP-Tokyo 12
       
-  - name: PingTest
+  - name: 延迟测试
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -110,10 +110,10 @@ proxy-groups:
 #    proxies:
 #      - REJECT
 
-  - name: NeteaseMusic
+  - name: 网易云音乐
     type: select
     proxies:
-      - DirectConnect
+      - 直连
       - NeteaseUnblock-1(Works)
       - NeteaseUnblock-2(Works)
       - NeteaseUnblock-3(Works)
@@ -122,18 +122,18 @@ proxy-groups:
       - NeteaseUnblock-CN-HHHT-IOS(Works)
 
 
-  - name: DirectConnect
+  - name: 直连
     type: select
     proxies:
       - DIRECT
       - US-Heroku-Vmess
       - JP-Tokyo 12
 
-  - name: Final
+  - name: 漏网之鱼
     type: select
     proxies:
-      - DirectConnect
-      - Proxy
+      - 直连
+      - 国外
       - US-Heroku-Vmess
       - JP-Tokyo 12
 rules:
@@ -141,49 +141,49 @@ rules:
 
 
 #local
- - DOMAIN-SUFFIX,local,DirectConnect
- - DOMAIN-SUFFIX,localhost,DirectConnect
- - IP-CIDR,0.0.0.0/8,DirectConnect
- - IP-CIDR,10.0.0.0/8,DirectConnect
- - IP-CIDR,100.64.0.0/10,DirectConnect
- - IP-CIDR,127.0.0.0/8,DirectConnect
- - IP-CIDR,169.254.0.0/16,DirectConnect
- - IP-CIDR,172.16.0.0/12,DirectConnect
- - IP-CIDR,192.0.0.0/24,DirectConnect
- - IP-CIDR,192.0.2.0/24,DirectConnect
- - IP-CIDR,192.88.99.0/24,DirectConnect
- - IP-CIDR,192.168.0.0/16,DirectConnect
- - IP-CIDR,198.18.0.0/15,DirectConnect
- - IP-CIDR,198.51.100.0/24,DirectConnect
- - IP-CIDR,203.0.113.0/24,DirectConnect
- - IP-CIDR,224.0.0.0/4,DirectConnect
- - IP-CIDR,240.0.0.0/4,DirectConnect
- - IP-CIDR,255.255.255.255/32,DirectConnect
- - IP-CIDR6,::1/128,DirectConnect
- - IP-CIDR6,fc00::/7,DirectConnect
- - IP-CIDR6,fe80::/10,DirectConnect
+ - DOMAIN-SUFFIX,local,直连
+ - DOMAIN-SUFFIX,localhost,直连
+ - IP-CIDR,0.0.0.0/8,直连
+ - IP-CIDR,10.0.0.0/8,直连
+ - IP-CIDR,100.64.0.0/10,直连
+ - IP-CIDR,127.0.0.0/8,直连
+ - IP-CIDR,169.254.0.0/16,直连
+ - IP-CIDR,172.16.0.0/12,直连
+ - IP-CIDR,192.0.0.0/24,直连
+ - IP-CIDR,192.0.2.0/24,直连
+ - IP-CIDR,192.88.99.0/24,直连
+ - IP-CIDR,192.168.0.0/16,直连
+ - IP-CIDR,198.18.0.0/15,直连
+ - IP-CIDR,198.51.100.0/24,直连
+ - IP-CIDR,203.0.113.0/24,直连
+ - IP-CIDR,224.0.0.0/4,直连
+ - IP-CIDR,240.0.0.0/4,直连
+ - IP-CIDR,255.255.255.255/32,直连
+ - IP-CIDR6,::1/128,直连
+ - IP-CIDR6,fc00::/7,直连
+ - IP-CIDR6,fe80::/10,直连
 
 
 
-# - SRC-IP-CIDR,0.0.0.0/8,DirectConnect
-# - SRC-IP-CIDR,10.0.0.0/8,DirectConnect
-# - SRC-IP-CIDR,100.64.0.0/10,DirectConnect
-# - SRC-IP-CIDR,127.0.0.0/8,DirectConnect
-# - SRC-IP-CIDR,169.254.0.0/16,DirectConnect
-# - SRC-IP-CIDR,172.16.0.0/12,DirectConnect
-# - SRC-IP-CIDR,192.0.0.0/24,DirectConnect
-# - SRC-IP-CIDR,192.0.2.0/24,DirectConnect
-# - SRC-IP-CIDR,192.88.99.0/24,DirectConnect
-# - SRC-IP-CIDR,192.168.0.0/16,DirectConnect
-# - SRC-IP-CIDR,198.18.0.0/15,DirectConnect
-# - SRC-IP-CIDR,198.51.100.0/24,DirectConnect
-# - SRC-IP-CIDR,203.0.113.0/24,DirectConnect
-# - SRC-IP-CIDR,224.0.0.0/4,DirectConnect
-# - SRC-IP-CIDR,240.0.0.0/4,DirectConnect
-# - SRC-IP-CIDR,255.255.255.255/32,DirectConnect
-# - SRC-IP-CIDR,::1/128,DirectConnect
-# - SRC-IP-CIDR,fc00::/7,DirectConnect
-# - SRC-IP-CIDR,fe80::/10,DirectConnect
+# - SRC-IP-CIDR,0.0.0.0/8,直连
+# - SRC-IP-CIDR,10.0.0.0/8,直连
+# - SRC-IP-CIDR,100.64.0.0/10,直连
+# - SRC-IP-CIDR,127.0.0.0/8,直连
+# - SRC-IP-CIDR,169.254.0.0/16,直连
+# - SRC-IP-CIDR,172.16.0.0/12,直连
+# - SRC-IP-CIDR,192.0.0.0/24,直连
+# - SRC-IP-CIDR,192.0.2.0/24,直连
+# - SRC-IP-CIDR,192.88.99.0/24,直连
+# - SRC-IP-CIDR,192.168.0.0/16,直连
+# - SRC-IP-CIDR,198.18.0.0/15,直连
+# - SRC-IP-CIDR,198.51.100.0/24,直连
+# - SRC-IP-CIDR,203.0.113.0/24,直连
+# - SRC-IP-CIDR,224.0.0.0/4,直连
+# - SRC-IP-CIDR,240.0.0.0/4,直连
+# - SRC-IP-CIDR,255.255.255.255/32,直连
+# - SRC-IP-CIDR,::1/128,直连
+# - SRC-IP-CIDR,fc00::/7,直连
+# - SRC-IP-CIDR,fe80::/10,直连
 
 
 # 禁用所有DNS相关
@@ -215,326 +215,326 @@ rules:
 # - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
  
 # Google
- - DOMAIN-KEYWORD,google,Proxy
+ - DOMAIN-KEYWORD,google,国外
  
  
 # Dns Over Https直连
- - DOMAIN,dns.cloudflare.com,DirectConnect
- - DOMAIN,doh.opendns.com,DirectConnect
- - DOMAIN,dns-unfiltered.adguard.com,DirectConnect
- - DOMAIN,ddns.nextdns.io,DirectConnect
- - DOMAIN,dns10.quad9.net,DirectConnect
- - DOMAIN,doh.crypto.sx,DirectConnect
- - DOMAIN,dns.containerpi.com,DirectConnect
- - DOMAIN,dns.alidns.com,DirectConnect
- - DOMAIN,doh.pub,DirectConnect
- - DOMAIN,doh.dns.sb,DirectConnect
- - DOMAIN,dns.sb,DirectConnect
- - DOMAIN,dns.rubyfish.cn,DirectConnect
- - DOMAIN,ea-dns.rubyfish.cn,DirectConnect
- - DOMAIN,uw-dns.rubyfish.cn,DirectConnect
- - DOMAIN,doh.360.cn,DirectConnect
- - DOMAIN,dns.google,DirectConnect
- - DOMAIN,dns.pumplex.com,DirectConnect
- - DOMAIN,doh.rixcloud.dev,DirectConnect
- - DOMAIN,dns.233py.com,DirectConnect
- - DOMAIN,i.233py.com,DirectConnect
+ - DOMAIN,dns.cloudflare.com,直连
+ - DOMAIN,doh.opendns.com,直连
+ - DOMAIN,dns-unfiltered.adguard.com,直连
+ - DOMAIN,ddns.nextdns.io,直连
+ - DOMAIN,dns10.quad9.net,直连
+ - DOMAIN,doh.crypto.sx,直连
+ - DOMAIN,dns.containerpi.com,直连
+ - DOMAIN,dns.alidns.com,直连
+ - DOMAIN,doh.pub,直连
+ - DOMAIN,doh.dns.sb,直连
+ - DOMAIN,dns.sb,直连
+ - DOMAIN,dns.rubyfish.cn,直连
+ - DOMAIN,ea-dns.rubyfish.cn,直连
+ - DOMAIN,uw-dns.rubyfish.cn,直连
+ - DOMAIN,doh.360.cn,直连
+ - DOMAIN,dns.google,直连
+ - DOMAIN,dns.pumplex.com,直连
+ - DOMAIN,doh.rixcloud.dev,直连
+ - DOMAIN,dns.233py.com,直连
+ - DOMAIN,i.233py.com,直连
 
  
 # Github走代理
- - DOMAIN-KEYWORD,github,Proxy
- - DOMAIN-SUFFIX,github.com,Proxy
- - DOMAIN-SUFFIX,github.io,Proxy
- - DOMAIN-SUFFIX,githubapp.com,Proxy
- - DOMAIN-SUFFIX,githubassets.com,Proxy
- - DOMAIN-SUFFIX,githubusercontent.com,Proxy
- - DOMAIN-SUFFIX,home-intl.console.aliyun.com,Proxy
- - DOMAIN,ip.skk.moe,Proxy
- - DOMAIN,ip.sb,Proxy
- - DOMAIN-SUFFIX,googleapis.cn,Proxy
+ - DOMAIN-KEYWORD,github,国外
+ - DOMAIN-SUFFIX,github.com,国外
+ - DOMAIN-SUFFIX,github.io,国外
+ - DOMAIN-SUFFIX,githubapp.com,国外
+ - DOMAIN-SUFFIX,githubassets.com,国外
+ - DOMAIN-SUFFIX,githubusercontent.com,国外
+ - DOMAIN-SUFFIX,home-intl.console.aliyun.com,国外
+ - DOMAIN,ip.skk.moe,国外
+ - DOMAIN,ip.sb,国外
+ - DOMAIN-SUFFIX,googleapis.cn,国外
 
 # 网易云规则
- - DOMAIN-SUFFIX,music.126.net,DirectConnect
- - DOMAIN-SUFFIX,vod.126.net,DirectConnect
+ - DOMAIN-SUFFIX,music.126.net,直连
+ - DOMAIN-SUFFIX,vod.126.net,直连
  
-# - DOMAIN-SUFFIX,126.net,NeteaseMusic
- - DOMAIN-SUFFIX,163yun.com,NeteaseMusic
- - DOMAIN-SUFFIX,music.163.com,NeteaseMusic
- - DOMAIN-SUFFIX,api.iplay.163.com,NeteaseMusic
- - DOMAIN-SUFFIX,music.126.com,NeteaseMusic
- - DOMAIN-SUFFIX,mam.netease.com,NeteaseMusic
- - DOMAIN-SUFFIX,hz.netease.com,NeteaseMusic
- - DOMAIN-SUFFIX,crash.163.com,NeteaseMusic
- - DOMAIN-SUFFIX,mr.da.netease.com,NeteaseMusic
+# - DOMAIN-SUFFIX,126.net,网易云音乐
+ - DOMAIN-SUFFIX,163yun.com,网易云音乐
+ - DOMAIN-SUFFIX,music.163.com,网易云音乐
+ - DOMAIN-SUFFIX,api.iplay.163.com,网易云音乐
+ - DOMAIN-SUFFIX,music.126.com,网易云音乐
+ - DOMAIN-SUFFIX,mam.netease.com,网易云音乐
+ - DOMAIN-SUFFIX,hz.netease.com,网易云音乐
+ - DOMAIN-SUFFIX,crash.163.com,网易云音乐
+ - DOMAIN-SUFFIX,mr.da.netease.com,网易云音乐
 
 
 
 #GeoIP
- - GEOIP,AF,Proxy
- - GEOIP,AL,Proxy
- - GEOIP,DZ,Proxy
- - GEOIP,AS,Proxy
- - GEOIP,AD,Proxy
- - GEOIP,AO,Proxy
- - GEOIP,AI,Proxy
- - GEOIP,AQ,Proxy
- - GEOIP,AG,Proxy
- - GEOIP,AR,Proxy
- - GEOIP,AM,Proxy
- - GEOIP,AW,Proxy
- - GEOIP,AU,Proxy
- - GEOIP,AT,Proxy
- - GEOIP,AZ,Proxy
- - GEOIP,BS,Proxy
- - GEOIP,BH,Proxy
- - GEOIP,BD,Proxy
- - GEOIP,BB,Proxy
- - GEOIP,BY,Proxy
- - GEOIP,BE,Proxy
- - GEOIP,BZ,Proxy
- - GEOIP,BJ,Proxy
- - GEOIP,BM,Proxy
- - GEOIP,BT,Proxy
- - GEOIP,BO,Proxy
- - GEOIP,BA,Proxy
- - GEOIP,BW,Proxy
- - GEOIP,BV,Proxy
- - GEOIP,BR,Proxy
- - GEOIP,IO,Proxy
- - GEOIP,VG,Proxy
- - GEOIP,BN,Proxy
- - GEOIP,BG,Proxy
- - GEOIP,BF,Proxy
- - GEOIP,MM,Proxy
- - GEOIP,BI,Proxy
- - GEOIP,CV,Proxy
- - GEOIP,KH,Proxy
- - GEOIP,CM,Proxy
- - GEOIP,CA,Proxy
- - GEOIP,KY,Proxy
- - GEOIP,CF,Proxy
- - GEOIP,TD,Proxy
- - GEOIP,CL,Proxy
- - GEOIP,CX,Proxy
- - GEOIP,CC,Proxy
- - GEOIP,CO,Proxy
- - GEOIP,KM,Proxy
- - GEOIP,CD,Proxy
- - GEOIP,CG,Proxy
- - GEOIP,CK,Proxy
- - GEOIP,CR,Proxy
- - GEOIP,CI,Proxy
- - GEOIP,HR,Proxy
- - GEOIP,CU,Proxy
- - GEOIP,CW,Proxy
- - GEOIP,CY,Proxy
- - GEOIP,CZ,Proxy
- - GEOIP,DK,Proxy
- - GEOIP,DJ,Proxy
- - GEOIP,DM,Proxy
- - GEOIP,DO,Proxy
- - GEOIP,EC,Proxy
- - GEOIP,EG,Proxy
- - GEOIP,SV,Proxy
- - GEOIP,GQ,Proxy
- - GEOIP,ER,Proxy
- - GEOIP,EE,Proxy
- - GEOIP,ET,Proxy
- - GEOIP,FK,Proxy
- - GEOIP,FO,Proxy
- - GEOIP,FJ,Proxy
- - GEOIP,FI,Proxy
- - GEOIP,FR,Proxy
- - GEOIP,FX,Proxy
- - GEOIP,GF,Proxy
- - GEOIP,PF,Proxy
- - GEOIP,TF,Proxy
- - GEOIP,GA,Proxy
- - GEOIP,GM,Proxy
- - GEOIP,PS,Proxy
- - GEOIP,GE,Proxy
- - GEOIP,DE,Proxy
- - GEOIP,GH,Proxy
- - GEOIP,GI,Proxy
- - GEOIP,GR,Proxy
- - GEOIP,GL,Proxy
- - GEOIP,GD,Proxy
- - GEOIP,GP,Proxy
- - GEOIP,GU,Proxy
- - GEOIP,GT,Proxy
- - GEOIP,GG,Proxy
- - GEOIP,GN,Proxy
- - GEOIP,GW,Proxy
- - GEOIP,GY,Proxy
- - GEOIP,HT,Proxy
- - GEOIP,HM,Proxy
- - GEOIP,VA,Proxy
- - GEOIP,HN,Proxy
- - GEOIP,HK,Proxy
- - GEOIP,HU,Proxy
- - GEOIP,IS,Proxy
- - GEOIP,IN,Proxy
- - GEOIP,ID,Proxy
- - GEOIP,IR,Proxy
- - GEOIP,IQ,Proxy
- - GEOIP,IE,Proxy
- - GEOIP,IM,Proxy
- - GEOIP,IL,Proxy
- - GEOIP,IT,Proxy
- - GEOIP,JM,Proxy
- - GEOIP,JP,Proxy
- - GEOIP,JE,Proxy
- - GEOIP,JO,Proxy
- - GEOIP,KZ,Proxy
- - GEOIP,KE,Proxy
- - GEOIP,KI,Proxy
- - GEOIP,KP,Proxy
- - GEOIP,KR,Proxy
- - GEOIP,XK,Proxy
- - GEOIP,KW,Proxy
- - GEOIP,KG,Proxy
- - GEOIP,LA,Proxy
- - GEOIP,LV,Proxy
- - GEOIP,LB,Proxy
- - GEOIP,LS,Proxy
- - GEOIP,LR,Proxy
- - GEOIP,LY,Proxy
- - GEOIP,LI,Proxy
- - GEOIP,LT,Proxy
- - GEOIP,LU,Proxy
- - GEOIP,MO,Proxy
- - GEOIP,MK,Proxy
- - GEOIP,MG,Proxy
- - GEOIP,MW,Proxy
- - GEOIP,MY,Proxy
- - GEOIP,MV,Proxy
- - GEOIP,ML,Proxy
- - GEOIP,MT,Proxy
- - GEOIP,MH,Proxy
- - GEOIP,MQ,Proxy
- - GEOIP,MR,Proxy
- - GEOIP,MU,Proxy
- - GEOIP,YT,Proxy
- - GEOIP,MX,Proxy
- - GEOIP,FM,Proxy
- - GEOIP,MD,Proxy
- - GEOIP,MC,Proxy
- - GEOIP,MN,Proxy
- - GEOIP,ME,Proxy
- - GEOIP,MS,Proxy
- - GEOIP,MA,Proxy
- - GEOIP,MZ,Proxy
- - GEOIP,NA,Proxy
- - GEOIP,NR,Proxy
- - GEOIP,NP,Proxy
- - GEOIP,NL,Proxy
- - GEOIP,AN,Proxy
- - GEOIP,NC,Proxy
- - GEOIP,NZ,Proxy
- - GEOIP,NI,Proxy
- - GEOIP,NE,Proxy
- - GEOIP,NG,Proxy
- - GEOIP,NU,Proxy
- - GEOIP,NF,Proxy
- - GEOIP,MP,Proxy
- - GEOIP,NO,Proxy
- - GEOIP,OM,Proxy
- - GEOIP,PK,Proxy
- - GEOIP,PW,Proxy
- - GEOIP,PA,Proxy
- - GEOIP,PG,Proxy
- - GEOIP,PY,Proxy
- - GEOIP,PE,Proxy
- - GEOIP,PH,Proxy
- - GEOIP,PN,Proxy
- - GEOIP,PL,Proxy
- - GEOIP,PT,Proxy
- - GEOIP,PR,Proxy
- - GEOIP,QA,Proxy
- - GEOIP,RE,Proxy
- - GEOIP,RO,Proxy
- - GEOIP,TW,Proxy
- - GEOIP,RU,Proxy
- - GEOIP,RW,Proxy
- - GEOIP,BL,Proxy
- - GEOIP,SH,Proxy
- - GEOIP,KN,Proxy
- - GEOIP,LC,Proxy
- - GEOIP,MF,Proxy
- - GEOIP,VC,Proxy
- - GEOIP,WS,Proxy
- - GEOIP,SM,Proxy
- - GEOIP,ST,Proxy
- - GEOIP,SA,Proxy
- - GEOIP,SN,Proxy
- - GEOIP,RS,Proxy
- - GEOIP,SC,Proxy
- - GEOIP,SL,Proxy
- - GEOIP,SG,Proxy
- - GEOIP,SX,Proxy
- - GEOIP,SK,Proxy
- - GEOIP,SI,Proxy
- - GEOIP,SB,Proxy
- - GEOIP,SO,Proxy
- - GEOIP,ZA,Proxy
- - GEOIP,GS,Proxy
- - GEOIP,SS,Proxy
- - GEOIP,ES,Proxy
- - GEOIP,LK,Proxy
- - GEOIP,SD,Proxy
- - GEOIP,SR,Proxy
- - GEOIP,PM,Proxy
- - GEOIP,SZ,Proxy
- - GEOIP,SE,Proxy
- - GEOIP,CH,Proxy
- - GEOIP,SY,Proxy
- - GEOIP,TJ,Proxy
- - GEOIP,TZ,Proxy
- - GEOIP,TH,Proxy
- - GEOIP,TL,Proxy
- - GEOIP,TG,Proxy
- - GEOIP,TK,Proxy
- - GEOIP,TO,Proxy
- - GEOIP,TT,Proxy
- - GEOIP,TN,Proxy
- - GEOIP,TR,Proxy
- - GEOIP,TM,Proxy
- - GEOIP,TC,Proxy
- - GEOIP,TV,Proxy
- - GEOIP,UG,Proxy
- - GEOIP,UA,Proxy
- - GEOIP,AE,Proxy
- - GEOIP,GB,Proxy
- - GEOIP,US,Proxy
- - GEOIP,UM,Proxy
- - GEOIP,UY,Proxy
- - GEOIP,UZ,Proxy
- - GEOIP,VU,Proxy
- - GEOIP,VE,Proxy
- - GEOIP,VN,Proxy
- - GEOIP,VI,Proxy
- - GEOIP,WF,Proxy
- - GEOIP,PS,Proxy
- - GEOIP,EH,Proxy
- - GEOIP,UN,Proxy
- - GEOIP,EU,Proxy
- - GEOIP,YE,Proxy
- - GEOIP,ZA,Proxy
- - GEOIP,ZM,Proxy
- - GEOIP,ZW,Proxy
- - GEOIP,RO,Proxy
- - GEOIP,WI,Proxy
- - GEOIP,EN,Proxy
- - GEOIP,AZ,Proxy
- - GEOIP,YG,Proxy
- - GEOIP,UR,Proxy
- - GEOIP,DH,Proxy
- - GEOIP,VL,Proxy
- - GEOIP,BO,Proxy
- - GEOIP,TC,Proxy
- - GEOIP,UA,Proxy
- - GEOIP,SG,Proxy
+ - GEOIP,AF,国外
+ - GEOIP,AL,国外
+ - GEOIP,DZ,国外
+ - GEOIP,AS,国外
+ - GEOIP,AD,国外
+ - GEOIP,AO,国外
+ - GEOIP,AI,国外
+ - GEOIP,AQ,国外
+ - GEOIP,AG,国外
+ - GEOIP,AR,国外
+ - GEOIP,AM,国外
+ - GEOIP,AW,国外
+ - GEOIP,AU,国外
+ - GEOIP,AT,国外
+ - GEOIP,AZ,国外
+ - GEOIP,BS,国外
+ - GEOIP,BH,国外
+ - GEOIP,BD,国外
+ - GEOIP,BB,国外
+ - GEOIP,BY,国外
+ - GEOIP,BE,国外
+ - GEOIP,BZ,国外
+ - GEOIP,BJ,国外
+ - GEOIP,BM,国外
+ - GEOIP,BT,国外
+ - GEOIP,BO,国外
+ - GEOIP,BA,国外
+ - GEOIP,BW,国外
+ - GEOIP,BV,国外
+ - GEOIP,BR,国外
+ - GEOIP,IO,国外
+ - GEOIP,VG,国外
+ - GEOIP,BN,国外
+ - GEOIP,BG,国外
+ - GEOIP,BF,国外
+ - GEOIP,MM,国外
+ - GEOIP,BI,国外
+ - GEOIP,CV,国外
+ - GEOIP,KH,国外
+ - GEOIP,CM,国外
+ - GEOIP,CA,国外
+ - GEOIP,KY,国外
+ - GEOIP,CF,国外
+ - GEOIP,TD,国外
+ - GEOIP,CL,国外
+ - GEOIP,CX,国外
+ - GEOIP,CC,国外
+ - GEOIP,CO,国外
+ - GEOIP,KM,国外
+ - GEOIP,CD,国外
+ - GEOIP,CG,国外
+ - GEOIP,CK,国外
+ - GEOIP,CR,国外
+ - GEOIP,CI,国外
+ - GEOIP,HR,国外
+ - GEOIP,CU,国外
+ - GEOIP,CW,国外
+ - GEOIP,CY,国外
+ - GEOIP,CZ,国外
+ - GEOIP,DK,国外
+ - GEOIP,DJ,国外
+ - GEOIP,DM,国外
+ - GEOIP,DO,国外
+ - GEOIP,EC,国外
+ - GEOIP,EG,国外
+ - GEOIP,SV,国外
+ - GEOIP,GQ,国外
+ - GEOIP,ER,国外
+ - GEOIP,EE,国外
+ - GEOIP,ET,国外
+ - GEOIP,FK,国外
+ - GEOIP,FO,国外
+ - GEOIP,FJ,国外
+ - GEOIP,FI,国外
+ - GEOIP,FR,国外
+ - GEOIP,FX,国外
+ - GEOIP,GF,国外
+ - GEOIP,PF,国外
+ - GEOIP,TF,国外
+ - GEOIP,GA,国外
+ - GEOIP,GM,国外
+ - GEOIP,PS,国外
+ - GEOIP,GE,国外
+ - GEOIP,DE,国外
+ - GEOIP,GH,国外
+ - GEOIP,GI,国外
+ - GEOIP,GR,国外
+ - GEOIP,GL,国外
+ - GEOIP,GD,国外
+ - GEOIP,GP,国外
+ - GEOIP,GU,国外
+ - GEOIP,GT,国外
+ - GEOIP,GG,国外
+ - GEOIP,GN,国外
+ - GEOIP,GW,国外
+ - GEOIP,GY,国外
+ - GEOIP,HT,国外
+ - GEOIP,HM,国外
+ - GEOIP,VA,国外
+ - GEOIP,HN,国外
+ - GEOIP,HK,国外
+ - GEOIP,HU,国外
+ - GEOIP,IS,国外
+ - GEOIP,IN,国外
+ - GEOIP,ID,国外
+ - GEOIP,IR,国外
+ - GEOIP,IQ,国外
+ - GEOIP,IE,国外
+ - GEOIP,IM,国外
+ - GEOIP,IL,国外
+ - GEOIP,IT,国外
+ - GEOIP,JM,国外
+ - GEOIP,JP,国外
+ - GEOIP,JE,国外
+ - GEOIP,JO,国外
+ - GEOIP,KZ,国外
+ - GEOIP,KE,国外
+ - GEOIP,KI,国外
+ - GEOIP,KP,国外
+ - GEOIP,KR,国外
+ - GEOIP,XK,国外
+ - GEOIP,KW,国外
+ - GEOIP,KG,国外
+ - GEOIP,LA,国外
+ - GEOIP,LV,国外
+ - GEOIP,LB,国外
+ - GEOIP,LS,国外
+ - GEOIP,LR,国外
+ - GEOIP,LY,国外
+ - GEOIP,LI,国外
+ - GEOIP,LT,国外
+ - GEOIP,LU,国外
+ - GEOIP,MO,国外
+ - GEOIP,MK,国外
+ - GEOIP,MG,国外
+ - GEOIP,MW,国外
+ - GEOIP,MY,国外
+ - GEOIP,MV,国外
+ - GEOIP,ML,国外
+ - GEOIP,MT,国外
+ - GEOIP,MH,国外
+ - GEOIP,MQ,国外
+ - GEOIP,MR,国外
+ - GEOIP,MU,国外
+ - GEOIP,YT,国外
+ - GEOIP,MX,国外
+ - GEOIP,FM,国外
+ - GEOIP,MD,国外
+ - GEOIP,MC,国外
+ - GEOIP,MN,国外
+ - GEOIP,ME,国外
+ - GEOIP,MS,国外
+ - GEOIP,MA,国外
+ - GEOIP,MZ,国外
+ - GEOIP,NA,国外
+ - GEOIP,NR,国外
+ - GEOIP,NP,国外
+ - GEOIP,NL,国外
+ - GEOIP,AN,国外
+ - GEOIP,NC,国外
+ - GEOIP,NZ,国外
+ - GEOIP,NI,国外
+ - GEOIP,NE,国外
+ - GEOIP,NG,国外
+ - GEOIP,NU,国外
+ - GEOIP,NF,国外
+ - GEOIP,MP,国外
+ - GEOIP,NO,国外
+ - GEOIP,OM,国外
+ - GEOIP,PK,国外
+ - GEOIP,PW,国外
+ - GEOIP,PA,国外
+ - GEOIP,PG,国外
+ - GEOIP,PY,国外
+ - GEOIP,PE,国外
+ - GEOIP,PH,国外
+ - GEOIP,PN,国外
+ - GEOIP,PL,国外
+ - GEOIP,PT,国外
+ - GEOIP,PR,国外
+ - GEOIP,QA,国外
+ - GEOIP,RE,国外
+ - GEOIP,RO,国外
+ - GEOIP,TW,国外
+ - GEOIP,RU,国外
+ - GEOIP,RW,国外
+ - GEOIP,BL,国外
+ - GEOIP,SH,国外
+ - GEOIP,KN,国外
+ - GEOIP,LC,国外
+ - GEOIP,MF,国外
+ - GEOIP,VC,国外
+ - GEOIP,WS,国外
+ - GEOIP,SM,国外
+ - GEOIP,ST,国外
+ - GEOIP,SA,国外
+ - GEOIP,SN,国外
+ - GEOIP,RS,国外
+ - GEOIP,SC,国外
+ - GEOIP,SL,国外
+ - GEOIP,SG,国外
+ - GEOIP,SX,国外
+ - GEOIP,SK,国外
+ - GEOIP,SI,国外
+ - GEOIP,SB,国外
+ - GEOIP,SO,国外
+ - GEOIP,ZA,国外
+ - GEOIP,GS,国外
+ - GEOIP,SS,国外
+ - GEOIP,ES,国外
+ - GEOIP,LK,国外
+ - GEOIP,SD,国外
+ - GEOIP,SR,国外
+ - GEOIP,PM,国外
+ - GEOIP,SZ,国外
+ - GEOIP,SE,国外
+ - GEOIP,CH,国外
+ - GEOIP,SY,国外
+ - GEOIP,TJ,国外
+ - GEOIP,TZ,国外
+ - GEOIP,TH,国外
+ - GEOIP,TL,国外
+ - GEOIP,TG,国外
+ - GEOIP,TK,国外
+ - GEOIP,TO,国外
+ - GEOIP,TT,国外
+ - GEOIP,TN,国外
+ - GEOIP,TR,国外
+ - GEOIP,TM,国外
+ - GEOIP,TC,国外
+ - GEOIP,TV,国外
+ - GEOIP,UG,国外
+ - GEOIP,UA,国外
+ - GEOIP,AE,国外
+ - GEOIP,GB,国外
+ - GEOIP,US,国外
+ - GEOIP,UM,国外
+ - GEOIP,UY,国外
+ - GEOIP,UZ,国外
+ - GEOIP,VU,国外
+ - GEOIP,VE,国外
+ - GEOIP,VN,国外
+ - GEOIP,VI,国外
+ - GEOIP,WF,国外
+ - GEOIP,PS,国外
+ - GEOIP,EH,国外
+ - GEOIP,UN,国外
+ - GEOIP,EU,国外
+ - GEOIP,YE,国外
+ - GEOIP,ZA,国外
+ - GEOIP,ZM,国外
+ - GEOIP,ZW,国外
+ - GEOIP,RO,国外
+ - GEOIP,WI,国外
+ - GEOIP,EN,国外
+ - GEOIP,AZ,国外
+ - GEOIP,YG,国外
+ - GEOIP,UR,国外
+ - GEOIP,DH,国外
+ - GEOIP,VL,国外
+ - GEOIP,BO,国外
+ - GEOIP,TC,国外
+ - GEOIP,UA,国外
+ - GEOIP,SG,国外
 
- - GEOIP,CN,DirectConnect
+ - GEOIP,CN,直连
 #剩余直连
- - MATCH,Final
+ - MATCH,漏网之鱼
