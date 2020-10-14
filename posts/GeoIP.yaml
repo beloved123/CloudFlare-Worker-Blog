@@ -129,6 +129,12 @@ proxy-groups:
       - US-Heroku-Vmess
       - JP-Tokyo 12
 
+  - name: 禁止访问
+    type: select
+    proxies:
+      - REJECT
+      - DirectConnect
+
   - name: 漏网之鱼
     type: select
     proxies:
@@ -268,10 +274,10 @@ rules:
  - DOMAIN-SUFFIX,crash.163.com,网易云音乐
  - DOMAIN-SUFFIX,mr.da.netease.com,网易云音乐
  
- - DOMAIN,admusicpic.music.126.net,REJECT
- - DOMAIN,iadmat.nosdn.127.net,REJECT
- - DOMAIN,iadmusicmat.music.126.net,REJECT
- - DOMAIN,iadmusicmatvideo.music.126.net,REJECT
+ - DOMAIN,admusicpic.music.126.net,禁止访问
+ - DOMAIN,iadmat.nosdn.127.net,禁止访问
+ - DOMAIN,iadmusicmat.music.126.net,禁止访问
+ - DOMAIN,iadmusicmatvideo.music.126.net,禁止访问
 
 
 
