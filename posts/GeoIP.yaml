@@ -256,6 +256,7 @@ rules:
 # 网易云规则
  - DOMAIN-SUFFIX,music.126.net,直连
  - DOMAIN-SUFFIX,vod.126.net,直连
+ - DOMAIN-SUFFIX,mp.music.163.com,直连
  
 # - DOMAIN-SUFFIX,126.net,网易云音乐
  - DOMAIN-SUFFIX,163yun.com,网易云音乐
