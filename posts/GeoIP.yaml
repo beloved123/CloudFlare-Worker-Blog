@@ -85,7 +85,14 @@ proxies:
   - {name: NeteaseUnblock-CN-HHHT-IOS(Works), server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: US-Heroku-Vmess, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
   - {name: JP-Tokyo 12, server: 45.87.213.3, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-
+  - {name: CN-Taiwan 15, server: 103.98.74.229, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: CN-Taiwan, server: 103.98.74.227, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: JP-Tokyo 17, server: 45.87.213.211, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: USA-Denver 4, server: 212.102.44.98, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: USA-Houston 9, server: 199.10.64.67, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: USA-Phoenix 5, server: 107.181.184.117, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
+  - {name: HK-Microsoft-Trojan, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
+  
 
 proxy-groups:
 
@@ -94,16 +101,30 @@ proxy-groups:
     proxies:
       - 延迟测试
       - 直连
-      - US-Heroku-Vmess
+      - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
+      - US-Heroku-Vmess
       
   - name: 延迟测试
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
     interval: 300
     proxies:
-      - US-Heroku-Vmess
+      - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
+      - US-Heroku-Vmess
   
 #  - name: DnsBlock
 #    type: select
@@ -126,9 +147,16 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - US-Heroku-Vmess
+      - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
-
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
+      - US-Heroku-Vmess
+      
   - name: 禁止访问
     type: select
     proxies:
@@ -140,8 +168,15 @@ proxy-groups:
     proxies:
       - 直连
       - 国外
-      - US-Heroku-Vmess
+      - HK-Microsoft-Trojan
+      - CN-Taiwan
+      - CN-Taiwan 15
       - JP-Tokyo 12
+      - JP-Tokyo 17
+      - USA-Denver 4
+      - USA-Houston 9
+      - USA-Phoenix 5
+      - US-Heroku-Vmess
 rules:
 
 
