@@ -340,6 +340,11 @@ rules:
 
 
 # 网易云规则
+ - DOMAIN,admusicpic.music.126.net,Block
+ - DOMAIN,iadmat.nosdn.127.net,Block
+ - DOMAIN,iadmusicmat.music.126.net,Block
+ - DOMAIN,iadmusicmatvideo.music.126.net,Block
+
  - DOMAIN-SUFFIX,music.126.net,DirectConnect
  - DOMAIN-SUFFIX,vod.126.net,DirectConnect
  
@@ -353,10 +358,7 @@ rules:
  - DOMAIN-SUFFIX,crash.163.com,NeteaseMusic
  - DOMAIN-SUFFIX,mr.da.netease.com,NeteaseMusic
  
- - DOMAIN,admusicpic.music.126.net,Block
- - DOMAIN,iadmat.nosdn.127.net,Block
- - DOMAIN,iadmusicmat.music.126.net,Block
- - DOMAIN,iadmusicmatvideo.music.126.net,Block
+
 
 
 
