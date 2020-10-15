@@ -99,17 +99,17 @@ proxy-providers:
 
 proxy-groups:
 
-  - name: Proxy
+  - name: 国外代理
     type: select
     use:
       - GeoIP
     proxies:
-      - PingTest
+      - 延迟测试
       - DIRECT
 
 
       
-  - name: PingTest
+  - name: 延迟测试
     type: url-test
     url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
     interval: 300
@@ -124,7 +124,7 @@ proxy-groups:
 
 
 
-  - name: NeteaseMusic
+  - name: 网易云音乐
     type: select
     use:
       - NeteaseUnblock
@@ -133,23 +133,23 @@ proxy-groups:
     
 
 
-  - name: DirectConnect
+  - name: 国内直连
     type: select
     use:
       - GeoIP
     proxies:
       - DIRECT
-      - Proxy
+      - 国外代理
 
 
 
-  - name: Final
+  - name: 漏网之鱼
     type: select
     use:
       - GeoIP
     proxies:
       - DIRECT
-      - Proxy
+      - 国外代理
 
 
 rule-providers:
@@ -189,10 +189,10 @@ rule-providers:
 
 
 rules:
- - RULE-SET,DirectConnect,DirectConnect
- - RULE-SET,Proxy,Proxy
- - RULE-SET,NeteaseMusic,NeteaseMusic
- - RULE-SET,GeoIP,Proxy
+ - RULE-SET,DirectConnect,国内直连
+ - RULE-SET,Proxy,国外代理
+ - RULE-SET,NeteaseMusic,网易云音乐
+ - RULE-SET,GeoIP,国外代理
 
 #剩余直连
- - MATCH,Final
+ - MATCH,漏网之鱼
