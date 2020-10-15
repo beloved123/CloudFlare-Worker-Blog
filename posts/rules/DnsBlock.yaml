@@ -1,3 +1,4 @@
+payload:
 # 禁用所有DNS相关
  - SRC-PORT,0
  - DST-PORT,0
