@@ -189,9 +189,9 @@ rule-providers:
 
 
 rules:
+ - RULE-SET,NeteaseMusic,网易云音乐
  - RULE-SET,DirectConnect,国内直连
  - RULE-SET,Proxy,国外代理
- - RULE-SET,NeteaseMusic,网易云音乐
  - RULE-SET,GeoIP,国外代理
 
 #剩余直连
