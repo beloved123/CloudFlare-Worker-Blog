@@ -104,7 +104,7 @@ proxy-groups:
     type: select
     proxies:
       - PingTest
-      - DirectConnect
+      - DIRECT
       - config
 
       
@@ -126,7 +126,7 @@ proxy-groups:
   - name: NeteaseMusic
     type: select
     proxies:
-      - DirectConnect
+      - DIRECT
       - NeteaseUnblock
 
 
@@ -141,7 +141,7 @@ proxy-groups:
   - name: Final
     type: select
     proxies:
-      - DirectConnect
+      - DIRECT
       - Proxy
       - config
 
