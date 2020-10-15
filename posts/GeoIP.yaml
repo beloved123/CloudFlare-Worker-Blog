@@ -23,9 +23,9 @@ dns:
     - 223.5.5.5
     - 1.1.1.1
     - 8.8.8.8
-#首选DNS，最终解析结果会与Fallback验证，建议使用直连Doh
+#首选DNS，最终解析结果会与Fallback验证，建议使用国内Doh
   nameserver:
-#直连Doh
+#国内Doh
 #    - https://dns.alidns.com/dns-query
 #    - https://doh.pub/dns-query
 #    - https://dns.rubyfish.cn/dns-query
@@ -47,8 +47,8 @@ dns:
     - https://dns.pumplex.com/dns-query
     - https://doh.rixcloud.dev/dns-query
 
-#Dot是固定端口，所有直连Dot服务都可能被拦截，建议使用Doh
-#直连Dot
+#Dot是固定端口，所有国内Dot服务都可能被拦截，建议使用Doh
+#国内Dot
 #    - tls://dns.sb:853
 #    - tls://dns.pub:853
 #    - tls://dns.alidns.com:853
@@ -65,7 +65,6 @@ dns:
     - https://dns.cloudflare.com/dns-query
     - https://dns-unfiltered.adguard.com/dns-query
     - https://dns.google.com/dns-query
-#    - https://dns.alidns.com/dns-query
 #    - tls://dns.google:853
   fallback-filter:
     geoip: true
@@ -76,514 +75,124 @@ dns:
     
   interface-name:
   
-proxies:
-  - {name: NeteaseUnblock-1(Works), type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
-  - {name: NeteaseUnblock-2(Works), server: music.lolico.me, port: 39000, type: http, tls: false}
-  - {name: NeteaseUnblock-3(Works), server: taron.top, port: 100, type: http, tls: false}
-  - {name: NeteaseUnblock-4(Works), server: taron.top, port: 200, type: http, tls: false}
-  - {name: NeteaseUnblock-CN-HHHT-PC(Works), server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
-  - {name: NeteaseUnblock-CN-HHHT-IOS(Works), server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
-  - {name: US-Heroku-Vmess, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
-  - {name: JP-Tokyo 12, server: 45.87.213.3, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: CN-Taiwan 15, server: 103.98.74.229, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: CN-Taiwan, server: 103.98.74.227, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: JP-Tokyo 17, server: 45.87.213.211, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: USA-Denver 4, server: 212.102.44.98, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: USA-Houston 9, server: 199.10.64.67, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: USA-Phoenix 5, server: 107.181.184.117, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: HK-Microsoft-Trojan, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
-  
+proxy-providers:
+  GeoIP:
+    type: http
+    path: ./Proxy-Providers/GeoIP-proxy-providers.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/providers/GeoIP-proxy-providers.yaml
+    interval: 3600000
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  NeteaseUnblock:
+    type: http
+    path: ./Proxy-Providers/NeteaseUnblock-proxy-providers.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/providers/NeteaseUnblock-proxy-providers.yaml
+    interval: 3600000
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
 
 proxy-groups:
 
-  - name: 国外代理
+  - name: Proxy
     type: select
+    use:
+      - GeoIP
     proxies:
-      - 延迟测试
-      - 国内直连
-      - HK-Microsoft-Trojan
-      - CN-Taiwan
-      - CN-Taiwan 15
-      - JP-Tokyo 12
-      - JP-Tokyo 17
-      - USA-Denver 4
-      - USA-Houston 9
-      - USA-Phoenix 5
-      - US-Heroku-Vmess
+      - PingTest
+      - DIRECT
+
+
       
-  - name: 延迟测试
+  - name: PingTest
     type: url-test
     url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
-    interval: 500
-    proxies:
-      - HK-Microsoft-Trojan
-      - CN-Taiwan
-      - CN-Taiwan 15
-      - JP-Tokyo 12
-      - JP-Tokyo 17
-      - USA-Denver 4
-      - USA-Houston 9
-      - USA-Phoenix 5
-      - US-Heroku-Vmess
+    interval: 300
+    use:
+      - GeoIP
+
   
 #  - name: DnsBlock
 #    type: select
 #    proxies:
 #      - REJECT
 
-  - name: 网易云音乐
-    type: select
-    proxies:
-      - 国内直连
-      - NeteaseUnblock-1(Works)
-      - NeteaseUnblock-2(Works)
-      - NeteaseUnblock-3(Works)
-      - NeteaseUnblock-4(Works)
-      - NeteaseUnblock-CN-HHHT-PC(Works)
-      - NeteaseUnblock-CN-HHHT-IOS(Works)
 
 
-  - name: 国内直连
+  - name: NeteaseMusic
     type: select
+    use:
+      - NeteaseUnblock
     proxies:
       - DIRECT
-      - HK-Microsoft-Trojan
-      - CN-Taiwan
-      - CN-Taiwan 15
-      - JP-Tokyo 12
-      - JP-Tokyo 17
-      - USA-Denver 4
-      - USA-Houston 9
-      - USA-Phoenix 5
-      - US-Heroku-Vmess
-      
-  - name: 禁止访问
-    type: select
-    proxies:
-      - REJECT
-      - 国内直连
+    
 
-  - name: 漏网之鱼
+
+  - name: DirectConnect
     type: select
+    use:
+      - GeoIP
     proxies:
-      - 国内直连
-      - 国外代理
-      - HK-Microsoft-Trojan
-      - CN-Taiwan
-      - CN-Taiwan 15
-      - JP-Tokyo 12
-      - JP-Tokyo 17
-      - USA-Denver 4
-      - USA-Houston 9
-      - USA-Phoenix 5
-      - US-Heroku-Vmess
+      - DIRECT
+      - Proxy
+
+
+
+  - name: Final
+    type: select
+    use:
+      - GeoIP
+    proxies:
+      - DIRECT
+      - Proxy
+
+
+rule-providers:
+
+  DirectConnect:
+    type: http
+    behavior: classical
+    path: ./Rule-Providers/Direct.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Direct.yaml
+    interval: 3600000
+
+
+  Proxy:
+    type: http
+    behavior: classical
+    path: ./Rule-Providers/Proxy.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Proxy.yaml
+    interval: 3600000
+
+
+  NeteaseMusic:
+    type: http
+    behavior: classical
+    path: ./Rule-Providers/NeteaseMusic.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMusic.yaml
+    interval: 3600000
+
+
+  GeoIP:
+    type: http
+    behavior: classical
+    path: ./Rule-Providers/GeoIP.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/rules/GeoIP.yaml
+    interval: 3600000
+
+
+
+
 rules:
+ - RULE-SET,DirectConnect,DirectConnect
+ - RULE-SET,Proxy,Proxy
+ - RULE-SET,NeteaseMusic,NeteaseMusic
+ - RULE-SET,GeoIP,Proxy
 
-
-
-#local
- - DOMAIN-SUFFIX,local,国内直连
- - DOMAIN-SUFFIX,localhost,国内直连
- - IP-CIDR,0.0.0.0/8,国内直连
- - IP-CIDR,10.0.0.0/8,国内直连
- - IP-CIDR,100.64.0.0/10,国内直连
- - IP-CIDR,127.0.0.0/8,国内直连
- - IP-CIDR,169.254.0.0/16,国内直连
- - IP-CIDR,172.16.0.0/12,国内直连
- - IP-CIDR,192.0.0.0/24,国内直连
- - IP-CIDR,192.0.2.0/24,国内直连
- - IP-CIDR,192.88.99.0/24,国内直连
- - IP-CIDR,192.168.0.0/16,国内直连
- - IP-CIDR,198.18.0.0/15,国内直连
- - IP-CIDR,198.51.100.0/24,国内直连
- - IP-CIDR,203.0.113.0/24,国内直连
- - IP-CIDR,224.0.0.0/4,国内直连
- - IP-CIDR,240.0.0.0/4,国内直连
- - IP-CIDR,255.255.255.255/32,国内直连
- - IP-CIDR6,::1/128,国内直连
- - IP-CIDR6,fc00::/7,国内直连
- - IP-CIDR6,fe80::/10,国内直连
-
-
-
-# - SRC-IP-CIDR,0.0.0.0/8,国内直连
-# - SRC-IP-CIDR,10.0.0.0/8,国内直连
-# - SRC-IP-CIDR,100.64.0.0/10,国内直连
-# - SRC-IP-CIDR,127.0.0.0/8,国内直连
-# - SRC-IP-CIDR,169.254.0.0/16,国内直连
-# - SRC-IP-CIDR,172.16.0.0/12,国内直连
-# - SRC-IP-CIDR,192.0.0.0/24,国内直连
-# - SRC-IP-CIDR,192.0.2.0/24,国内直连
-# - SRC-IP-CIDR,192.88.99.0/24,国内直连
-# - SRC-IP-CIDR,192.168.0.0/16,国内直连
-# - SRC-IP-CIDR,198.18.0.0/15,国内直连
-# - SRC-IP-CIDR,198.51.100.0/24,国内直连
-# - SRC-IP-CIDR,203.0.113.0/24,国内直连
-# - SRC-IP-CIDR,224.0.0.0/4,国内直连
-# - SRC-IP-CIDR,240.0.0.0/4,国内直连
-# - SRC-IP-CIDR,255.255.255.255/32,国内直连
-# - SRC-IP-CIDR,::1/128,国内直连
-# - SRC-IP-CIDR,fc00::/7,国内直连
-# - SRC-IP-CIDR,fe80::/10,国内直连
-
-
-# 禁用所有DNS相关
-# - SRC-PORT,0,DnsBlock
-# - DST-PORT,0,DnsBlock
-# - SRC-PORT,2,DnsBlock
-# - DST-PORT,2,DnsBlock
-# - SRC-PORT,53,DnsBlock
-# - DST-PORT,53,DnsBlock
-# - SRC-PORT,953,DnsBlock
-# - DST-PORT,953,DnsBlock
-# - SRC-PORT,5353,DnsBlock
-# - DST-PORT,5353,DnsBlock
-# - SRC-PORT,5355,DnsBlock
-# - DST-PORT,5355,DnsBlock
-# - SRC-PORT,1900,DnsBlock
-# - DST-PORT,1900,DnsBlock
-# - SRC-PORT,52219,DnsBlock
-# - DST-PORT,52219,DnsBlock
-# - IP-CIDR,224.0.0.251/32,DnsBlock
-# - IP-CIDR,224.0.0.252/32,DnsBlock
-# - IP-CIDR,239.255.255.250/32,DnsBlock
-# - IP-CIDR,10.0.0.255/32,DnsBlock
-# - IP-CIDR,192.168.0.1/16,DnsBlock
-# - SRC-IP-CIDR,224.0.0.251/32,DnsBlock
-# - SRC-IP-CIDR,224.0.0.252/32,DnsBlock
-# - SRC-IP-CIDR,239.255.255.250/32,DnsBlock
-# - SRC-IP-CIDR,10.0.0.255/32,DnsBlock
-# - SRC-IP-CIDR,192.168.0.1/16,DnsBlock
- 
-# Google
- - DOMAIN-KEYWORD,google,国外代理
- 
- 
-# Dns Over Https直连
- - DOMAIN,dns.cloudflare.com,国内直连
- - DOMAIN,doh.opendns.com,国内直连
- - DOMAIN,dns-unfiltered.adguard.com,国内直连
- - DOMAIN,ddns.nextdns.io,国内直连
- - DOMAIN,dns10.quad9.net,国内直连
- - DOMAIN,doh.crypto.sx,国内直连
- - DOMAIN,dns.containerpi.com,国内直连
- - DOMAIN,dns.alidns.com,国内直连
- - DOMAIN,doh.pub,国内直连
- - DOMAIN,doh.dns.sb,国内直连
- - DOMAIN,dns.sb,国内直连
- - DOMAIN,dns.rubyfish.cn,国内直连
- - DOMAIN,ea-dns.rubyfish.cn,国内直连
- - DOMAIN,uw-dns.rubyfish.cn,国内直连
- - DOMAIN,doh.360.cn,国内直连
- - DOMAIN,dns.google,国内直连
- - DOMAIN,dns.pumplex.com,国内直连
- - DOMAIN,doh.rixcloud.dev,国内直连
- - DOMAIN,dns.233py.com,国内直连
- - DOMAIN,i.233py.com,国内直连
-
- 
-# Github走代理
- - DOMAIN-KEYWORD,github,国外代理
- - DOMAIN-SUFFIX,github.com,国外代理
- - DOMAIN-SUFFIX,github.io,国外代理
- - DOMAIN-SUFFIX,githubapp.com,国外代理
- - DOMAIN-SUFFIX,githubassets.com,国外代理
- - DOMAIN-SUFFIX,githubusercontent.com,国外代理
- - DOMAIN-SUFFIX,home-intl.console.aliyun.com,国外代理
- - DOMAIN,ip.skk.moe,国外代理
- - DOMAIN,ip.sb,国外代理
- - DOMAIN-SUFFIX,googleapis.cn,国外代理
-
-# 网易云规则
-
- - DOMAIN,admusicpic.music.126.net,禁止访问
- - DOMAIN,iadmat.nosdn.127.net,禁止访问
- - DOMAIN,iadmusicmat.music.126.net,禁止访问
- - DOMAIN,iadmusicmatvideo.music.126.net,禁止访问
-
-
-
- - DOMAIN-SUFFIX,music.126.net,国内直连
- - DOMAIN-SUFFIX,vod.126.net,国内直连
-
-
- - DOMAIN-SUFFIX,126.net,网易云音乐
- - DOMAIN-SUFFIX,163yun.com,网易云音乐
- - DOMAIN-SUFFIX,music.163.com,网易云音乐
- - DOMAIN-SUFFIX,api.iplay.163.com,网易云音乐
- - DOMAIN-SUFFIX,music.126.com,网易云音乐
- - DOMAIN-SUFFIX,mam.netease.com,网易云音乐
- - DOMAIN-SUFFIX,hz.netease.com,网易云音乐
- - DOMAIN-SUFFIX,crash.163.com,网易云音乐
- - DOMAIN-SUFFIX,mr.da.netease.com,网易云音乐
-
-
-#GeoIP
- - GEOIP,AF,国外代理
- - GEOIP,AL,国外代理
- - GEOIP,DZ,国外代理
- - GEOIP,AS,国外代理
- - GEOIP,AD,国外代理
- - GEOIP,AO,国外代理
- - GEOIP,AI,国外代理
- - GEOIP,AQ,国外代理
- - GEOIP,AG,国外代理
- - GEOIP,AR,国外代理
- - GEOIP,AM,国外代理
- - GEOIP,AW,国外代理
- - GEOIP,AU,国外代理
- - GEOIP,AT,国外代理
- - GEOIP,AZ,国外代理
- - GEOIP,BS,国外代理
- - GEOIP,BH,国外代理
- - GEOIP,BD,国外代理
- - GEOIP,BB,国外代理
- - GEOIP,BY,国外代理
- - GEOIP,BE,国外代理
- - GEOIP,BZ,国外代理
- - GEOIP,BJ,国外代理
- - GEOIP,BM,国外代理
- - GEOIP,BT,国外代理
- - GEOIP,BO,国外代理
- - GEOIP,BA,国外代理
- - GEOIP,BW,国外代理
- - GEOIP,BV,国外代理
- - GEOIP,BR,国外代理
- - GEOIP,IO,国外代理
- - GEOIP,VG,国外代理
- - GEOIP,BN,国外代理
- - GEOIP,BG,国外代理
- - GEOIP,BF,国外代理
- - GEOIP,MM,国外代理
- - GEOIP,BI,国外代理
- - GEOIP,CV,国外代理
- - GEOIP,KH,国外代理
- - GEOIP,CM,国外代理
- - GEOIP,CA,国外代理
- - GEOIP,KY,国外代理
- - GEOIP,CF,国外代理
- - GEOIP,TD,国外代理
- - GEOIP,CL,国外代理
- - GEOIP,CX,国外代理
- - GEOIP,CC,国外代理
- - GEOIP,CO,国外代理
- - GEOIP,KM,国外代理
- - GEOIP,CD,国外代理
- - GEOIP,CG,国外代理
- - GEOIP,CK,国外代理
- - GEOIP,CR,国外代理
- - GEOIP,CI,国外代理
- - GEOIP,HR,国外代理
- - GEOIP,CU,国外代理
- - GEOIP,CW,国外代理
- - GEOIP,CY,国外代理
- - GEOIP,CZ,国外代理
- - GEOIP,DK,国外代理
- - GEOIP,DJ,国外代理
- - GEOIP,DM,国外代理
- - GEOIP,DO,国外代理
- - GEOIP,EC,国外代理
- - GEOIP,EG,国外代理
- - GEOIP,SV,国外代理
- - GEOIP,GQ,国外代理
- - GEOIP,ER,国外代理
- - GEOIP,EE,国外代理
- - GEOIP,ET,国外代理
- - GEOIP,FK,国外代理
- - GEOIP,FO,国外代理
- - GEOIP,FJ,国外代理
- - GEOIP,FI,国外代理
- - GEOIP,FR,国外代理
- - GEOIP,FX,国外代理
- - GEOIP,GF,国外代理
- - GEOIP,PF,国外代理
- - GEOIP,TF,国外代理
- - GEOIP,GA,国外代理
- - GEOIP,GM,国外代理
- - GEOIP,PS,国外代理
- - GEOIP,GE,国外代理
- - GEOIP,DE,国外代理
- - GEOIP,GH,国外代理
- - GEOIP,GI,国外代理
- - GEOIP,GR,国外代理
- - GEOIP,GL,国外代理
- - GEOIP,GD,国外代理
- - GEOIP,GP,国外代理
- - GEOIP,GU,国外代理
- - GEOIP,GT,国外代理
- - GEOIP,GG,国外代理
- - GEOIP,GN,国外代理
- - GEOIP,GW,国外代理
- - GEOIP,GY,国外代理
- - GEOIP,HT,国外代理
- - GEOIP,HM,国外代理
- - GEOIP,VA,国外代理
- - GEOIP,HN,国外代理
- - GEOIP,HK,国外代理
- - GEOIP,HU,国外代理
- - GEOIP,IS,国外代理
- - GEOIP,IN,国外代理
- - GEOIP,ID,国外代理
- - GEOIP,IR,国外代理
- - GEOIP,IQ,国外代理
- - GEOIP,IE,国外代理
- - GEOIP,IM,国外代理
- - GEOIP,IL,国外代理
- - GEOIP,IT,国外代理
- - GEOIP,JM,国外代理
- - GEOIP,JP,国外代理
- - GEOIP,JE,国外代理
- - GEOIP,JO,国外代理
- - GEOIP,KZ,国外代理
- - GEOIP,KE,国外代理
- - GEOIP,KI,国外代理
- - GEOIP,KP,国外代理
- - GEOIP,KR,国外代理
- - GEOIP,XK,国外代理
- - GEOIP,KW,国外代理
- - GEOIP,KG,国外代理
- - GEOIP,LA,国外代理
- - GEOIP,LV,国外代理
- - GEOIP,LB,国外代理
- - GEOIP,LS,国外代理
- - GEOIP,LR,国外代理
- - GEOIP,LY,国外代理
- - GEOIP,LI,国外代理
- - GEOIP,LT,国外代理
- - GEOIP,LU,国外代理
- - GEOIP,MO,国外代理
- - GEOIP,MK,国外代理
- - GEOIP,MG,国外代理
- - GEOIP,MW,国外代理
- - GEOIP,MY,国外代理
- - GEOIP,MV,国外代理
- - GEOIP,ML,国外代理
- - GEOIP,MT,国外代理
- - GEOIP,MH,国外代理
- - GEOIP,MQ,国外代理
- - GEOIP,MR,国外代理
- - GEOIP,MU,国外代理
- - GEOIP,YT,国外代理
- - GEOIP,MX,国外代理
- - GEOIP,FM,国外代理
- - GEOIP,MD,国外代理
- - GEOIP,MC,国外代理
- - GEOIP,MN,国外代理
- - GEOIP,ME,国外代理
- - GEOIP,MS,国外代理
- - GEOIP,MA,国外代理
- - GEOIP,MZ,国外代理
- - GEOIP,NA,国外代理
- - GEOIP,NR,国外代理
- - GEOIP,NP,国外代理
- - GEOIP,NL,国外代理
- - GEOIP,AN,国外代理
- - GEOIP,NC,国外代理
- - GEOIP,NZ,国外代理
- - GEOIP,NI,国外代理
- - GEOIP,NE,国外代理
- - GEOIP,NG,国外代理
- - GEOIP,NU,国外代理
- - GEOIP,NF,国外代理
- - GEOIP,MP,国外代理
- - GEOIP,NO,国外代理
- - GEOIP,OM,国外代理
- - GEOIP,PK,国外代理
- - GEOIP,PW,国外代理
- - GEOIP,PA,国外代理
- - GEOIP,PG,国外代理
- - GEOIP,PY,国外代理
- - GEOIP,PE,国外代理
- - GEOIP,PH,国外代理
- - GEOIP,PN,国外代理
- - GEOIP,PL,国外代理
- - GEOIP,PT,国外代理
- - GEOIP,PR,国外代理
- - GEOIP,QA,国外代理
- - GEOIP,RE,国外代理
- - GEOIP,RO,国外代理
- - GEOIP,TW,国外代理
- - GEOIP,RU,国外代理
- - GEOIP,RW,国外代理
- - GEOIP,BL,国外代理
- - GEOIP,SH,国外代理
- - GEOIP,KN,国外代理
- - GEOIP,LC,国外代理
- - GEOIP,MF,国外代理
- - GEOIP,VC,国外代理
- - GEOIP,WS,国外代理
- - GEOIP,SM,国外代理
- - GEOIP,ST,国外代理
- - GEOIP,SA,国外代理
- - GEOIP,SN,国外代理
- - GEOIP,RS,国外代理
- - GEOIP,SC,国外代理
- - GEOIP,SL,国外代理
- - GEOIP,SG,国外代理
- - GEOIP,SX,国外代理
- - GEOIP,SK,国外代理
- - GEOIP,SI,国外代理
- - GEOIP,SB,国外代理
- - GEOIP,SO,国外代理
- - GEOIP,ZA,国外代理
- - GEOIP,GS,国外代理
- - GEOIP,SS,国外代理
- - GEOIP,ES,国外代理
- - GEOIP,LK,国外代理
- - GEOIP,SD,国外代理
- - GEOIP,SR,国外代理
- - GEOIP,PM,国外代理
- - GEOIP,SZ,国外代理
- - GEOIP,SE,国外代理
- - GEOIP,CH,国外代理
- - GEOIP,SY,国外代理
- - GEOIP,TJ,国外代理
- - GEOIP,TZ,国外代理
- - GEOIP,TH,国外代理
- - GEOIP,TL,国外代理
- - GEOIP,TG,国外代理
- - GEOIP,TK,国外代理
- - GEOIP,TO,国外代理
- - GEOIP,TT,国外代理
- - GEOIP,TN,国外代理
- - GEOIP,TR,国外代理
- - GEOIP,TM,国外代理
- - GEOIP,TC,国外代理
- - GEOIP,TV,国外代理
- - GEOIP,UG,国外代理
- - GEOIP,UA,国外代理
- - GEOIP,AE,国外代理
- - GEOIP,GB,国外代理
- - GEOIP,US,国外代理
- - GEOIP,UM,国外代理
- - GEOIP,UY,国外代理
- - GEOIP,UZ,国外代理
- - GEOIP,VU,国外代理
- - GEOIP,VE,国外代理
- - GEOIP,VN,国外代理
- - GEOIP,VI,国外代理
- - GEOIP,WF,国外代理
- - GEOIP,PS,国外代理
- - GEOIP,EH,国外代理
- - GEOIP,UN,国外代理
- - GEOIP,EU,国外代理
- - GEOIP,YE,国外代理
- - GEOIP,ZA,国外代理
- - GEOIP,ZM,国外代理
- - GEOIP,ZW,国外代理
- - GEOIP,RO,国外代理
- - GEOIP,WI,国外代理
- - GEOIP,EN,国外代理
- - GEOIP,AZ,国外代理
- - GEOIP,YG,国外代理
- - GEOIP,UR,国外代理
- - GEOIP,DH,国外代理
- - GEOIP,VL,国外代理
- - GEOIP,BO,国外代理
- - GEOIP,TC,国外代理
- - GEOIP,UA,国外代理
- - GEOIP,SG,国外代理
-
- - GEOIP,CN,国内直连
 #剩余直连
- - MATCH,漏网之鱼
+ - MATCH,Final
