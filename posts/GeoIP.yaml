@@ -76,7 +76,7 @@ dns:
   interface-name:
   
 proxy-providers:
-  GeoIP:
+  GeoIP-Proxy:
     type: http
     path: ./Proxy-Providers/GeoIP-proxy-providers.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/providers/GeoIP-proxy-providers.yaml
