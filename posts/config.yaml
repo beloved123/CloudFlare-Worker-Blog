@@ -76,7 +76,7 @@ dns:
   interface-name:
   
 proxy-providers:
-  config:
+  Config:
     type: http
     path: ./Proxy-Providers/config-proxy-providers.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/providers/config-proxy-providers.yaml
@@ -102,7 +102,7 @@ proxy-groups:
   - name: Proxy
     type: select
     use:
-      - config
+      - Config
     proxies:
       - PingTest
       - DIRECT
@@ -114,7 +114,7 @@ proxy-groups:
     url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
     interval: 300
     use:
-      - config
+      - Config
 
   
 #  - name: DnsBlock
@@ -136,7 +136,7 @@ proxy-groups:
   - name: DirectConnect
     type: select
     use:
-      - config
+      - Config
     proxies:
       - DIRECT
       - Proxy
@@ -146,7 +146,7 @@ proxy-groups:
   - name: Final
     type: select
     use:
-      - config
+      - Config
     proxies:
       - DIRECT
       - Proxy
