@@ -295,6 +295,14 @@ rules:
  - DOMAIN-SUFFIX,googleapis.cn,国外代理
 
 # 网易云规则
+
+ - DOMAIN,admusicpic.music.126.net,禁止访问
+ - DOMAIN,iadmat.nosdn.127.net,禁止访问
+ - DOMAIN,iadmusicmat.music.126.net,禁止访问
+ - DOMAIN,iadmusicmatvideo.music.126.net,禁止访问
+
+
+
  - DOMAIN-SUFFIX,music.126.net,国内直连
  - DOMAIN-SUFFIX,vod.126.net,国内直连
 
@@ -308,12 +316,6 @@ rules:
  - DOMAIN-SUFFIX,hz.netease.com,网易云音乐
  - DOMAIN-SUFFIX,crash.163.com,网易云音乐
  - DOMAIN-SUFFIX,mr.da.netease.com,网易云音乐
- 
- - DOMAIN,admusicpic.music.126.net,禁止访问
- - DOMAIN,iadmat.nosdn.127.net,禁止访问
- - DOMAIN,iadmusicmat.music.126.net,禁止访问
- - DOMAIN,iadmusicmatvideo.music.126.net,禁止访问
-
 
 
 #GeoIP
