@@ -1,0 +1,18 @@
+# 网易云规则
+ - DOMAIN,admusicpic.music.126.net
+ - DOMAIN,iadmat.nosdn.127.net
+ - DOMAIN,iadmusicmat.music.126.net
+ - DOMAIN,iadmusicmatvideo.music.126.net
+
+
+ 
+ - DOMAIN-SUFFIX,126.net
+ - DOMAIN-SUFFIX,163yun.com
+ - DOMAIN-SUFFIX,music.163.com
+ - DOMAIN-SUFFIX,api.iplay.163.com
+ - DOMAIN-SUFFIX,music.126.com
+ - DOMAIN-SUFFIX,mam.netease.com
+ - DOMAIN-SUFFIX,hz.netease.com
+ - DOMAIN-SUFFIX,crash.163.com
+ - DOMAIN-SUFFIX,mr.da.netease.com
+ 
