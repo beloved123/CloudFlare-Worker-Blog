@@ -190,9 +190,9 @@ rule-providers:
 
 rules:
  - RULE-SET,Netease,NeteaseMusic
- - RULE-SET,Direct,DirectConnect
  - RULE-SET,ProxyRules,Proxy
  - RULE-SET,GeoIP,Proxy
-
+ - RULE-SET,Direct,DirectConnect
+ 
 #剩余直连
  - MATCH,Final
