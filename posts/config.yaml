@@ -154,7 +154,7 @@ proxy-groups:
 
 rule-providers:
 
-  Direct:
+  DirectConnect:
     type: http
     behavior: classical
     path: ./Rule-Providers/Direct.yaml
@@ -162,7 +162,7 @@ rule-providers:
     interval: 3600000
 
 
-  ProxyRules:
+  Proxy:
     type: http
     behavior: classical
     path: ./Rule-Providers/Proxy.yaml
@@ -170,12 +170,13 @@ rule-providers:
     interval: 3600000
 
 
-  Netease:
+  NeteaseMusic:
     type: http
     behavior: classical
     path: ./Rule-Providers/NeteaseMusic.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMusic.yaml
     interval: 3600000
+
 
 
   NeteaseMedia:
@@ -186,6 +187,7 @@ rule-providers:
     interval: 3600000
     
     
+
   GeoIP:
     type: http
     behavior: classical
@@ -196,11 +198,12 @@ rule-providers:
 
 
 
+
 rules:
  - RULE-SET,NeteaseMedia,NeteaseMusic
- - RULE-SET,Netease,NeteaseMusic
- - RULE-SET,Direct,DirectConnect
- - RULE-SET,ProxyRules,Proxy
+ - RULE-SET,NeteaseMusic,NeteaseMusic
+ - RULE-SET,DirectConnect,DirectConnect
+ - RULE-SET,Proxy,Proxy
  - RULE-SET,GeoIP,Proxy
  
 #剩余直连
