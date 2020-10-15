@@ -154,7 +154,7 @@ proxy-groups:
 
 rule-providers:
 
-  DirectConnect:
+  Direct:
     type: http
     behavior: classical
     path: ./Rule-Providers/Direct.yaml
@@ -162,7 +162,7 @@ rule-providers:
     interval: 3600000
 
 
-  Proxy:
+  ProxyRules:
     type: http
     behavior: classical
     path: ./Rule-Providers/Proxy.yaml
@@ -170,7 +170,7 @@ rule-providers:
     interval: 3600000
 
 
-  NeteaseMusic:
+  Netease:
     type: http
     behavior: classical
     path: ./Rule-Providers/NeteaseMusic.yaml
@@ -189,9 +189,9 @@ rule-providers:
 
 
 rules:
- - RULE-SET,DirectConnect,DirectConnect
- - RULE-SET,Proxy,Proxy
- - RULE-SET,NeteaseMusic,NeteaseMusic
+ - RULE-SET,Direct,DirectConnect
+ - RULE-SET,ProxyRules,Proxy
+ - RULE-SET,Netease,NeteaseMusic
  - RULE-SET,GeoIP,Proxy
 
 #剩余直连
