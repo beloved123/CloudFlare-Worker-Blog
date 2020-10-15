@@ -199,7 +199,7 @@ rule-providers:
 
 
 rules:
- - RULE-SET,NeteaseMedia,网易云音乐
+ - RULE-SET,NeteaseMedia,国内直连
  - RULE-SET,NeteaseMusic,网易云音乐
  - RULE-SET,DirectConnect,国内直连
  - RULE-SET,Proxy,国外代理
