@@ -46,3 +46,7 @@
  - DOMAIN,doh.rixcloud.dev
  - DOMAIN,dns.233py.com
  - DOMAIN,i.233py.com
+
+
+#国内直连 
+ - GEOIP,CN
