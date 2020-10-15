@@ -200,7 +200,7 @@ rule-providers:
 
 
 rules:
- - RULE-SET,NeteaseMedia,NeteaseMusic
+ - RULE-SET,NeteaseMedia,DirectConnect
  - RULE-SET,NeteaseMusic,NeteaseMusic
  - RULE-SET,DirectConnect,DirectConnect
  - RULE-SET,Proxy,Proxy
