@@ -102,7 +102,7 @@ proxy-groups:
   - name: 国外代理
     type: select
     use:
-      - GeoIP
+      - GeoIP-Proxy
     proxies:
       - 延迟测试
       - DIRECT
@@ -114,7 +114,7 @@ proxy-groups:
     url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
     interval: 300
     use:
-      - GeoIP
+      - GeoIP-Proxy
 
   
 #  - name: DnsBlock
@@ -136,7 +136,7 @@ proxy-groups:
   - name: 国内直连
     type: select
     use:
-      - GeoIP
+      - GeoIP-Proxy
     proxies:
       - DIRECT
       - 国外代理
@@ -146,7 +146,7 @@ proxy-groups:
   - name: 漏网之鱼
     type: select
     use:
-      - GeoIP
+      - GeoIP-Proxy
     proxies:
       - DIRECT
       - 国外代理
