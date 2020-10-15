@@ -101,11 +101,12 @@ proxy-groups:
 
   - name: Proxy
     type: select
+    use:
+      - config
     proxies:
       - PingTest
       - DIRECT
-    use:
-      - config
+
 
       
   - name: PingTest
@@ -125,28 +126,31 @@ proxy-groups:
 
   - name: NeteaseMusic
     type: select
-    proxies:
-      - DIRECT
     use:
       - NeteaseUnblock
+    proxies:
+      - DIRECT
+    
 
 
   - name: DirectConnect
     type: select
+    use:
+      - config
     proxies:
       - DIRECT
       - Proxy
-    use:
-      - config
+
 
 
   - name: Final
     type: select
+    use:
+      - config
     proxies:
       - DIRECT
       - Proxy
-    use:
-      - config
+
 
 rule-providers:
 
