@@ -1,0 +1,5 @@
+payload:
+
+#网易云放行
+ - DOMAIN-SUFFIX,music.126.net
+ - DOMAIN-SUFFIX,vod.126.net
