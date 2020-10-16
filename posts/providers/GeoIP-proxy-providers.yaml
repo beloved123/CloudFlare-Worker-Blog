@@ -6,7 +6,7 @@ proxies:
 #  - {name: USA-Denver 4, server: 212.102.44.98, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
 #  - {name: USA-Houston 9, server: 199.10.64.67, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
 #  - {name: USA-Phoenix 5, server: 107.181.184.117, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
-  - {name: HK-SS, type: ss, server: 45.82.79.71, port: 33682, cipher: aes-256-gcm, password: 123456@B, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: , path: , mux: true}}
+  - {name: HK-SS, type: ss, server: 45.82.79.71, port: 33682, cipher: aes-256-gcm, password: 123456@B, plugin: v2ray-plugin, plugin-opts: {mode: websocket, mux: true}}
   - {name: EU-Kimi-Trojan, server: eu1.kimi.pw, port: 443, type: trojan, password: 5ff230c6, sni: eu1.kimi.pw, skip-cert-verify: false}
   - {name: HK-DMIT-Vmess, server: 193.110.202.230, port: 35781, type: vmess, uuid: be2b92b4-e677-4a52-9abb-90eebdfca45c, alterId: 233, cipher: auto, tls: false}
   - {name: US-DMIT-LAX, server: 154.17.7.87, port: 49353, type: vmess, uuid: f762694a-948b-4918-a657-6ca9b10f2d32, alterId: 233, cipher: auto, tls: false}
