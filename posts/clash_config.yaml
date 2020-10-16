@@ -1,3 +1,4 @@
+#https://github.com/gitgao9527/config/blob/master/clash_config.txt
 port: 7890
 socks-port: 7891
 allow-lan: true
