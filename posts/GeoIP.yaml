@@ -115,7 +115,7 @@ proxy-groups:
     type: select
     use:
       - GeoIP-Proxy
-      - Fly1
+      - Fly1-Proxy
     proxies:
       - 延迟测试
       - DIRECT
@@ -128,7 +128,7 @@ proxy-groups:
     interval: 300
     use:
       - GeoIP-Proxy
-      - Fly1
+      - Fly1-Proxy
 
   
 #  - name: DnsBlock
@@ -151,7 +151,7 @@ proxy-groups:
     type: select
     use:
       - GeoIP-Proxy
-      - Fly1
+      - Fly1-Proxy
     proxies:
       - DIRECT
       - 国外代理
@@ -162,7 +162,7 @@ proxy-groups:
     type: select
     use:
       - GeoIP-Proxy
-      - Fly1
+      - Fly1-Proxy
     proxies:
       - DIRECT
       - 国外代理
