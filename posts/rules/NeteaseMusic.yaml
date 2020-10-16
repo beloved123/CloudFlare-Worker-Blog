@@ -1,11 +1,5 @@
 payload:
 # 网易云规则
- - DOMAIN,admusicpic.music.126.net
- - DOMAIN,iadmat.nosdn.127.net
- - DOMAIN,iadmusicmat.music.126.net
- - DOMAIN,iadmusicmatvideo.music.126.net
-
-
  
  - DOMAIN,music.126.net
  - DOMAIN-SUFFIX,163yun.com
