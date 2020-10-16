@@ -3,6 +3,8 @@ proxies:
   - {name: HK-Microsoft-Trojan, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
   - {name: SP-Kimi-Trojan, server: sp1.kimi.pw, port: 443, type: trojan, password: 75fa78b6, sni: sp1.kimi.pw, skip-cert-verify: false}
   - {name: EU-Kimi-Trojan, server: eu1.kimi.pw, port: 443, type: trojan, password: 5ff230c6, sni: eu1.kimi.pw, skip-cert-verify: false}
+  - {name: HK-DMIT-Vmess, server: 193.110.202.230, port: 35781, type: vmess, uuid: be2b92b4-e677-4a52-9abb-90eebdfca45c, alterId: 233, cipher: auto, tls: false}
+  - {name: US-DMIT-LAX, server: 154.17.7.87, port: 49353, type: vmess, uuid: f762694a-948b-4918-a657-6ca9b10f2d32, alterId: 233, cipher: auto, tls: false}
   - {name: HK-01 D3/VR/IPLC, server: 14.17.97.145, port: 5000, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: HK-02 D3/VR/IPLC, server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: HK-03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
