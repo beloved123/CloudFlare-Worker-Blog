@@ -178,6 +178,16 @@ rule-providers:
     interval: 3600000
 
 
+
+
+  NeteaseMedia:
+    type: http
+    behavior: classical
+    path: ./Rule-Providers/NeteaseMedia.yaml
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com//LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMedia.yaml
+    interval: 3600000
+
+
   GeoIP:
     type: http
     behavior: classical
@@ -189,10 +199,12 @@ rule-providers:
 
 
 rules:
- - RULE-SET,DirectConnect,DirectConnect
  - RULE-SET,Proxy,Proxy
- - RULE-SET,NeteaseMusic,NeteaseMusic
  - RULE-SET,GeoIP,Proxy
+ - RULE-SET,NeteaseMedia,DirectConnect
+ - RULE-SET,NeteaseMusic,NeteaseMusic
+ - RULE-SET,DirectConnect,DirectConnect
+
 
 #剩余直连
  - MATCH,Final
