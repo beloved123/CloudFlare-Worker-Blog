@@ -1,7 +1,6 @@
 proxies:
   - {name: HK-MyQnapCloud, server: gyddnas.myqnapcloud.cn, port: 12366, type: ss, cipher: aes-256-gcm, password: PSlwA9OIrG64}
   - {name: HK-Microsoft-Trojan, server: trojan.kdbaidu.com, port: 443, type: trojan, password: Trojan-MeMa=Uallen_Qbit-Trojan, sni: trojan.kdbaidu.com}
-  - {name: HKG-AWS-Https, username: "290939675", password: 14a2YflrR8, type: http, server: aga1.hkg-aws.tradewind.link, port: 443, tls: true, skip-cert-verify: true}
   - {name: SP-Kimi-Trojan, server: sp1.kimi.pw, port: 443, type: trojan, password: 75fa78b6, sni: sp1.kimi.pw, skip-cert-verify: false}
   - {name: EU-Kimi-Trojan, server: eu1.kimi.pw, port: 443, type: trojan, password: 5ff230c6, sni: eu1.kimi.pw, skip-cert-verify: false}
   - {name: HK-DMIT-Vmess, server: 193.110.202.230, port: 35781, type: vmess, uuid: be2b92b4-e677-4a52-9abb-90eebdfca45c, alterId: 233, cipher: auto, tls: false}
@@ -14,6 +13,22 @@ proxies:
   - {name: JP-01 D3/VR/IPLC, server: 14.17.97.145, port: 5008, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: SG-01 D3/VR/IPLC, server: 14.17.97.145, port: 5006, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: US-01 D3/VR/IPLC, server: 14.17.97.145, port: 5012, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
+  - {name: HKG-AWS 1(https), username: "290939675", password: 14a2YflrR8, type: http, server: aga1.hkg-aws.tradewind.link, port: 443, tls: true, skip-cert-verify: true}
+  - {name: HK-Eons GB1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: gb1.hkg-eons.tradewind.link, port: 12443, tls: true, skip-cert-verify: true}
+  - {name: HK-Eons HK1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: hk1.hkg-eons.tradewind.link, port: 10443, tls: true, skip-cert-verify: true}
+  - {name: HK-Eons TW1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: tw1.hkg-eons.tradewind.link, port: 11443, tls: true, skip-cert-verify: true}
+  - {name: TW-TFN 1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: tfn1.tpe-kcd.tradewind.link, port: 20443, tls: true, skip-cert-verify: true}
+  - {name: SHA-HKG ABD HGC2(https), username: "744523856", password: ip175Rd1Ld, type: http, server: hgc2.hkg-abd.dataport.xyz, port: 23443, tls: true, skip-cert-verify: true}
+  - {name: SHA-HKG ABD HKT1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: hkt-200m.hkg-abd.dataport.xyz, port: 22443, tls: true, skip-cert-verify: true}
+  - {name: SHA-HKG EONS HK2(https), username: "744523856", password: ip175Rd1Ld, type: http, server: hk2.hkg-eons.tradewind.link, port: 24443, tls: true, skip-cert-verify: true}
+  - {name: HK-Eons GB1(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: gb1.hkg-eons.tradewind.link, port: 12443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: gb1.hkg-eons.tradewind.link, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+  - {name: HK-Eons HK1(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: hk1.hkg-eons.tradewind.link, port: 10443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: hk1.hkg-eons.tradewind.link, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+  - {name: HK-Eons TW1(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: tw1.hkg-eons.tradewind.link, port: 11443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: tw1.hkg-eons.tradewind.link, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+  - {name: TW-TFN 1(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: tfn1.tpe-kcd.tradewind.link, port: 20443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: tfn1.tpe-kcd.tradewind.link, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+  - {name: SHA-HKG ABD HGC2(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: hgc2.hkg-abd.dataport.xyz, port: 23443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: hgc2.hkg-abd.dataport.xyz, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+  - {name: SHA-HKG ABD HKT1(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: hkt-200m.hkg-abd.dataport.xyz, port: 22443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: hkt-200m.hkg-abd.dataport.xyz, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+  - {name: SHA-HKG EONS HK2(vmess), uuid: b1093d85-fa7a-401a-a52b-eb327592bed7, type: vmess, server: hk2.hkg-eons.tradewind.link, port: 24443, alterId: 0, cipher: none, tls: true, network: ws, ws-path: /je5x3pBN1vez3NQudNkB, ws-headers:, host: hk2.hkg-eons.tradewind.link, User-Agent: |-, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36, (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36}
+
 #  - {name: JP-Tokyo 12, server: 45.87.213.3, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
 #  - {name: JP-Tokyo 17, server: 45.87.213.211, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
 #  - {name: CN-Taiwan, server: 103.98.74.227, port: 34651, type: ss, cipher: aes-256-gcm, password: fQrrhJUGWCGRfgvJgPDDX5sN}
