@@ -79,7 +79,7 @@ proxy-providers:
   Config:
     type: http
     path: ./Proxy-Providers/config-proxy-providers.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/providers/config-proxy-providers.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/providers/config-proxy-providers.yaml
     interval: 3600000
     health-check:
       enable: true
@@ -89,7 +89,7 @@ proxy-providers:
   NeteaseUnblock:
     type: http
     path: ./Proxy-Providers/NeteaseUnblock-proxy-providers.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/providers/NeteaseUnblock-proxy-providers.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/providers/NeteaseUnblock-proxy-providers.yaml
     interval: 3600000
     health-check:
       enable: true
@@ -158,7 +158,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Rule-Providers/Direct.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/rules/Direct.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/rules/Direct.yaml
     interval: 3600000
 
 
@@ -166,7 +166,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Rule-Providers/Proxy.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/rules/Proxy.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/rules/Proxy.yaml
     interval: 3600000
 
 
@@ -174,7 +174,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Rule-Providers/NeteaseMusic.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/rules/NeteaseMusic.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/rules/NeteaseMusic.yaml
     interval: 3600000
 
 
@@ -183,7 +183,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Rule-Providers/NeteaseMedia.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/rules/NeteaseMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/rules/NeteaseMedia.yaml
     interval: 3600000
     
     
@@ -192,7 +192,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Rule-Providers/GeoIP.yaml
-    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog/posts/rules/GeoIP.yaml
+    url: https://cdn.jsdelivr.net/gh/LittleRey/CloudFlare-Worker-Blog@master/posts/rules/GeoIP.yaml
     interval: 3600000
 
 
@@ -200,11 +200,12 @@ rule-providers:
 
 
 rules:
+ - RULE-SET,Proxy,Proxy
+ - RULE-SET,GeoIP,Proxy
  - RULE-SET,NeteaseMedia,DirectConnect
  - RULE-SET,NeteaseMusic,NeteaseMusic
  - RULE-SET,DirectConnect,DirectConnect
- - RULE-SET,Proxy,Proxy
- - RULE-SET,GeoIP,Proxy
+
  
 #剩余直连
  - MATCH,Final
