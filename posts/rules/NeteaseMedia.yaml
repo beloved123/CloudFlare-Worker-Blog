@@ -1,5 +1,17 @@
 payload:
 
 #网易云放行
- - DOMAIN-SUFFIX,music.126.net
+ - DOMAIN,p1.music.126.net
+ - DOMAIN,p2.music.126.net
+ - DOMAIN,p3.music.126.net
+ - DOMAIN,p4.music.126.net
+ - DOMAIN,p5.music.126.net
+ - DOMAIN,p6.music.126.net
+ - DOMAIN,p7.music.126.net
+ - DOMAIN,p8.music.126.net
+ - DOMAIN,p9.music.126.net
+ - DOMAIN,p10.music.126.net
+ - DOMAIN,p11.music.126.net
+ - DOMAIN,p12.music.126.net
+ 
  - DOMAIN-SUFFIX,vod.126.net
