@@ -200,10 +200,10 @@ rule-providers:
 
 
 rules:
- - RULE-SET,Proxy,Proxy
- - RULE-SET,GeoIP,Proxy
  - RULE-SET,NeteaseMedia,DirectConnect
  - RULE-SET,NeteaseMusic,NeteaseMusic
+ - RULE-SET,Proxy,Proxy
+ - RULE-SET,GeoIP,Proxy
  - RULE-SET,DirectConnect,DirectConnect
 
  
