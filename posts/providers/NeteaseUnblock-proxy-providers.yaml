@@ -1,7 +1,10 @@
 proxies:
   - {name: NeteaseUnblock-1(Works), type: ss, server: music.desperadoj.com, port: 30001, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
-  - {name: NeteaseUnblock-2(Works), server: music.lolico.me, port: 39000, type: http, tls: false}
-  - {name: NeteaseUnblock-3(Works), server: taron.top, port: 100, type: http, tls: false}
-  - {name: NeteaseUnblock-4(Works), server: taron.top, port: 200, type: http, tls: false}
+  - {name: NeteaseUnblock-2(Works), server: 106.52.127.72, port: 19951, type: http, tls: false}
+  - {name: NeteaseUnblock-3(Works), server: 3music.poetyin.me, port: 100, type: http, tls: false}
+  - {name: NeteaseUnblock-4(Works), server: block4music.poetyin.me, port: 39000, type: http, tls: false}
+  - {name: NeteaseUnblock-5(Works), type: ss, server: blockmusic.poetyin.me, port: 30003, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_x80j}
+  - {name: NeteaseUnblock-6(Works), server: music.lolico.me, port: 39000, type: http, tls: false}
+  - {name: NeteaseUnblock-7(Works), server: taron.top, port: 200, type: http, tls: false}
   - {name: NeteaseUnblock-CN-HHHT-PC(Works), server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: NeteaseUnblock-CN-HHHT-IOS(Works), server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
