@@ -13,7 +13,7 @@ proxies:
   - {name: JP-01 D3/VR/IPLC, server: 14.17.97.145, port: 5008, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: SG-01 D3/VR/IPLC, server: 14.17.97.145, port: 5006, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: US-01 D3/VR/IPLC, server: 14.17.97.145, port: 5012, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
-  - {name: HKG-AWS 1(https), username: "290939675", password: 14a2YflrR8, type: http, server: aga1.hkg-aws.tradewind.link, port: 443, tls: true, skip-cert-verify: true}
+#  - {name: HKG-AWS 1(https), username: "290939675", password: 14a2YflrR8, type: http, server: aga1.hkg-aws.tradewind.link, port: 443, tls: true, skip-cert-verify: true}
   - {name: HK-Eons GB1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: gb1.hkg-eons.tradewind.link, port: 12443, tls: true, skip-cert-verify: true}
   - {name: HK-Eons HK1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: hk1.hkg-eons.tradewind.link, port: 10443, tls: true, skip-cert-verify: true}
   - {name: HK-Eons TW1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: tw1.hkg-eons.tradewind.link, port: 11443, tls: true, skip-cert-verify: true}
