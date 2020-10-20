@@ -251,7 +251,32 @@ proxy-groups:
     use:
       - Config
 
-  
+  - name: Relay
+    type: relay
+    proxies:
+      - HK-Eons GB1(https)
+      - US-Heroku-Vmess
+
+  - name: Fallback
+    type: fallback
+    use:
+      - Config
+      
+    url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+    interval: 300
+
+
+
+  # load-balance（负载均衡）: 同一eTLD的请求将在同一代理服务器上拨号
+
+  - name: LoadBalance
+    type: load-balance
+    use:
+      - Config
+
+    url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+    interval: 300
+
 #  - name: DnsBlock
 #    type: select
 #    proxies:
