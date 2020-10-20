@@ -3,8 +3,7 @@ proxies:
   - {name: NeteaseUnblock-2(可用), server: 106.52.127.72, port: 19951, type: http, tls: false}
   - {name: NeteaseUnblock-3(可用), server: 3music.poetyin.me, port: 100, type: http, tls: false}
   - {name: NeteaseUnblock-4(可用), server: block4music.poetyin.me, port: 39000, type: http, tls: false}
-  - {name: NeteaseUnblock-5(可用), type: ss, server: blockmusic.poetyin.me, port: 30003, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_x80j}
-  - {name: NeteaseUnblock-6(可用), server: music.lolico.me, port: 39000, type: http, tls: false}
-  - {name: NeteaseUnblock-7(可用), server: taron.top, port: 200, type: http, tls: false}
+  - {name: NeteaseUnblock-5(可用), server: music.lolico.me, port: 39000, type: http, tls: false}
+  - {name: NeteaseUnblock-6(可用), server: taron.top, port: 200, type: http, tls: false}
   - {name: NeteaseUnblock-CN-HHHT-PC(可用), server: netease-hhht.wcc.best, port: 58080, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
   - {name: NeteaseUnblock-CN-HHHT-IOS(可用), server: netease-hhht.wcc.best, port: 58081, type: ss, cipher: rc4-md5, password: T5ckndbLSXHQ, udp: true}
