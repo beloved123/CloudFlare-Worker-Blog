@@ -215,7 +215,7 @@ proxy-providers:
     type: http
     path: ./Proxy-Providers/config-proxy-providers.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/providers/config-proxy-providers.yaml
-    interval: 3600
+    interval: 1800
     health-check:
       enable: true
       url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
@@ -225,7 +225,7 @@ proxy-providers:
     type: http
     path: ./Proxy-Providers/NeteaseUnblock-proxy-providers.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/providers/NeteaseUnblock-proxy-providers.yaml
-    interval: 3600
+    interval: 1800
     health-check:
       enable: true
       url: http://music.163.com
@@ -287,6 +287,9 @@ proxy-groups:
       - Proxy
 
 
+# rules 里面的interval
+# interval     # 自动更新间隔，仅在类型为 HTTP 时可用，单位秒
+
 rule-providers:
 
   DirectConnect:
@@ -294,7 +297,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/Direct.list
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Direct.list
-    interval: 3600
+    interval: 1800
 
 
   Proxy:
@@ -302,7 +305,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/Proxy.list
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Proxy.list
-    interval: 3600
+    interval: 1800
 
 
   NeteaseMusic:
@@ -310,7 +313,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/NeteaseMusic.list
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMusic.list
-    interval: 3600
+    interval: 1800
 
 
 
@@ -319,7 +322,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/NeteaseMedia.list
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMedia.list
-    interval: 3600
+    interval: 1800
     
     
 
@@ -328,7 +331,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/GeoIP.list
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/GeoIP.list
-    interval: 3600
+    interval: 1800
 
 
 
