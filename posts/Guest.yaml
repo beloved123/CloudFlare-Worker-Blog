@@ -83,7 +83,7 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
       interval: 300
       
       
@@ -94,7 +94,7 @@ proxy-providers:
 #    interval: 3600
 #    health-check:
 #      enable: true
-#      url: http://www.gstatic.com/generate_204
+#      url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
 #      interval: 300
       
 
@@ -173,24 +173,24 @@ rule-providers:
   DirectConnect:
     type: http
     behavior: classical
-    path: ./Rule-Providers/Direct.yaml
-    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Direct.yaml
+    path: ./Rule-Providers/Direct.list
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Direct.list
     interval: 3600
 
 
   Proxy:
     type: http
     behavior: classical
-    path: ./Rule-Providers/Proxy.yaml
-    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Proxy.yaml
+    path: ./Rule-Providers/Proxy.list
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Proxy.list
     interval: 3600
 
 
   NeteaseMusic:
     type: http
     behavior: classical
-    path: ./Rule-Providers/NeteaseMusic.yaml
-    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMusic.yaml
+    path: ./Rule-Providers/NeteaseMusic.list
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMusic.list
     interval: 3600
 
 
@@ -198,8 +198,8 @@ rule-providers:
   NeteaseMedia:
     type: http
     behavior: classical
-    path: ./Rule-Providers/NeteaseMedia.yaml
-    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMedia.yaml
+    path: ./Rule-Providers/NeteaseMedia.list
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMedia.list
     interval: 3600
     
     
@@ -207,9 +207,10 @@ rule-providers:
   GeoIP:
     type: http
     behavior: classical
-    path: ./Rule-Providers/GeoIP.yaml
-    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/GeoIP.yaml
+    path: ./Rule-Providers/GeoIP.list
+    url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/GeoIP.list
     interval: 3600
+
 
 
 
