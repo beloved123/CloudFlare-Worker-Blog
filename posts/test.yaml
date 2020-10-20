@@ -211,10 +211,6 @@ dns:
 
 
 
-proxies:
-  - {name: HK-Eons GB1(https), username: "744523856", password: ip175Rd1Ld, type: http, server: gb1.hkg-eons.tradewind.link, port: 12443, tls: true, skip-cert-verify: true}
-  - {name: US-Heroku-Vmess, server: v2ray.buildtest.site, port: 443, type: vmess, uuid: ad806487-2d26-4636-98b6-ab85cc8521f7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2ray.buildtest.site}}
-
 
 
 proxy-providers:
@@ -247,8 +243,6 @@ proxy-groups:
       - Config
     proxies:
       - PingTest
-      - Relay
-      - Fallback
       - LoadBalance
       - DIRECT
 
@@ -260,20 +254,6 @@ proxy-groups:
     interval: 300
     use:
       - Config
-
-  - name: Relay
-    type: relay
-    proxies:
-      - HK-Eons GB1(https)
-      - US-Heroku-Vmess
-
-  - name: Fallback
-    type: fallback
-    use:
-      - Config
-      
-    url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
-    interval: 300
 
 
 
