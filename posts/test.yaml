@@ -247,6 +247,9 @@ proxy-groups:
       - Config
     proxies:
       - PingTest
+      - Relay
+      - Fallback
+      - LoadBalance
       - DIRECT
 
 
