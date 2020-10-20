@@ -105,7 +105,7 @@ proxy-providers:
     interval: 3600
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: https://music.163.com/
       interval: 300
 
 
