@@ -253,6 +253,7 @@ proxy-groups:
       - Fly1-Proxy
     proxies:
       - 延迟测试
+      - 负载均衡
       - DIRECT
 
 
@@ -265,6 +266,14 @@ proxy-groups:
       - GeoIP-Proxy
       - Fly1-Proxy
 
+
+  - name: 负载均衡
+    type: load-balance
+    use:
+      - GeoIP-Proxy
+      - Fly1-Proxy
+    url: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+    interval: 300
   
 #  - name: DnsBlock
 #    type: select
@@ -290,6 +299,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 国外代理
+      - 负载均衡
 
 
 
@@ -301,6 +311,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 国外代理
+      - 负载均衡
 
 
 rule-providers:
