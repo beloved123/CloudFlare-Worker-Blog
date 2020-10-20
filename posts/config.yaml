@@ -80,7 +80,7 @@ proxy-providers:
     type: http
     path: ./Proxy-Providers/config-proxy-providers.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/providers/config-proxy-providers.yaml
-    interval: 3600000
+    interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -90,7 +90,7 @@ proxy-providers:
     type: http
     path: ./Proxy-Providers/NeteaseUnblock-proxy-providers.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/providers/NeteaseUnblock-proxy-providers.yaml
-    interval: 3600000
+    interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -159,7 +159,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/Direct.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Direct.yaml
-    interval: 3600000
+    interval: 3600
 
 
   Proxy:
@@ -167,7 +167,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/Proxy.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/Proxy.yaml
-    interval: 3600000
+    interval: 3600
 
 
   NeteaseMusic:
@@ -175,7 +175,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/NeteaseMusic.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMusic.yaml
-    interval: 3600000
+    interval: 3600
 
 
 
@@ -184,7 +184,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/NeteaseMedia.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/NeteaseMedia.yaml
-    interval: 3600000
+    interval: 3600
     
     
 
@@ -193,7 +193,7 @@ rule-providers:
     behavior: classical
     path: ./Rule-Providers/GeoIP.yaml
     url: https://cors.buildtest.site/https://raw.githubusercontent.com/LittleRey/CloudFlare-Worker-Blog/master/posts/rules/GeoIP.yaml
-    interval: 3600000
+    interval: 3600
 
 
 
