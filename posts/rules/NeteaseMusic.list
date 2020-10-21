@@ -10,7 +10,7 @@ payload:
  - DOMAIN-SUFFIX,hz.netease.com
  - DOMAIN-SUFFIX,crash.163.com
  - DOMAIN-SUFFIX,mr.da.netease.com
- - DOMAIN-SUFFIX,dun.126.net
+ - DOMAIN-SUFFIX,acstatic-dun.126.net
  - DOMAIN-SUFFIX,dun.163.com
  
 # - IP-CIDR,39.105.63.80/32
