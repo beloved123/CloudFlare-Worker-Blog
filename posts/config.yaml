@@ -349,10 +349,9 @@ rule-providers:
 rules:
  - RULE-SET,NeteaseMedia,DirectConnect
  - RULE-SET,NeteaseMusic,NeteaseMusic
- - RULE-SET,DirectConnect,DirectConnect
  - RULE-SET,Proxy,Proxy
  - RULE-SET,GeoIP,Proxy
-
+ - RULE-SET,DirectConnect,DirectConnect
 
 #剩余直连
  - MATCH,Final
