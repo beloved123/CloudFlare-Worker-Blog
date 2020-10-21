@@ -19,6 +19,7 @@ payload:
  - DOMAIN-SUFFIX,push.126.net
  - DOMAIN-SUFFIX,cstaticdun.126.net
 
+##########################
  - IP-CIDR,39.105.63.80/32,no-resolve
  - IP-CIDR,115.236.121.1/32,no-resolve
  - IP-CIDR,115.236.118.33/32,no-resolve
@@ -32,3 +33,6 @@ payload:
  - IP-CIDR,193.112.159.225/32,no-resolve
  - IP-CIDR,47.100.127.239/32,no-resolve
  - IP-CIDR,118.24.63.156/32,no-resolve
+##### 网易云 HK
+ - IP-CIDR,103.126.92.132/32,no-resolve
+ - IP-CIDR,103.126.92.133/32,no-resolve
