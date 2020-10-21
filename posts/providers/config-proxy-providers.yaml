@@ -6,6 +6,7 @@ proxies:
   - {name: HK-DMIT-Vmess, server: 193.110.202.230, port: 35781, type: vmess, uuid: be2b92b4-e677-4a52-9abb-90eebdfca45c, alterId: 233, cipher: auto, tls: false}
   - {name: US-DMIT-LAX, server: 154.17.7.87, port: 49353, type: vmess, uuid: f762694a-948b-4918-a657-6ca9b10f2d32, alterId: 233, cipher: auto, tls: false}
   - {name: US-Electron-Vmess, type: vmess, server: llajv.rebldp.tech, port: 443, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: { Host: llajv.rebldp.tech }}
+  - {name: HK-CalvinVPN-Vmess, type: vmess, server: hkvpn.sxhome.club, port: 443, uuid: d1ac6006-6c13-4462-8e7d-b2bd394c5c2a, alterId: 64, cipher: aes-128-gcm, udp: true, tls: true, network: ws, ws-path: /f044, ws-headers: {Host: hkvpn.sxhome.club}}
   - {name: HK-01 D3/VR/IPLC, server: 14.17.97.145, port: 5000, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: HK-02 D3/VR/IPLC, server: 14.17.97.145, port: 5002, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
   - {name: HK-03 D3/VR/IPLC, server: 14.17.97.145, port: 5004, type: vmess, uuid: 3bc521f7-439e-332c-acc4-594398dfa5a2, alterId: 2, cipher: auto, udp: true} 
