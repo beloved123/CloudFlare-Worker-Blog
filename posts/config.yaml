@@ -42,11 +42,11 @@ log-level: info
 # 在openwrt上，这个是节点控制页面登录地址和端口
 
 # 这就是管理节点和选择节点页面的登陆地址和端口,端口可自行设置
-external-controller: 127.0.0.1:9090
+external-controller: :9090
 
 # RESTful web API的密码（可选） 通过加快HTTP头 "Authorization.Bearer ${secret}"来验证
 # 如果RESTful API在0.0.0.0上监听，则总是设置一个密码
-# secret: 
+secret: ''
 
 # 设置为false时，解析程序不会将主机名转换为IPv6地址
 ipv6: true
@@ -95,7 +95,7 @@ dns:
   enable: true
 # 当 ipv6 为 "false "时，对AAAA请求的回答为空。
   ipv6: true
-  listen: 0.0.0.0:53
+  listen: 0.0.0.0:5354
   enhanced-mode: redir-host
 
 
