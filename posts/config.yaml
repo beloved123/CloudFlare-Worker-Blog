@@ -95,7 +95,7 @@ dns:
   enable: true
 # 当 ipv6 为 "false "时，对AAAA请求的回答为空。
   ipv6: true
-  listen: 0.0.0.0:5354
+  listen: 0.0.0.0:53
   enhanced-mode: redir-host
 
 
